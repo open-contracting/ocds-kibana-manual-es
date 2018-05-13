@@ -1,0 +1,375 @@
+{
+ "template": "poder-ptp-pef-ofdp",
+ "settings": {
+   "number_of_shards": 1
+ },
+ "mappings": {
+   "registros": {
+     "properties": {
+       "@timestamp": {
+         "type": "date"
+       },
+       "@version": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "CICLO": {
+         "type": "number",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_AI": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_CAPITULO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_CONCEPTO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_FF": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_FUNCION": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_GPO_FUNCIONAL": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_MODALIDAD": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_PARTIDA_ESPECIFICA": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_PARTIDA_GENERICA": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_PP": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_RAMO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_SUBFUNCION": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_TIPOGASTO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "DESC_UR": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ENTIDAD_FEDERATIVA": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "GPO_FUNCIONAL": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_AI": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_CAPITULO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_CLAVE_CARTERA": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_CONCEPTO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_ENTIDAD_FEDERATIVA": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_FF": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_FUNCION": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_MODALIDAD": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_PARTIDA_ESPECIFICA": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_PARTIDA_GENERICA": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_PP": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_RAMO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_SUBFUNCION": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_TIPOGASTO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "ID_UR": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "MONTO_ADEFAS": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "MONTO_APROBADO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "MONTO_DEVENGADO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "MONTO_EJERCICIO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "MONTO_EJERCIDO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "MONTO_MODIFICADO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       },
+       "MONTO_PAGADO": {
+         "type": "text",
+         "fields": {
+           "keyword": {
+             "type": "keyword",
+             "ignore_above": 256
+           }
+         }
+       }
+     }
+   }
+ }
+}
