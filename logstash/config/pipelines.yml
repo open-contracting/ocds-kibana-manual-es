@@ -1,6 +1,8 @@
 - pipeline.id: ptp.pef.ofdp
-  path.config: "/etc/logstash/pipelines/ptp.pef.ofdp.conf"
-  # path.logs: "/etc/logstash/logs/ptp.pef.ofdp.log"
+  path.config: "/etc/logstash/pipelines/ptp-pef-ofdp.conf"
+  pipeline.workers: 2
+- pipeline.id: sfp.compranet.contratos
+  path.config: "/etc/logstash/pipelines/sfp-compranet-contratos.conf"
   pipeline.workers: 2
 
 # List of pipelines to be loaded by Logstash

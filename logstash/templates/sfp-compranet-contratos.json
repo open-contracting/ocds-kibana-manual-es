@@ -1,0 +1,61 @@
+{
+  "index_patterns": ["poder-sfp-compranet-contratos"],
+  "settings": {
+    "index": {
+      "number_of_shards": 3,
+      "number_of_replicas": 2
+    }
+  },
+  "mappings": {
+    "doc": {
+      "properties": {
+        "GOBIERNO": { "type": "keyword" },
+        "SIGLAS": { "type": "keyword" },
+        "DEPENDENCIA": { "type": "text" },
+        "CLAVEUC": { "type": "keyword" },
+        "NOMBRE_DE_LA_UC": { "type": "text" },
+        "RESPONSABLE": { "type": "text" },
+        "CODIGO_EXPEDIENTE": { "type": "keyword" },
+        "TITULO_EXPEDIENTE": { "type": "text" },
+        "PLANTILLA_EXPEDIENTE": { "type": "text" },
+        "NUMERO_PROCEDIMIENTO": { "type": "text" },
+        "EXP_F_FALLO": { "type": "date", "format": "strict_date_optional_time" },
+        "PROC_F_PUBLICACION": { "type": "date", "format": "strict_date_optional_time" },
+        "FECHA_APERTURA_PROPOSICIONES": { "type": "date", "format": "strict_date_optional_time" },
+        "CARACTER": { "type": "keyword" },
+        "TIPO_CONTRATACION": { "type": "keyword" },
+        "TIPO_PROCEDIMIENTO": { "type": "keyword" },
+        "FORMA_PROCEDIMIENTO": { "type": "keyword" },
+        "CODIGO_CONTRATO": { "type": "keyword" },
+        "TITULO_CONTRATO": { "type": "text" },
+        "FECHA_INICIO": { "type": "date", "format": "strict_date_optional_time" },
+        "FECHA_FIN": { "type": "date", "format": "strict_date_optional_time" },
+        "IMPORTE_CONTRATO": { "type": "float", "null_value": 0, "ignore_malformed": true },
+        "MONEDA": { "type": "keyword" },
+        "ESTATUS_CONTRATO": { "type": "keyword" },
+        "ARCHIVADO": { "type": "boolean" },
+        "CONVENIO_MODIFICATORIO": { "type": "boolean" },
+        "RAMO": { "type": "keyword" },
+        "RAMO_POR_UC": { "type": "keyword" },
+        "CLAVE_PROGRAMA": { "type": "keyword" },
+        "APORTACION_FEDERAL": { "type": "float", "null_value": 0, "ignore_malformed": true },
+        "FECHA_CELEBRACION": { "type": "date", "format": "strict_date_optional_time" },
+        "CONTRATO_MARCO": { "type": "boolean" },
+        "IDENTIFICADOR_CM": { "type": "text" },
+        "COMPRA_CONSOLIDADA": { "type": "boolean" },
+        "PLURIANUAL": { "type": "boolean" },
+        "CLAVE_CARTERA_SHCP": { "type": "keyword" },
+        "ESTRATIFICACION_MUC": { "type": "keyword" },
+        "FOLIO_RUPC": { "type": "keyword" },
+        "PROVEEDOR_CONTRATISTA": { "type": "text" },
+        "ESTRATIFICACION_MPC": { "type": "keyword" },
+        "SIGLAS_PAIS": { "type": "keyword" },
+        "ESTATUS_EMPRESA": { "type": "keyword" },
+        "CUENTA_ADMINISTRADA_POR": { "type": "keyword" },
+        "C_EXTERNO": { "type": "boolean" },
+        "ORGANISMO": { "type": "keyword" },
+        "ANUNCIO": { "type": "text", "index": false }
+      }
+    }
+  }
+}
