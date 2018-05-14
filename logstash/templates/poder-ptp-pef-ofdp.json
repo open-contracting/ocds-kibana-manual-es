@@ -1,0 +1,54 @@
+{
+  "index_patterns": ["poder-ptp-pef-ofdp"],
+  "settings": {
+    "index": {
+      "number_of_shards": 3,
+      "number_of_replicas": 2
+    }
+  },
+  "mappings": {
+    "doc": {
+      "properties": {
+        "CICLO": { "type": "short" },
+        "DESC_AI": { "type": "text" },
+        "DESC_CAPITULO": { "type": "text" },
+        "DESC_CONCEPTO": { "type": "text" },
+        "DESC_FF": { "type": "text" },
+        "DESC_FUNCION": { "type": "text" },
+        "DESC_GPO_FUNCIONAL": { "type": "text" },
+        "DESC_MODALIDAD": { "type": "text" },
+        "DESC_PARTIDA_ESPECIFICA": { "type": "text" },
+        "DESC_PARTIDA_GENERICA": { "type": "text" },
+        "DESC_PP": { "type": "text" },
+        "DESC_RAMO": { "type": "text" },
+        "DESC_SUBFUNCION": { "type": "text" },
+        "DESC_TIPOGASTO": { "type": "text" },
+        "DESC_UR": { "type": "text" },
+        "ENTIDAD_FEDERATIVA": { "type": "keyword" },
+        "GPO_FUNCIONAL": { "type": "keyword" },
+        "ID_AI": { "type": "keyword" },
+        "ID_CAPITULO": { "type": "keyword" },
+        "ID_CLAVE_CARTERA": { "type": "keyword" },
+        "ID_CONCEPTO": { "type": "keyword" },
+        "ID_ENTIDAD_FEDERATIVA": { "type": "keyword" },
+        "ID_FF": { "type": "keyword" },
+        "ID_FUNCION": { "type": "keyword" },
+        "ID_MODALIDAD": { "type": "keyword" },
+        "ID_PARTIDA_ESPECIFICA": { "type": "keyword" },
+        "ID_PARTIDA_GENERICA": { "type": "keyword" },
+        "ID_PP": { "type": "keyword" },
+        "ID_RAMO": { "type": "keyword" },
+        "ID_SUBFUNCION": { "type": "keyword" },
+        "ID_TIPOGASTO": { "type": "keyword" },
+        "ID_UR": { "type": "keyword" },
+        "MONTO_ADEFAS": { "type": "float", "null_value": 0, "ignore_malformed": true },
+        "MONTO_APROBADO": { "type": "float", "null_value": 0, "ignore_malformed": true },
+        "MONTO_DEVENGADO": { "type": "float", "null_value": 0, "ignore_malformed": true },
+        "MONTO_EJERCICIO": { "type": "float", "null_value": 0, "ignore_malformed": true },
+        "MONTO_EJERCIDO": { "type": "float", "null_value": 0, "ignore_malformed": true },
+        "MONTO_MODIFICADO": { "type": "float", "null_value": 0, "ignore_malformed": true },
+        "MONTO_PAGADO": { "type": "float", "null_value": 0, "ignore_malformed": true }
+      }
+    }
+  }
+}

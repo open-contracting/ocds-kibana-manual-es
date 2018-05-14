@@ -8,7 +8,7 @@ services:
     ports:
       - 9200:9200
     environment:
-      - node.name=poder-test
+      - node.name=poder-elasticsearch-test
       - cluster.name=poder
       - discovery.type=single-node
       - bootstrap.memory_lock=true
@@ -28,12 +28,10 @@ services:
 
   logstash:
     image: docker.elastic.co/logstash/logstash-oss:6.2.4
-    # command: --log.level=info
     ports:
       - 9600:9600
       - 8080:8080
     volumes:
-      # - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro # uncomment for custom logstash config
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
-      - ./logstash/pipelines:/etc/logstash/pipelines:ro
-      - ./logstash/logs:/etc/logstash/logs:rw
+      - ./logstash:/etc/logstash:ro
