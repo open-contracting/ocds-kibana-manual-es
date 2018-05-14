@@ -17,10 +17,8 @@ Abrir en el navegador `http://localhost:5601/app/kibana` lo cual nos dara acceso
 
 ## Datasets
 
-[PTP - Presupuesto de Egresos de la Federacion - Formato OFDP](./datasets/ptp-pef-ofdp.md)
-[Datos Gob MX / SFP - Compranet - Contratos Ingresados a Compranet](./datasets/sfp-compranet-contratos.md)
-
-...
+- [PTP - Presupuesto de Egresos de la Federacion - Formato OFDP](./datasets/ptp-pef-ofdp.md)
+- [Datos Gob MX / SFP - Compranet - Contratos Ingresados a Compranet](./datasets/sfp-compranet-contratos.md)
 
 ## Extras
 
