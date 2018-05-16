@@ -30,8 +30,6 @@ services:
     image: docker.elastic.co/logstash/logstash-oss:6.2.4
     ports:
       - 9600:9600
-      - 8080:8080 # usado por http input
-      - 8081:8081 # usado por http input
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
