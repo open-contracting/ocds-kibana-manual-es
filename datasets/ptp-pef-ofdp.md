@@ -13,11 +13,10 @@ Se incluyen muestras al 1% de los originales y diccionario de datos en `./source
 
 Pipeline definido en `./logstash/pipelines/ptp-pef-ofdp.conf`
 
-Dos modulos de entrada:
+### Módulos de entrada:
 - File: A la escucha de archivos .csv en la carpeta `./logstash/input/ptp-pef-ofdp`
-- HTTP: Recibe peticiones POST en `http://localhost:8080` con el contenido CSV como payload
 
-Dos modulos de salida:
+### Módulos de salida:
 - Consola
 - ElasticSearch, indice: `poder-ptp-pef-ofdp`
 

@@ -35,14 +35,3 @@ Ejemplo:
 ```
 shuf -n 1000 -o pef.sample.csv pef.full.csv
 ```
-
-#### Enviar POST requests con payloads
-
-Se recomienda usar [HTTPie](https://httpie.org/) para mejor ergonomia y luego:
-```
-http POST http://localhost:8080/ @/path/file.csv
-```
-O
-```
-http POST http://localhost:8080/ < /path/file.csv
-```
