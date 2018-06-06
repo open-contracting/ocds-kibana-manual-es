@@ -38,11 +38,11 @@ node.name: poder-logstash-test
 #
 # This defaults to the number of the host's CPU cores.
 #
-# pipeline.workers: 2
+pipeline.workers: 2
 #
 # How many events to retrieve from inputs before sending to filters+workers
 #
-# pipeline.batch.size: 125
+pipeline.batch.size: 256
 #
 # How long to wait in milliseconds while polling for the next event
 # before dispatching an undersized batch to filters+outputs
@@ -115,14 +115,12 @@ config.reload.interval: 3s
 # and it may have an label prefix e.g. staging:dXMtZ...
 # This will overwrite 'var.elasticsearch.hosts' and 'var.kibana.host'
 # cloud.id: <identifier>
-cloud.id: e2c5c0:dXMtZWFzdC0xLmF3cy5mb3VuZC5pbyRlMmM1YzBmYTU3N2Y0M2IyODA2OGEwOWFhNTlhYzI0YSQwNTcxOWUzMDllM2M0NDM1YTA4NjFiMTA3NzIyYmM2Yw==
 #
 # Format of cloud.auth is: <user>:<pass>
 # This is optional
 # If supplied this will overwrite 'var.elasticsearch.username' and 'var.elasticsearch.password'
 # If supplied this will overwrite 'var.kibana.username' and 'var.kibana.password'
 # cloud.auth: elastic:<password>
-cloud.auth: elastic:5EzJeXOwiOiAuWv97eleEt8J
 #
 # ------------ Queuing Settings --------------
 #

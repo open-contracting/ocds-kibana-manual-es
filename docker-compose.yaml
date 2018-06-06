@@ -12,7 +12,7 @@ services:
       - cluster.name=poder
       - discovery.type=single-node
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "ES_JAVA_OPTS=-Xms512m -Xmx1024m"
     ulimits:
       memlock:
         soft: -1
@@ -30,6 +30,8 @@ services:
     image: docker.elastic.co/logstash/logstash-oss:6.2.4
     ports:
       - 9600:9600
+    environment:
+      - "LS_JAVA_OPTS=-Xms128m -Xmx512m"
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
