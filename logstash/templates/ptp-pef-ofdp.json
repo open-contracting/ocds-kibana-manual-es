@@ -9,7 +9,7 @@
   "mappings": {
     "doc": {
       "properties": {
-        "CICLO": { "type": "short" },
+        "CICLO": { "type": "keyword" },
         "DESC_AI": { "type": "text" },
         "DESC_CAPITULO": { "type": "text" },
         "DESC_CONCEPTO": { "type": "text" },
