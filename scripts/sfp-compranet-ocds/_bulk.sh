@@ -2,7 +2,6 @@
 
 # Argumentos posicionales
 ES_HOST=${1:-"http://localhost:9200"}
-THREADS=${2:-4}
 
 if [ ! -d ./jsonpyes ] || [ ! -f ./jsonpyes/jsonpyes.py ]; then
     echo "Dependencia no encontrada: jsonpyes"
@@ -14,5 +13,5 @@ shopt -s nullglob
 for filename in *.lines
 do
     echo "Procesando y enviando: $filename"
-    ./jsonpyes/jsonpyes.py --threads $THREADS --bulk $ES_HOST --import --index poder-sfp-compranet-ocds --type records --data "$filename" > "${filename/%.lines/.log}"
+    ./jsonpyes/jsonpyes.py --bulk $ES_HOST --import --index dev-poder-sfp-compranet-ocds --type _doc --data "$filename" > "${filename/%.lines/.log}"
 done
