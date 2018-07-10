@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Argumentos posicionales
-ES_HOST=${1:-"http://localhost:9200"}
+ES_HOST=${1:-"http://elastic:elastic@localhost:9200"}
 
 if [ ! -d ./jsonpyes ] || [ ! -f ./jsonpyes/jsonpyes.py ]; then
     echo "Dependencia no encontrada: jsonpyes"

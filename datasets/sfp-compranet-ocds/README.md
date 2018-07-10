@@ -12,7 +12,7 @@ La documentacion del esquema OCDS se puede encontrar en: [Open Contracting](http
 
 ## Script
 
-El script para cargar los datos se puede encontrar en `./scripts/sfp-compranet-ocds/run.sh`
+El script para cargar los datos se puede encontrar en `./run.sh`
 
 ### Dependencias
 
