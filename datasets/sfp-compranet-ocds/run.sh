@@ -13,10 +13,10 @@ if [ ! -d ./jsonpyes ]; then
     mv jsonpyes-master jsonpyes && rm file.zip
 fi
 
-ES_HOST=${1:-"http://localhost:9200"}
+ES_HOST=${1:-"http://elastic:elastic@localhost:9200"}
 
 echo "Comenzando:"
 echo "ElasticSearch: $ES_HOST"
-./_prepare.sh
-./_bulk.sh "$ES_HOST"
+./_prepare.sh input/
+./_bulk.sh input/ "$ES_HOST"
 echo "Fin"
