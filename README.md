@@ -11,14 +11,14 @@ Ejecutar `docker-compose up` para levantar los tres servicios del ELK stack:
 - LogStash
 - Kibana
 
-*Nota:Se usan las imagenes oficiales de elastic.co SIN paquetes extra*
+*Nota:Se usan las imagenes oficiales de elastic.co*
 
 Abrir en el navegador `http://localhost:5601/app/kibana` lo cual nos dara acceso a los Dev Tools de Kibana.
 
 ## Datasets
 
-- [PTP - Presupuesto de Egresos de la Federacion - Formato OFDP](./datasets/ptp-pef-ofdp.md)
-- [Datos Gob MX / SFP - Compranet - Contratos Ingresados a Compranet](./datasets/sfp-compranet-contratos.md)
+- [PTP - Presupuesto de Egresos de la Federacion - Formato OFDP](./datasets/ptp-pef-ofdp/)
+- [Datos Gob MX / SFP - Compranet - Contratos Ingresados a Compranet](./datasets/sfp-compranet-contratos/)
 
 ## Extras
 

@@ -1,3 +1,2 @@
 *.full.csv
 .~lock.*
-logstash/input/*
