@@ -14,6 +14,7 @@ for i in `seq $TIMEOUT` ; do
   curl -sf "$HOST:$PORT" > /dev/null
   if [ $? -eq 0 ] ; then
     echo "Activating XPACK trial"
+    # https://www.elastic.co/guide/en/elasticsearch/reference/6.3/start-trial.html
     jpost -d '' "$BASEURL/_xpack/license/start_trial?acknowledge=true"
     echo ""
 

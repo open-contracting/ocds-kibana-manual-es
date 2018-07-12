@@ -2,6 +2,11 @@
 
 Datos descargables en: [PTP - Estándar Internacional de Datos Presupuestarios Abiertos](http://transparenciapresupuestaria.gob.mx/es/PTP/datos_presupuestarios_abiertos)
 
+Ejemplos:
+```
+http://datastore.openspending.org/667df60aa07c34260eae9b55b2778712/presupuesto_mexico/final/data/presupuesto_mexico__2010.csv
+```
+
 Se incluyen muestras al 1% de los originales y diccionario de datos en `./data/diccionario.xlsx`
 
 ## ElasticSearch

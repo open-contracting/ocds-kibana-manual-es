@@ -30,6 +30,7 @@ services:
       - 5601:5601
     volumes:
       - ./config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+      - kbndata:/usr/share/kibana/data
 
   configure-security:
     image: yauritux/busybox-curl
@@ -44,4 +45,6 @@ services:
 
 volumes:
   esdata:
+    driver: local
+  kbndata:
     driver: local
