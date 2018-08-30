@@ -25,8 +25,16 @@
             }
           }
         },
+        "r": {
+          "type": "alias",
+          "path": "records"
+        },
         "records": {
           "properties": {
+            "cr": {
+              "type": "alias",
+              "path": "compiledRelease"
+            },
             "compiledRelease": {
               "properties": {
                 "buyer": {
