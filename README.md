@@ -18,13 +18,6 @@ Ejecutar `docker-compose -f elastic-kibana.yml up` para levantar los servicios.
 
 Abrir en el navegador `http://localhost:5601/app/kibana` lo cual nos dara acceso a los Dev Tools de Kibana.
 
-
-### Iniciar Logstash para procesamiento de datos
-
-Ejecutar `docker-compose -f logstash.yml up` para levantar el servicio de Logstash.
-
-Seguir las instrucciones de cada dataset
-
 ## Datasets
 
 - [PTP - Presupuesto de Egresos de la Federacion - Formato OFDP](./datasets/ptp-pef-ofdp/)
