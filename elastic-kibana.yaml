@@ -9,7 +9,7 @@ services:
     ports:
       - 9200:9200
     environment:
-      - node.name=poder-elasticsearch-test
+      - node.name=elasticsearch
       - discovery.type=single-node
       # - "ELASTIC_PASSWORD=elastic"
       - "ES_JAVA_OPTS=-Xms512m -Xmx1024m"
