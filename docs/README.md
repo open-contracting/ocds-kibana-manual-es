@@ -24,5 +24,5 @@
 
 ### Capítulo 3. Análisis de los datos
 
-1. [Resultados](C3/Seccion1.md)
+1. [Introducción a Kibana](C3/Seccion1.md)
 1. [Notas](C3/Seccion2.md)
