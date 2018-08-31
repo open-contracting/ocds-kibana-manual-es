@@ -14,9 +14,10 @@ if [ ! -d ./jsonpyes ]; then
 fi
 
 ES_HOST=${1:-"http://elastic:elastic@localhost:9200"}
+INPUT_DIR=${2:-"./input/"}
 
 echo "Comenzando:"
 echo "ElasticSearch: $ES_HOST"
-./_prepare.sh input/
-./_bulk.sh input/ "$ES_HOST"
+./_prepare.sh "$INPUT_DIR"
+./_bulk.sh "$INPUT_DIR" "$ES_HOST"
 echo "Fin"
