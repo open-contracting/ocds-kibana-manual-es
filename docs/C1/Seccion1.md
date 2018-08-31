@@ -46,12 +46,12 @@ Para fines de identificación, a todos los procesos de contratación se les asig
 Los procesos de contratación se representan como **documentos** en el OCDS. Cada documento se compone de varias **secciones**, que se mencionan a continuación:
 
 * metadatos de lanzamiento: información contextual sobre cada lanzamiento de datos;
-     * participantes: información sobre las organizaciones y otros actores involucrados en el proceso de contratación;
-     * planificación: información sobre los objetivos, presupuestos y proyectos relacionados con un proceso de contratación;
-     * convocatoria: información sobre cómo se realizará o se llevará a cabo una licitación;
-     * adjudicación: información sobre las adjudicaciones realizadas como parte de un proceso de contratación;
-     * contrato: información sobre contratos firmados como parte de un proceso de contratación;
-     * implementación: información sobre el progreso de cada contrato hacia la finalización.
+* participantes: información sobre las organizaciones y otros actores involucrados en el proceso de contratación;
+* planificación: información sobre los objetivos, presupuestos y proyectos relacionados con un proceso de contratación;
+* convocatoria: información sobre cómo se realizará o se llevará a cabo una licitación;
+* adjudicación: información sobre las adjudicaciones realizadas como parte de un proceso de contratación;
+* contrato: información sobre contratos firmados como parte de un proceso de contratación;
+* implementación: información sobre el progreso de cada contrato hacia la finalización.
 
 Un ejemplo de fragmento de JSON compatible con esta estructura se ve de la siguiente manera:
 
