@@ -1,6 +1,6 @@
 ## Introducción al Estandar de Datos de Contrataciones Abiertas
 
-> ***Esta introducción es una traducción adaptada del capítulo [An introduction to the Open Contracting Data Standard](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd#an-introduction-to-the-open-contracting-data-standard) del Manual [Analyzing Open Contracting data using the R programming language](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd) de [Rodrigo Parra](https://github.com/rparrapy)***
+> *Esta introducción es una traducción del capítulo [An introduction to the Open Contracting Data Standard](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd#an-introduction-to-the-open-contracting-data-standard) del Manual [Analyzing Open Contracting data using the R programming language](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd) de [Rodrigo Parra](https://github.com/rparrapy)*
 
 Se considera un dato abierto aquel que está en un formato estructurado, reutilizable y legible por máquina; más allá de los requerimientos técnicos los datos abiertos abren nuevas oportunidades para la participación y la rendición de cuentas ciudadana. El [Estándar de Datos de Contrataciones Abiertas (OCDS por sus siglas en inglés)](https://www.open-contracting.org/data-standard/?lang=es) fue creado para aplicar estos principios a los datos relacionados con el ciclo de vida completo de contratación, que incluye planificación, convocatoria, adjudicación, contratación e implementación.
 
