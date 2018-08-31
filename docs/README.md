@@ -10,14 +10,14 @@
 1. [Índice propuesto por ILDA](https://docs.google.com/document/d/1oqZfk1BUwyBg7P4jKfzbT53LpRLmIIQUr90IkCMNP4I/edit)
 1. [Manual de analisis OCDS en R](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd)
 
-### Capítulo 1. Apuntes sobre el procesamiento del formato OCDS
+### Capítulo 1. Apuntes sobre el procesamiento del formato OCDS - @MS in Charge
 
 1. [Introducción al Estándar OCDS](C1/Seccion1.md)
 1. [Análisis del caso de uso Mexicano del Estándar](C1/Seccion2.md)
 1. [Análisis técnico del caso de uso Mexicano del Estándar](C1/Seccion3.md)
 1. [Preparación de los datos](C1/Seccion4.md)
 
-### Capítulo 2. Apuntes técnicos sobre las herramientas Elastic
+### Capítulo 2. Apuntes técnicos sobre las herramientas Elastic - @MS in Charge
 
 1. [Introduccion a las herramientas Elastic](C2/Seccion1.md)
 1. [Arquitectura de las herramientas Elastic](C2/Seccion2.md)
@@ -26,7 +26,7 @@
 1. [Procesamiento de datos con Logstash](C2/Seccion5.md)
 1. [Visualización de datos en ElasticSearch y Kibana](C2/Seccion6.md)
 
-### Capítulo 3. Análisis de los datos
+### Capítulo 3. Análisis de los datos - @EMB asñdlkfj
 
 1. [Introducción a Kibana](C3/Seccion1.md)
 1. [Notas](C3/Seccion2.md)
