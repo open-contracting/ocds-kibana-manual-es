@@ -15,9 +15,10 @@ fi
 
 ES_HOST=${1:-"http://elastic:elastic@localhost:9200"}
 INPUT_DIR=${2:-"./input/"}
+ES_INDEX=${3:-"poder-sfp-compranet-ocds"}
 
 echo "Comenzando:"
 echo "ElasticSearch: $ES_HOST"
 ./_prepare.sh "$INPUT_DIR"
-./_bulk.sh "$INPUT_DIR" "$ES_HOST"
+./_bulk.sh "$INPUT_DIR" "$ES_HOST" "$ES_INDEX"
 echo "Fin"
