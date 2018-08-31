@@ -4,6 +4,11 @@
   },
   "mappings": {
     "_doc": {
+      "_source": {
+        "excludes": [
+          "records.releases"
+        ]
+      },
       "properties": {
         "id": {
           "properties": {
@@ -33,7 +38,7 @@
           "properties": {
             "cr": {
               "type": "alias",
-              "path": "compiledRelease"
+              "path": "records.compiledRelease"
             },
             "compiledRelease": {
               "properties": {
