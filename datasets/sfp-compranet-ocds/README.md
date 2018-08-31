@@ -10,19 +10,26 @@ La documentacion del esquema OCDS se puede encontrar en: [Open Contracting](http
 
 - **Indice**: `poder-sfp-compranet-ocds`
 
-## Script
-
-El script para cargar los datos se puede encontrar en `./run.sh`
-
 ### Dependencias
 
-- Python 2.7
-- PIP
-    - python-elasticsearch
-- [python-jsonpyes](https://github.com/mxcoder/jsonpyes)
+- Docker
 
-### Instrucciones para usar el Script
+### Instrucciones para usar este script
 
 1. Descargar los paquetes de datos, deben consistir de uno o varios archivos .json
-1. Asegurarse de tener todas las dependencias instaladas y/o descargadas
-1. Una vez descargados los paquetes de datos iniciar el script `run.sh`
+1. Extraer los archivos .json en la carpeta `input`
+
+Ejecutar en esta carpeta los siguientes comandos:
+
+1. `docker build . -t sfp-compranet-ocds:latest`
+    Esto generará nuestro contenedor para correr el proceso con todas las dependencias necesarias.
+    **Este comando solo tendremos que ejecutarlo una vez**
+
+1. `docker run --rm -it -v $PWD/input:/input sfp-compranet-ocds`
+    - Esto ejecutará el proceso utilizando los datos encontrados en la carpeta `input` de esta carpeta
+    - Por default los datos son enviados a un cluster ElasticSearch en `http://elastic:elastic@localhost:9200` si deseamos enviarlo a otro cluster podemos usar:
+    ```
+    docker run --rm -it -v $PWD/input:/input sfp-compranet-ocds http://user:pass@hostname:port
+    ```
+
+1. Al finalizar este procedimiento en la carpeta `input` podremos encontrar archivos .log donde podremos validar el resultado de la carga, de la misma forma deberiamos encontrar todos los datos cargados en el cluster ES especificado.
