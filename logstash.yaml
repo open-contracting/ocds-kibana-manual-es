@@ -5,7 +5,7 @@ services:
 
   logstash:
     # https://github.com/elastic/logstash-docker
-    image: docker.elastic.co/logstash/logstash:6.3.1
+    image: docker.elastic.co/logstash/logstash:6.4.0
     ports:
       - 9600:9600
     depends_on:
