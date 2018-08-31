@@ -6,6 +6,10 @@
 > El gobierno Mexicano comenzó a contemplar el Estándar de Datos de Contrataciones Abiertas (OCDS) en 2014 y en Octubre de 2015 se comprometió a implementar el Estándar para todo lo relacionado con la construcción del Nuevo Aeropuerto de la Ciudad de México. Dicho compromiso incluyó también continuar explorando la liberación de los datos de otras operaciones de gobierno en dicho Estándar.
 > En Noviembre de 2017 el gobierno Mexicano publicó la primera versión de los datos de contrataciones en OCDS: [https://www.gob.mx/contratacionesabiertas/](https://www.gob.mx/contratacionesabiertas/home#!/)
 
+## Documentos de apoyo para la escritura del Manual
+1. [Índice propuesto por ILDA](https://docs.google.com/document/d/1oqZfk1BUwyBg7P4jKfzbT53LpRLmIIQUr90IkCMNP4I/edit)
+1. [Manual de analisis OCDS en R](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd)
+
 ### Capítulo 1. Apuntes sobre el procesamiento del formato OCDS
 
 1. [Introducción al Estándar OCDS](C1/Seccion1.md)
