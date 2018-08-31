@@ -25,15 +25,11 @@
             }
           }
         },
-        "r": {
-          "type": "alias",
-          "path": "records"
-        },
         "records": {
+          "type": "nested",
           "properties": {
-            "cr": {
-              "type": "alias",
-              "path": "compiledRelease"
+            "releases": {
+              "enabled": false
             },
             "compiledRelease": {
               "properties": {
