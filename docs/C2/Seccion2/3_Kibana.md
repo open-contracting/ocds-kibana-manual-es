@@ -1,8 +1,8 @@
 # Kibana
 
-ElasticSearch y Logstash pueden ser utilizados mediante código especializado, y aunque podemos realizar consultas a los índices de esta forma, una parte muy importante es disponer de estas bases de datos a todo tipo de usuarios. Esa es la importancia de Kibana.
+Si bien ElasticSearch y Logstash pueden ser consultados o invocados utilizando software programado a medida y comandos en el servidor para realizar consultas a los índices, es importante disponibilizar estas bases de datos a todo tipo de usuarios. Esa es la importancia de Kibana.
 
-Kibana es la interfaz de usuario de la plataforma ELK. Y permite realizar análisis, consultas y visualizaciones de distintos tipos de los datos en nuestros índices.
+Kibana es la interfaz gráfica de usuario de la plataforma ELK. Y permite realizar análisis, consultas y visualizaciones de distintos tipos de los datos en nuestros índices.
 
 ## Funcionalidades
 
@@ -12,13 +12,13 @@ Una de las funcionalidades más basicas de Kibana es poder explorar los datos, d
 
 !["Explorar los datos con Kibana"](../kibana_004.png "Explorar los datos con Kibana")
 
-Más adelante conoceremos más sobre el lenguaje ([Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/6.3/query-dsl.html)) que Kibana y ElasticSearch utilizan para la construcción de consultas más avanzadas.
+Más adelante conoceremos más sobre el lenguaje ([Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/query-dsl.html)) que Kibana y ElasticSearch utilizan para la construcción de consultas más avanzadas.
 
 ### Visualizar los datos (Visualize)
 
 En esta función podremos crear gráficas, mapas y otro tipo de visualizaciones con los datos en nuestros índices.
 
-> Obviamente nuestros documentos deberán contener información como coordenadas geográficas si queremos visualizarlo en un mapa, o datos numéricos si queremos realizar una gráfica con algunos totales.
+> Para realizar mapas, nuestros documentos deberían contener información como coordenadas geográficas. Para realizar gráficas con sumas o totales, nuestros documentos deberán contenre datos numéricos.
 
 !["Visualizando los datos con Kibana"](../kibana_005.png "Visualizando los datos con Kibana")
 
@@ -30,11 +30,11 @@ Un Dashboard es una colección de visualizaciones que se actualizan en tiempo re
 
 ### Consola de desarrollo y otras funciones
 
-Entre otras herramientas, Kibana también permite realizar consultas manuales sobre nuestros clusters e índices usando una consola de desarrollador.
+Entre otras herramientas, Kibana también permite realizar consultas manuales sobre nuestros clusters e índices usando una consola de desarrollador, esta es una funcionalidad avanzada que puede servir para corrección de errores.
 
-Tambien, dependiendo de las configuraciones, puede exhibir un panel de administración de usuario, índices y documentos.
+Tambien, dependiendo de las configuraciones, puede exhibir un panel de administración de usuarios, índices y documentos. También permite monitorear el correcto funcionamiento de nuestra plataforma ELK por completo. 
 
-Y en funcionalidad más avanzada también permite monitorear el correcto funcionamiento de nuestra plataforma ELK por completo.
+Algunas funcionalidades avanzadas requieren la compra de licencia a la empresa Elastic.co, en este manual trabajaremos sólo con las funcionalidades gratuitas disponibles en la versión libre de la plataforma ELK. 
 
 ## Más ejemplos
 
