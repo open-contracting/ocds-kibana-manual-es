@@ -1,4 +1,5 @@
 # Arquitectura de las herramientas Elastic
+En este capítulo vamos a profundizar en el uso de las herramientas de Elastic para el análisis de datos de Contrataciones Abiertas en México. Para eso es necesario comprender mejor cómo se relacionan las diferentes herramientas antes de explicar cómo importaremos los datos.
 
 La plataforma ELK tiene una arquitectura lineal entre sus componentes.
 
