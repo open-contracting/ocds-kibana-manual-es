@@ -1,6 +1,6 @@
 # Logstash
 
-Es un motor de recolección, procesamiento y redistribución de datos, y esto es una herramienta muy valiosa cuando trabajamos con distintas fuentes de datos o con datos no centralizados, podemos describir a Logstash como una máquina que toma datos de los lugares indicados (recolección), los transforma (procesamiento) y luego puede enviarlos a otros sistemas en un nuevo formato (redistribución).
+Motor de recolección, procesamiento y redistribución de datos. Logstash es una herramienta muy valiosa cuando trabajamos con distintas fuentes de datos o con datos no centralizados. Podemos describir a Logstash como una máquina que toma datos de los lugares indicados (recolección), los transforma (procesamiento) y luego puede enviarlos a otros sistemas en un nuevo formato (redistribución).
 
 ![Logstash](../logstash_001.png "Logstash")
 
@@ -35,9 +35,4 @@ Las opciones oficiales de plugins de salida están listadas en esta página: [Ou
 **Nota sobre Logstash y ElasticSearch**
 Utilizar estas dos herramientas conjuntamente brinda muchos beneficios, pero cabe señalar que es posible enviar datos a ElasticSearch directamente **sin** usar Logstash.
 Esto se logra utilizando una funcionalidad de ElasticSearch conocida como "Ingesta" o "Ingest Pipeline", que convierte un nodo del cluster en un nodo especializado en recibir y procesar información.
-Sin embargo no ahondaremos en esta modalidad por ahora ya que aunque funcional tiene opciones limitadas, además de agregar carga de procesamiento a nuestro cluster de ElasticSearch.
-En caso de ser necesario puede consultar más información en las siguientes páginas:
-- [Ingest Node](https://www.elastic.co/guide/en/elasticsearch/reference/current/ingest.html)
-- [Ingest Pipeline](https://www.elastic.co/guide/en/elasticsearch/reference/current/pipeline.html)
-- [Ingest Processors](https://www.elastic.co/guide/en/elasticsearch/reference/current/ingest-processors.html)
-
+Sin embargo no ahondaremos en esta modalidad, ya que no se utiliza en este manual. Aunque es funcional, tiene opciones limitadas, además de agregar carga de procesamiento a nuestro cluster de ElasticSearch.
