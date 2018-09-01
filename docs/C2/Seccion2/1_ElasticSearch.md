@@ -2,15 +2,15 @@
 
 Es un motor de base de datos distribuida tolerante a fallos y de alta disponibilidad.
 
-Esto significa que la herramienta esta diseñada para funcionar como una "red de nodos", es decir, una misma base de datos puede estar compuesta por multíples computadoras conectadas en red, y los datos contenidos pueden estar compartidos en todos los nodos, ya sea de forma integra o "en pedazos", también conocidos como "data shards" o "shards".
+Esto significa que la herramienta sirve para almacenar, indexar, filtrar y mostrar datos. Esta diseñada para continuar su funcionamiento ante la falla de equipos, ya que se puede organizar como una "red de nodos". Es decir, una misma base de datos puede estar replicada en multíples computadoras conectadas en red, y los datos contenidos pueden estar compartidos en todos los nodos, ya sea de forma integra o "en pedazos" a los que se denomina "data shards" o "shards".
 
 ![Base de datos distribuida](../distributed_database.jpg "Base de datos distribuida")
 
-Esto permite que una base de datos en ElasticSearch siga funcionando aún cuando uno o varias de las computadoras que componen la red (nodos) deje de funcionar.
+Esta arquitectura distribuída permite que una base de datos en ElasticSearch siga funcionando aún cuando uno o varias de las computadoras que componen la red (nodos) deje de funcionar, y que los nodos puedan estar en diferentes ubicaciones físicas para lograr una velocidad uniforme del mismo sistema en diferentes ubicaciones.
 
 De la misma forma en que ElasticSearch distribuye la información, también distribuye el procesamiento de consultas de datos. Cuando se realiza una búsqueda en la base de datos y esa información se encuentra distribuida, será tarea de cada nodo procesar dicha consulta y devolver la información que tenga disponible. Al final, el sistema en su conjunto creará un resultado final conjuntando los segmentos devueltos por cada nodo.
 
-Esto permite que ElasticSearch pueda realizar consultas complejas, en grandes cantidades de datos conservando un excelente rendimiento para el usuario final.
+Esto permite que un sistema basado en ElasticSearch y configurado apropiadmente pueda realizar consultas complejas, en grandes cantidades de datos conservando un excelente rendimiento para el usuario final, más allá de su ubicación.
 
 ## Conceptos de ElasticSearch
 
@@ -18,7 +18,7 @@ Esto permite que ElasticSearch pueda realizar consultas complejas, en grandes ca
 
 Al conjunto de nodos en ElasticSearch se le conoce como "Cluster", un Cluster puede tener uno o más nodos.
 Un cluster tendrá un nombre único, y los nodos reconoceran el cluster al que pertenecen por este nombre.
-Es completamente válido tener un cluster con un solo nodo.
+Es completamente válido tener un cluster con un solo nodo, y esto resulta mucho más sencillo de configurar, por lo que será el ejemplo elegido en este manual.
 
 ![ElasticSearch Cluster](../elasticsearch_001.png "ElasticSearch Cluster")
 
