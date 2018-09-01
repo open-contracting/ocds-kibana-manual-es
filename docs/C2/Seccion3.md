@@ -4,9 +4,9 @@ Como establecimos en la introducción de este manual, el análisis de los datos 
 
 Para lograr este análisis debemos contar con las herramientas tecnológicas para tomar el Estándar OCDS y ponerlo a disposición del público de una forma amigable que permita refinar la información así como crear visualizaciones de estos datos.
 
-Resulta evidente que la plataforma Elastic (ELK) proveé de las herramientas necesarias para lograr este objetivo.
+La plataforma ELK (ElasticSearch, Logstash, Kibana) proveé de las herramientas necesarias para lograr este objetivo.
 
-Es por esto que el presente proyecto cuenta con las siguientes carácteristicas:
+El presente manual permitirá realizar un sistema con las siguientes carácteristicas:
 
 - Interfaz gráfica de uso amigable pero robusto para consultar los datos.
 - Un motor de busqueda e indexado que permita la actualización y corrección de los datos en todo momento.
