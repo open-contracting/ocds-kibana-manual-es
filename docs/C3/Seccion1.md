@@ -7,7 +7,7 @@ Kibana es una herramienta de analisis y visualizador de datos Elasticsearch inte
 Para acceder a la herramienta tendemos que ir a una url, si está usando la intancia de PODER es [kibana.quienesquien.wiki](https://kibana.quienesquien.wiki/), donde habitualmente tendremos que poner nuestro usuario y contraseña. Las funciones multiusuarios dependen de cada instancia por lo que no se explicarán aquí. En cualquier caso advertir al lector que tanto se puede encontrar accediendo a instancia limpia como a instancia donde ya hay búsquedas, visualizaciones y dashboards guardados. 
 
 Al acceder a Kibana podemos realizar varias acciones en este manual abordaremos solo cuatro apartados:
-* [Discover](C3/Seccion2.md)
-* [Management](C3/Seccion3.md)
-* [Visualize](C3/Seccion4.md)
-* [Dashboards](C3/Seccion5.md)
+* [Discover](Seccion2.md)
+* [Management](Seccion3.md)
+* [Visualize](Seccion4.md)
+* [Dashboards](Seccion5.md)
