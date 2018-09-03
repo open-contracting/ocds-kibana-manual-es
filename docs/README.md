@@ -27,4 +27,7 @@
 ### Capítulo 3. Análisis de los datos - @EMB asñdlkfj
 
 1. [Introducción a Kibana](C3/Seccion1.md)
-1. [Notas](C3/Seccion2.md)
+1. [Descubrir](C3/Seccion2.md)
+1. [Panel de administración](C3/Seccion3.md)
+1. [Visualizar](C3/Seccion4.md)
+1. [Dashboards](C3/Seccion5.md)
