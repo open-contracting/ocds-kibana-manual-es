@@ -17,3 +17,5 @@ Las empresas que más han contratado en el último año
 ## Gráfico de tiempo
 
 Evolución de los contratos por dia 
+
+## Otros graficos dispontibles
