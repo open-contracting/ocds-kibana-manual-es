@@ -1,28 +1,28 @@
 # Plataforma ELK para el Análisis de Contrataciones en formato OCDS
 
-Como establecimos en la introducción de este manual, el análisis de los datos de contrataciones públicas de Mexico es una tarea indispensable para la correcta fiscalización democrática de las operaciones gubernamentales.
+Como establecimos en la introducción de este manual, el análisis de los datos de contrataciones públicas de México es una tarea indispensable para la correcta fiscalización democrática de las operaciones gubernamentales.
 
 Para lograr este análisis debemos contar con las herramientas tecnológicas para tomar el Estándar OCDS y ponerlo a disposición del público de una forma amigable que permita refinar la información así como crear visualizaciones de estos datos.
 
 La plataforma ELK (ElasticSearch, Logstash, Kibana) proveé de las herramientas necesarias para lograr este objetivo.
 
-El presente manual permitirá realizar un sistema con las siguientes carácteristicas:
+El presente manual permitirá realizar un sistema con las siguientes características:
 
 - Interfaz gráfica de uso amigable pero robusto para consultar los datos.
-- Un motor de busqueda e indexado que permita la actualización y corrección de los datos en todo momento.
-- Un motor de ingesta de datos, que permita que segun se realicen las publicaciones de los datos por parte del gobierno Mexicano estos puedan ser procesados e ingresados a la base de datos con un mínimo esfuerzo.
+- Un motor de búsqueda e indexado que permita la actualización y corrección de los datos en todo momento.
+- Un motor de ingesta de datos, que permita que según se realicen las publicaciones de los datos por parte del gobierno Mexicano estos puedan ser procesados e ingresados a la base de datos con un mínimo esfuerzo.
 
 ## Arquitectura
 
 Cada una de estas funcionalidades estarán sustentadas en las herramientas Kibana, ElasticSearch y Logstash, y la arquitectura para su utilización quedará definida de la siguiente manera:
 
 - Cluster ElasticSearch para indexar y contener los datos.
-    - Inicialmente el cluster tendrá un solo nodo, según la demanda lo indique se podría incrementar el número de nodos.
+    - Inicialmente el clúster tendrá un solo nodo, según la demanda lo indique se podría incrementar el número de nodos.
     - Un índice especializado con los datos completos liberados.
 - Interfaz de Kibana para visualizar los datos en el índice.
     - Tanto Kibana como ElasticSearch estarán inicialmente contenidos en un mismo contenedor Docker para su sencilla distribución.
 - Un pipeline para Logstash preparado para tomar los datos OCDS, procesarlos e indexarlos en ElasticSearch
-    - Este pipeline estará contenido en un contenedor Docker para su facil ejecución.
+    - Este pipeline estará contenido en un contenedor Docker para su fácil ejecución.
 
 !["Plataforma ELK"](arquitectura.png "Plataforma ELK")
 
@@ -34,9 +34,9 @@ Y **Contenedor Procesador** al que solo ejecuta Logstash para procesar los datos
 
 Un contenedor Docker es una herramienta que utilizaremos para empaquetar nuestra solución, su arquitectura y las herramientas.
 
-Este manual no contempla enseñar los detalles de Docker y su tecnología pero podriamos definirlo de forma sencilla como "cajas" o "contenedores" (como de Trailers o de barcos de carga) de Software donde va incluido absolutamente todo lo que necesitamos para ejecutar nuestro proyecto.
+Este manual no contempla enseñar los detalles de Docker y su tecnología pero podríamos definirlo de forma sencilla como "cajas" o "contenedores" (como de Trailers o de barcos de carga) de Software donde va incluido absolutamente todo lo que necesitamos para ejecutar nuestro proyecto.
 
-En teoría esto debería facilitar mucho la distribución de cualquier herramienta de Software pues el unico prerequisito a instalar es Docker en sí mismo. Este paso debería ser muy parecido a instalar cualquier otro software en la plataforma de cómputo que se elija.
+En teoría esto debería facilitar mucho la distribución de cualquier herramienta de Software pues el único prerequisito a instalar es Docker en sí mismo. Este paso debería ser muy parecido a instalar cualquier otro software en la plataforma de cómputo que se elija.
 
 Una vez instalado Docker, nuestro software estará listo para iniciarse "automáticamente", sin necesitar de ningun tipo de software auxiliar ni dependencias.
 

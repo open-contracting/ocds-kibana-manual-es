@@ -6,7 +6,7 @@ La plataforma ELK tiene una arquitectura lineal entre sus componentes.
 ![ELK Stack](elk_stack.jpg "ELK Stack")
 
 1. Los datos son recogidos y procesados por LogStash
-1. LogStash envia los datos ya procesados a ElasticSearch para ser indexados
+1. LogStash envía los datos ya procesados a ElasticSearch para ser indexados
 1. ElasticSearch proporciona los datos a la interfaz de Kibana para poder ser consultados
 
 Pero veamos un poco más a detalle cada herramienta:

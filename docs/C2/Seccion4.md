@@ -1,7 +1,6 @@
 # Puesta en marcha de la Plataforma ELK para el Análisis de Contrataciones en formato OCDS
 
-Al final de esta sección tendremos todo lo necesario hacer consultas y visualizaciones sobre los datos de Contrataciones
-en formato OCDS.
+Al final de esta sección tendremos todo lo necesario hacer consultas y visualizaciones sobre los datos de Contrataciones en formato OCDS.
 
 > Para este procedimiento se recomienda tener familiaridad básica con la terminal de comandos
     * [Mac](https://www.soydemac.com/abrir-terminal-mac/)
@@ -13,6 +12,9 @@ en formato OCDS.
 1. Iniciar un servidor ElasticSearch con Kibana
 1. Cargar los datos publicados de Contrataciones en un formato sencillo de consultar.
 1. Realizar una consulta sobre los datos
+
+El presente proyecto esta desarrollado para poder iniciar los 3 servicios, según sea necesario de forma fácil y rápida.
+
 
 ## Pre-requisitos
 

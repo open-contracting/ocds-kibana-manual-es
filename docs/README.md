@@ -10,21 +10,20 @@
 1. [Índice propuesto por ILDA](https://docs.google.com/document/d/1oqZfk1BUwyBg7P4jKfzbT53LpRLmIIQUr90IkCMNP4I/edit)
 1. [Manual de analisis OCDS en R](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd)
 
-### Capítulo 1. Apuntes sobre las herramientas y datos en OCDS - @MS in Charge
+### Capítulo 1. Apuntes sobre el herramientas y datos en OCDS
 
 1. [Introducción al Estándar OCDS](C1/Seccion1.md)
 1. [Introduccion a las herramientas Elastic](C2/Seccion1.md)
 1. [Datos de Contrataciones Abiertas en México](C1/Seccion3.md)
 
-### Capítulo 2. Usando las herramientas Elastic para facilitar el análisis - @MS in Charge
+### Capítulo 2. Usando las herramientas Elastic para facilitar el análisis
 
 1. [Arquitectura de las herramientas Elastic](C2/Seccion2.md)
 1. [Plataforma ELK para el Análisis de Contrataciones en formato OCDS](C2/Seccion3.md)
 1. [Puesta en marcha de la Plataforma ELK para el Análisis de Contrataciones en formato OCDS](C2/Seccion4.md)
 1. [Procesamiento de datos con Logstash](C2/Seccion5.md)
-1. [Visualización de datos en ElasticSearch y Kibana](C2/Seccion6.md)
 
-### Capítulo 3. Análisis de los datos - @EMB asñdlkfj
+### Capítulo 3. Análisis de los datos
 
 1. [Introducción a Kibana](C3/Seccion1.md)
 1. [Descubrir](C3/Seccion2.md)
