@@ -2,7 +2,7 @@
 
 Tal y como su nombre indica este primer apartado sirve para hacer una primera exploración de los datos que nos servidrá para darle sentido. 
 
-[Captura de pantalla]
+!["Discover"](discover.png "Discover")
 
 Las primera configuraciones que hemos de realizar son:
 - Seleccionar el indice con el que vamos a trabajar
