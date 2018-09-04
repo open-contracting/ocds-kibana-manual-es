@@ -1,4 +1,4 @@
-## Introducción al Estandar de Datos de Contrataciones Abiertas
+## Introducción al Estándar de Datos de Contrataciones Abiertas
 
 > *Esta introducción es una traducción del capítulo [An introduction to the Open Contracting Data Standard](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd#an-introduction-to-the-open-contracting-data-standard) del Manual [Analyzing Open Contracting data using the R programming language](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd) de [Rodrigo Parra](https://github.com/rparrapy)*
 
@@ -10,7 +10,7 @@ La intención de esta sección es presentar al lector el estándar, los casos de
 
 ### Usuarios y casos de uso
 
-El estándar fue diseñado para satisfacer las cuatro necesidades principales que se dectectaron en los ususarios: 
+El estándar fue diseñado para satisfacer las cuatro necesidades principales que se detectaron en los usurarios:
 
 * Lograr poner en valor el gasto gubernamental
 * Fortalecimiento de la transparencia, la rendición de cuentas y la integridad de la contratación pública
@@ -37,7 +37,7 @@ El estándar cubre todas las etapas de un proceso de contratación, aunque algun
 knitr::include_graphics("procurement-stages.png")
 ```
 
-Para fines de identificación, a todos los procesos de contratación se les asigna un Id. de contratación abierta único (ocid), que se puede utilizar para unir datos de diferentes etapas. Para evitar clústeres de ocid entre editores, un editor puede anteponer un prefijo a los identificadores generados localmente. Se anima a los editores a registrar su prefijo [aquí](http://standard.open-contracting.org/latest/en/implementation/registration/).
+Para fines de identificación, a todos los procesos de contratación se les asigna un Id. de contratación abierta único (ocid), que se puede utilizar para unir datos de diferentes etapas. Para evitar clústers de ocid entre editores, un editor puede anteponer un prefijo a los identificadores generados localmente. Se anima a los editores a registrar su prefijo [aquí](http://standard.open-contracting.org/latest/en/implementation/registration/).
 
 
 
@@ -45,13 +45,13 @@ Para fines de identificación, a todos los procesos de contratación se les asig
 
 Los procesos de contratación se representan como **documentos** en el OCDS. Cada documento se compone de varias **secciones**, que se mencionan a continuación:
 
-* metadatos de lanzamiento: información contextual sobre cada lanzamiento de datos;
-* participantes: información sobre las organizaciones y otros actores involucrados en el proceso de contratación;
-* planificación: información sobre los objetivos, presupuestos y proyectos relacionados con un proceso de contratación;
-* convocatoria: información sobre cómo se realizará o se llevará a cabo una licitación;
-* adjudicación: información sobre las adjudicaciones realizadas como parte de un proceso de contratación;
-* contrato: información sobre contratos firmados como parte de un proceso de contratación;
-* implementación: información sobre el progreso de cada contrato hacia la finalización.
+* **Metadatos de lanzamiento**: información contextual sobre cada lanzamiento de datos;
+* **Participantes**: información sobre las organizaciones y otros actores involucrados en el proceso de contratación;
+* **Planificación**: información sobre los objetivos, presupuestos y proyectos relacionados con un proceso de contratación;
+* **Convocatoria**: información sobre cómo se realizará o se llevará a cabo una licitación;
+* **Adjudicación**: información sobre las adjudicaciones realizadas como parte de un proceso de contratación;
+* **Contrato**: información sobre contratos firmados como parte de un proceso de contratación;
+* **Implementación**: información sobre el progreso de cada contrato hacia la finalización.
 
 Un ejemplo de fragmento de JSON compatible con esta estructura se ve de la siguiente manera:
 
