@@ -1,6 +1,6 @@
 # Instalación y puesta en marcha de la herramienta
 
-El presente proyecto esta desarrollado para poder iniciar los 3 servicios, segun sea necesario de forma facil y rápida.
+El presente proyecto esta desarrollado para poder iniciar los 3 servicios, según sea necesario de forma fácil y rápida.
 
 ## Pre-requisitos
 
@@ -16,7 +16,7 @@ El presente proyecto esta desarrollado para poder iniciar los 3 servicios, segun
 1. Descomprimir el archivo descargado
 1. En el nuevo directorio ejecutar el comando `docker-compose -f elastic-kibana.yml up`
 
-    - Pasados unos minutos deberiamos poder abrir en el navegador [http://localhost:5601/app/kibana](http://localhost:5601/app/kibana) lo cual nos dara acceso a Kibana.
+    - Pasados unos minutos deberíamos poder abrir en el navegador [http://localhost:5601/app/kibana](http://localhost:5601/app/kibana) lo cual nos dará acceso a Kibana.
     - El usuario y contraseña para acceder a Kibana son `elastic` y `elastic` respectivamente.
 
 1. ElasticSearch y Kibana están listos para comenzar a recibir y visualizar datos.
