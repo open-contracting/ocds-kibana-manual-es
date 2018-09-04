@@ -11,7 +11,7 @@ Para ejemplificar hemos incluido dos datasets distintos en este proyecto:
 
 Ambos son similares y nos permitiran explorar de forma didáctica como construir un pipeline para Logstash.
 
-Por ahora usaremos el primero *PTP - PEF - Formato OFDP*, en la pagina de instrucciones del mismo podremos encontrar la página donde podemos descargar los datos oficiales ya que los incluids en la carpeta `datasets/ptp-pef-ofdp/input` son solo muestras.
+Por ahora usaremos el primero *PTP - PEF - Formato OFDP*, en la pagina de instrucciones del mismo podremos encontrar la página donde podemos descargar los datos oficiales ya que los incluid en la carpeta `datasets/ptp-pef-ofdp/input` son solo muestras.
 
 ### Los datos originales, el formato OFDP
 
