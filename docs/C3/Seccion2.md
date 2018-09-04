@@ -23,7 +23,14 @@ Las principales acciones tanto para búscar como para configurar la visualizaci�
 
 Para conocer más opciones leer la documentación de [Query String Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-query-string-query.html#query-string-syntax) y de [Lucene Query Syntax](https://www.elastic.co/guide/en/kibana/6.x/lucene-query.html).
 
-3. **Filtros**: 
+3. **Filtros**: Los filtros gráficos pueden hacer más o menos las mismas operaciones de filtro en el buscador, con la ventaja que se pueden sumar varios filtros con facilidad y que hay una opción para editar el filtro y hacerlo mucho más complejo siguiendo [este tutorial](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-filter-context.html). Si se están haciendo filtros sobre campos que contenin strings veran que aparecen duplacadas, una con el nombre definida y otra que termina en *.keyword*, se recomienda usar la segunda. 
+
+4. **Available fields**: La barra lateral sirve para poder inspeccionar las cabezaras de los datos, dar una primera visión de los datos que contienen y configurar el panel de resultados. 
+* Configuración: La ruedita que está al lado de "Availaible Fields" despliega una siere de opciones para que se muestren más o menos campos. En caso de datos no tabulares, como los de OCDS, se aconseja desmarcar "Hide missing fields", para que se muestren los campos que están dentro de otros campos. 
+* Campos: Todos los campos van acompañados de un simbolo que identifica el tipo de datos que contiene, el reloj cuando es temporal, el númeral o tecla gato para identificar numero, la t para identificar los textos o strings, un esfera mita negra significa que el campo es un booleano, y el simbolo interregonte que desconoce que tipo de campo tiene, normalment será porque contiene a su vez más campos a su interior. Al clicar sobre un campo se desplegará un grafico que mapea los primeros 500 valores del campo. 
+* Add: El botón add, que está iluminado con por el circulo rojo, sirve para que el panel de resultados en lugar de mostrar toda la tira de datos muestre solo aquel o aquellos valors seleccionados. Desde el panel de resultados también podremos usar esos datos para ordenar los resultados. 
+
+5. **Save**: Como se dice al principio del apartado la opción visualizar en el apartado discover sirve para una primera exploración, pero una vez ya conseguimos los resultados deseados podemos guardar esta búsqueda para graficarla o mandarla a un dashboard. 
 
 A partir de aquí tenemos tres puntos que nos serviran
 - Inspeccionar todos los elementos de la barra lateral. Determinar que es cada cosa, mirar si hay indices escondidos (el problema de los datos no tabulares) y configurar nuestros resultados. 
