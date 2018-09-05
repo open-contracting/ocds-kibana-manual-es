@@ -11,17 +11,17 @@ Las principales acciones tanto para buscar como para configurar la visualizació
 1. **Selector de indices**: En el desplegable se encuentran los distintos indices importados en la instancia de Kibana, este desplegable nos permite mover a través de ellos. Incluso algunos filtros se mantienen entre indices si hay campos coincidentes. 
 2. **Buscador**: Nos permite hacer toda una serie de preguntas sobre nuestra base de datos, una forma de ver si nuestra query está funcionado es comprobar el recuento de "hits" que aparece justo encima del buscador. Algunas de las querys más habituales que se pueden usar:   
 
-| Acción | Comando | Ejemplo |
-|:--|:--|:--|
-| Buscar en cualquier campo | *string* | México |
-| Buscar en campo espeficio | *campo:string* | buyer.name:México |
-| Buscar texto especifico en campo especifico | *campo:"string"* | buyer.name:"Telecomunicaciones de México" |
-| Buscar dos textos en un campo | *campo:("string" OR "string")* | buyer.name:("Telecomunicaciones de México" OR " Tecnológico Nacional de México") |
-| Buscar en dos campos a la vez | *campo:"string" AND campo:"string"* | buyer.name:"Telecomunicaciones de México" AND tender.title:servicios |
-| Más grande o más pequeño | *campo:>valor* | contracts.value.amount:(>100000 AND <1000000) |
-| wildcards, valores desconcidos | *c?mpo* | M?exic* |
+    | Acción | Comando | Ejemplo |
+    |:--|:--|:--|
+    | Buscar en cualquier campo | *string* | México |
+    | Buscar en campo espeficio | *campo:string* | buyer.name:México |
+    | Buscar texto especifico en campo especifico | *campo:"string"* | buyer.name:"Telecomunicaciones de México" |
+    | Buscar dos textos en un campo | *campo:("string" OR "string")* | buyer.name:("Telecomunicaciones de México" OR " Tecnológico Nacional de México") |
+    | Buscar en dos campos a la vez | *campo:"string" AND campo:"string"* | buyer.name:"Telecomunicaciones de México" AND tender.title:servicios |
+    | Más grande o más pequeño | *campo:>valor* | contracts.value.amount:(>100000 AND <1000000) |
+    | wildcards, valores desconcidos | *c?mpo* | M?exic* |
   
-Para conocer más opciones leer la documentación de [Query String Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-query-string-query.html#query-string-syntax) y de [Lucene Query Syntax](https://www.elastic.co/guide/en/kibana/6.x/lucene-query.html).
+    Para conocer más opciones leer la documentación de [Query String Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-query-string-query.html#query-string-syntax) y de [Lucene Query Syntax](https://www.elastic.co/guide/en/kibana/6.x/lucene-query.html).
 
 3. **Filtros**: Los filtros gráficos pueden hacer más o menos las mismas operaciones de filtro en el buscador, con la ventaja que se pueden sumar varios filtros con facilidad y que hay una opción para editar el filtro y hacerlo mucho más complejo siguiendo [este tutorial](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-filter-context.html). Si se están haciendo filtros sobre campos que contienen strings verán que aparecen duplicadas, una con el nombre definida y otra que termina en *.keyword*, se recomienda usar la segunda. 
 
