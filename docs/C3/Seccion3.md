@@ -22,12 +22,12 @@ Antes de empezar hemos de detectar los campos con los que vamos a trabajar, en n
 
 Siguiendo el formulario de la imagen. 
 
-* **Name:** El nombre con el que identificaremos nuestro campo, por ejemplo `tender.awardPeriod.duration` para seguir con el mismo lenguaje del dataset de OCDS. 
-* **Language:** Es un desplegable con las opciones "painless" y "expresión", se sugiere trabajar con painless ya que es la sintaxis con la que nos familiarizamos en Discover y la que seguro va ser soportada en próximas versiones. 
-* **Type:** Desplegable pare elegir el tipo de campo que vamos a generar, en este caso usaremos "Number".
-* **Format:** Definiremos el numero como "Duration", y nos aparecen dos desplegables más. El "Input format" donde seleccionaremos "Milliseconds" (porque así lo definimos en la formula) y el "Output format" como "Days" ya que estamos búscando la cantidad de días (Nota: la opción "Human Redable dificulta las querys sobre el campo). También tenemos un campo númerico para los decimales, seguiremos con 2 decimiales por preferencias del autor. 
-* **Popularity:** Este campo númerico Kibana lo va calculando a partir del uso para mostrar los campos destacados en varias pantallas de la aplicación. Si queremos tenerlo destacado desde que terminaos se sugiere ponrle un valor alto, en este caso le pondremos un 10. 
-* **Script:** Este es el campo donde haremos nuestros cálculo, para una comprensión profunda sobre como hacer scripts se sugiere leer [la guia oficial](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/search-request-script-fields.html). El sript que vamos a usar será:
+1. **Name:** El nombre con el que identificaremos nuestro campo, por ejemplo `tender.awardPeriod.duration` para seguir con el mismo lenguaje del dataset de OCDS. 
+1. **Language:** Es un desplegable con las opciones "painless" y "expresión", se sugiere trabajar con painless ya que es la sintaxis con la que nos familiarizamos en Discover y la que seguro va ser soportada en próximas versiones. 
+1. **Type:** Desplegable pare elegir el tipo de campo que vamos a generar, en este caso usaremos "Number".
+1. **Format:** Definiremos el numero como "Duration", y nos aparecen dos desplegables más. El "Input format" donde seleccionaremos "Milliseconds" (porque así lo definimos en la formula) y el "Output format" como "Days" ya que estamos búscando la cantidad de días (Nota: la opción "Human Redable dificulta las querys sobre el campo). También tenemos un campo númerico para los decimales, seguiremos con 2 decimiales por preferencias del autor. 
+1. **Popularity:** Este campo númerico Kibana lo va calculando a partir del uso para mostrar los campos destacados en varias pantallas de la aplicación. Si queremos tenerlo destacado desde que terminaos se sugiere ponrle un valor alto, en este caso le pondremos un 10. 
+1. **Script:** Este es el campo donde haremos nuestros cálculo, para una comprensión profunda sobre como hacer scripts se sugiere leer [la guia oficial](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/search-request-script-fields.html). El sript que vamos a usar será:
 ```
 (doc['tender.awardPeriod.endDate'].value.getMillis() - doc['tender.awardPeriod.startDate'].value.getMillis())
 ```
@@ -41,4 +41,4 @@ Analizando la al detalle los elementos del sript:
 
 Para maś detalles [consultar la sintaxis completa.](https://www.elastic.co/guide/en/elasticsearch/painless/master/painless-api-reference.html)
 
-* **Create field:** Este es el botón final que crea el campo para toda la aplicación. En caso que el sript dé error, nos saltará un mensaje de advertencia y no lo procesará en la aplicación. 
+7. **Create field:** Este es el botón final que crea el campo para toda la aplicación. En caso que el sript dé error, nos saltará un mensaje de advertencia y no lo procesará en la aplicación. 
