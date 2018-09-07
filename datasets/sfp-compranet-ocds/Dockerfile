@@ -1,16 +1,12 @@
-FROM python:2
+FROM docker.elastic.co/logstash/logstash-oss:6.4.0
 
-WORKDIR /usr/share/app
+USER root
+RUN yum install epel-release -y && yum install jq -y
+RUN mkdir -p /data /logs && chown -R logstash:logstash /data /logs
 
-COPY requirements.txt ./
+USER logstash
+COPY pipeline.conf /usr/share/logstash/pipeline/logstash.conf
+COPY template.json /opt/template.json
+COPY entrypoint.sh /opt/entrypoint.sh
 
-RUN pip install --no-cache-dir -r requirements.txt
-RUN curl 'https://codeload.github.com/mxcoder/jsonpyes/tar.gz/1.3.2-alpha' --output ./f.tar.gz \
-    && tar xzf ./f.tar.gz && mv ./jsonpyes-1.3.2-alpha ./jsonpyes && rm ./f.tar.gz
-
-COPY _bulk.sh _bulk.sh
-COPY _prepare.sh _prepare.sh
-COPY run.sh run.sh
-
-ENTRYPOINT [ "bash", "run.sh" ]
-CMD [ "http://elastic:elastic@localhost:9200" , "/input"]
+ENTRYPOINT ["bash", "/opt/entrypoint.sh"]

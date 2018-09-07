@@ -8,7 +8,7 @@ La documentacion del esquema OCDS se puede encontrar en: [Open Contracting](http
 
 ## ElasticSearch
 
-- **Indice**: `poder-sfp-compranet-ocds`
+- **Indice**: `sfp-compranet-ocds-compiled-releases`
 
 ### Dependencias
 
@@ -21,15 +21,19 @@ La documentacion del esquema OCDS se puede encontrar en: [Open Contracting](http
 
 Ejecutar en esta carpeta los siguientes comandos:
 
-1. `docker build . -t sfp-compranet-ocds:latest`
+1. `docker build . -t logstash-sfp-compranet-ocds:latest`
     Esto generará nuestro contenedor para correr el proceso con todas las dependencias necesarias.
     **Este comando solo tendremos que ejecutarlo una vez**
 
-1. `docker run --rm -it -v $PWD/input:/input sfp-compranet-ocds`
-    - Esto ejecutará el proceso utilizando los datos encontrados en la carpeta `input` de esta carpeta
-    - Por default los datos son enviados a un cluster ElasticSearch en `http://elastic:elastic@localhost:9200` si deseamos enviarlo a otro cluster podemos usar:
+1. `docker run --rm -it --net="host" -v $PWD/logs:/logs:rw -v $PWD/input:/input logstash-sfp-compranet-ocds`
+
+    Este comando puede recibir los siguientes parametros
+    * `-e "ES_HOST=servidor.com:9200"` Especifica el hostname del servidor ElasticSearch (default:`localhost:9200`)
+    * `-e "ES_INDEX=nombre-indice"` Especifica el nombre del indice a usar en ES (defaul:`sfp-compranet-ocds-compiled-releases`)
+
+    Ejemplo:
     ```
-    docker run --rm -it -v $PWD/input:/input sfp-compranet-ocds http://user:pass@hostname:port
+    docker run --rm -it --net="host" -v $PWD/logs:/logs:rw -v $PWD/input:/input -e "ES_HOST=example.org:9200" logstash-sfp-compranet-ocds
     ```
 
-1. Al finalizar este procedimiento en la carpeta `input` podremos encontrar archivos .log donde podremos validar el resultado de la carga, de la misma forma deberiamos encontrar todos los datos cargados en el cluster ES especificado.
+1. Al finalizar este procedimiento ya podremos consultar los datos en ElasticSearch y Kibana si está disponible.
