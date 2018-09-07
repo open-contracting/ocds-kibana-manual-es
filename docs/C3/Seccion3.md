@@ -28,17 +28,17 @@ Siguiendo el formulario de la imagen.
 1. **Format:** Definiremos el numero como "Duration", y nos aparecen dos desplegables más. El "Input format" donde seleccionaremos "Milliseconds" (porque así lo definimos en la formula) y el "Output format" como "Days" ya que estamos búscando la cantidad de días (Nota: la opción "Human Redable dificulta las querys sobre el campo). También tenemos un campo númerico para los decimales, seguiremos con 2 decimiales por preferencias del autor. 
 1. **Popularity:** Este campo númerico Kibana lo va calculando a partir del uso para mostrar los campos destacados en varias pantallas de la aplicación. Si queremos tenerlo destacado desde que terminaos se sugiere ponrle un valor alto, en este caso le pondremos un 10. 
 1. **Script:** Este es el campo donde haremos nuestros cálculo, para una comprensión profunda sobre como hacer scripts se sugiere leer [la guia oficial](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/search-request-script-fields.html). El sript que vamos a usar será:
-```
-(doc['tender.awardPeriod.endDate'].value.getMillis() - doc['tender.awardPeriod.startDate'].value.getMillis())
-```
-El sript lo que hace es llamar a los campos de inicio y fin de la apertura de licitación, mostrar sus valores, convertirlos a milisegundos y restar el fin del inicio. Para hacer este resultado usable y que podamos trabajar en el resto de la plataforma lo hemos formateado a dias con dos decimales. 
+    ```
+    (doc['tender.awardPeriod.endDate'].value.getMillis() - doc['tender.awardPeriod.startDate'].value.getMillis())
+    ```
+    El sript lo que hace es llamar a los campos de inicio y fin de la apertura de licitación, mostrar sus valores, convertirlos a milisegundos y restar el fin del inicio. Para hacer este resultado usable y que podamos trabajar en el resto de la plataforma lo hemos formateado a dias con dos decimales. 
 
-Analizando la al detalle los elementos del sript: 
-  * `doc['Nombre.Campo']` Sirva para llamar al campo de nuestra base datos. 
-  * El `.value` nos devuelve el valor que nos servirá para hacer operaciones matematicas. 
-  * `.getMillis()` convierte el valor en milesegundos
-  * ` - ` Es el operador de resta, se pueden usar otros operadores matematicos. 
+    Analizando la al detalle los elementos del sript: 
+    * `doc['Nombre.Campo']` Sirva para llamar al campo de nuestra base datos. 
+    * El `.value` nos devuelve el valor que nos servirá para hacer operaciones matematicas. 
+    * `.getMillis()` convierte el valor en milesegundos
+    * ` - ` Es el operador de resta, se pueden usar otros operadores matematicos. 
 
-Para maś detalles [consultar la sintaxis completa.](https://www.elastic.co/guide/en/elasticsearch/painless/master/painless-api-reference.html)
+    Para maś detalles [consultar la sintaxis completa.](https://www.elastic.co/guide/en/elasticsearch/painless/master/painless-api-reference.html)
 
 7. **Create field:** Este es el botón final que crea el campo para toda la aplicación. En caso que el sript dé error, nos saltará un mensaje de advertencia y no lo procesará en la aplicación. 
