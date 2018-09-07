@@ -16,7 +16,7 @@ Kibana permite crear nuevos campos a partir de cálculos y que los podamos usar 
 
 En la pantalla "Index patterns" hay tres pestañas, "Fields", "Scripted filds" y "Source Fields", clicaremos en "Sripted fields" donde aprecen los campos calculados y luego en el botón "Add scripted field" para empezar a calcular. 
 
-["Scripted Fields"](ScriptedFields.png "Scripted Fields")
+!["Scripted Fields"](ScriptedFields.png "Scripted Fields")
 
 Antes de empezar hemos de detectar los campos con los que vamos a trabajar, en nuestro caso serán `tender.awardPeriod.startDate` y `tender.awardPeriod.endDate` que ambos son fechas y Kibana las reconoce como fechas. El resultado que queremos es el número de días de diferencia. 
 
