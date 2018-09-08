@@ -26,11 +26,47 @@ Para replicar el gráfico el proceso es:
 
 Cuando ya tenemos todo el panel completo hemos de darle al botón de play en el recuadro azul y el gráfico aparecerá en la pantalla. Podemos modificar las distintas opciones para analizar a profundidad. 
 
-## Tabla 
-
-Cálculo de cuantos ganadores y tenderers hay para cada contato. 
-
 ## Grafico de tarta
+
+Los graficos de tarta para saber que peso tiene cada uno de los elementos (procedimientos de contratación) sobre el conjunto (todo el dataset).
+
+!["Grafico de tarta"](GTarta1.png "Grafico de tarta")
+
+Para replicar el gráfico el proceso es:
+* **Metrics**
+  * *Agregation:* Dejaremos seleccionada el "Count"
+
+* **Bucket / Splits Slices** ya que nos interesa generar los espacios de la tarda y no crear varias graficas de tarta. 
+  * *Agregation:* Otra vez Terms
+  * *Field*: `tender.procurementMethod.keyword`
+  * *Order by*: "Count"
+  * *Oder* Descent
+  * *Size*: Dejamos 5 aunque son tres. 
+  
+Le damos al "play" y aparecera el gráfico. Pero una vez visualizado queremos ver cuales son las dependencias que más han usado este dataset para y para esto hemos de clicar al botón con letra azul "Add sub-buckets" que está en el apartado de Buckets. Una vez allí repetiremos el proceso.
+
+* **Bucket / Splits Slices**
+  * *Agregation:* Otra vez Terms
+  * *Field*: `buyer.name.keyword`
+  * *Order by*: "Count"
+  * *Oder* Descent
+  * *Size*: Dejamos 5 aunque son tres. 
+
+Cuando le demos al play nos saldrá este grafica con las 5 dependencias que más veces han echo ese tipo de contración en el dataset. 
+
+!["Grafico de tarta2"](GTarta2.png "Grafico de tarta2")
+
+Siguiendo con el analisis queremos cambiar el agregado, no queremos que sea cuenta sinó importe total por procedimiento y dependencia. 
+* **Metrics**
+  * *Agregation:* seleccionaremos la opción de "Sum" y en el nuevo desplagable *Field* seleccionaremos `awards.value.amount`
+
+Le volvemos a dar al play y nos da la siguiente grafica.
+
+!["Grafico de tarta3"](GTarta3.png "Grafico de tarta3")
+
+Podemos seguir analizando añadiendo y quitando valores. Para accelerar el proceso, al lado de cada "Split Slices", hay tres botones que permiten hacer la acciones "Mostrar/econder", "modificar el orden de aparición" y "borrar el slice". Cada vez que se hace una modificación hay que apretar el botón de play. 
+
+## 
 
 Visión de las distintas Depenedencias, Unidades Compradoras y empresas para cada caso. 
 
