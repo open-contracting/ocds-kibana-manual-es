@@ -66,14 +66,31 @@ Le volvemos a dar al play y nos da la siguiente grafica.
 
 Podemos seguir analizando añadiendo y quitando valores. Para accelerar el proceso, al lado de cada "Split Slices", hay tres botones que permiten hacer la acciones "Mostrar/econder", "modificar el orden de aparición" y "borrar el slice". Cada vez que se hace una modificación hay que apretar el botón de play. 
 
-## 
+## Gráfico de lineas
 
-Visión de las distintas Depenedencias, Unidades Compradoras y empresas para cada caso. 
+Los gráficos de líneas nos sirven para mostrar la evolución durante el tiempo, en esta ocasión haremos un gráfico con dos valores: cuenta e importe. 
 
+!["Grafico de lineas"](Glineas.png "Grafico de lineas")
 
+* **Metrics**
+  * *Agregation:* seleccionaremos la opción de "Sum" y en el nuevo desplagable *Field* seleccionaremos `awards.value.amount`
+  * Clicaremos en *Add metric*
+  * *Agretation:* Dejaremos seleccionada el "Count"
+  
+* **Buckets / X-Axis** - Aunque hay dos otrasopciones **Split Series** y **Split Chart** para realizar este gráfico nos quedaremos con la primera opcion
+  * *Agregation:* Esta vez seleccionaremos "Date Histogram", ya que queremos hacer una serie temporal.
+  * *Field:* Usaremos el campo `awards.contractPeriod.endDate`, la fecha en la que se otorga el contrato.
+  * *Interval:* Seleccionaremos "Monthly", que nuestro dataset contiene datos de tres años. 
+  
+Si le dieramos play ahora, el gráfico quedaria solo con la linea verda, y la azul quedaría rozando al 0, ya que los valores entre ambas son muy distintos. Para que esto aparezca bien, hemos de crear un segundo eje de valores en la gráfica. Para esto hemos de hacer clicar en *Metrics & Axes* (el menú a la izquerda del botón play) y en el desplegable "Value Axis" clicar a la opción "New Axis", que nos generará un nuevo eje que podemos editar en la siguente caja **Y-Axis**.
 
-## Gráfico de tiempo
+Observando el grafico podemos ver que termina en el 2020, cuando aún estamos en 2018. Para rectificar esto, podemos añadir un filtro a los datos, de la misma forma que lo hacemos en el apartado [Discover](Seccion2.md) 
 
-Evolución de los contratos por dia 
 
 ## Otros graficos dispontibles
+
+En Kibana hay muchas más opciones de crear gráficos, todos ellos con funcionamientos muy similares a los anteriormente descritos. Algunos recomendados son:
+* **Tablas**: Permiten generar nuevas tablas y exportarlas a csv.
+* **Area**: para valores acumulados en el tiempo
+* **Mapas**: cuando tenemos valores graficos
+* **Redes**: Explorar las relaciones entre los distintos campos. 
