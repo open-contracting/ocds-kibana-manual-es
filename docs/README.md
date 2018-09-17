@@ -22,6 +22,7 @@
 1. [Plataforma ELK para el Análisis de Contrataciones en formato OCDS](C2/Seccion3.md)
 1. [Puesta en marcha de la Plataforma ELK para el Análisis de Contrataciones en formato OCDS](C2/Seccion4.md)
 1. [Procesamiento de datos con Logstash](C2/Seccion5.md)
+1. [Resúmen](C2/Seccion5.md)
 
 ### Capítulo 3. Análisis de los datos
 

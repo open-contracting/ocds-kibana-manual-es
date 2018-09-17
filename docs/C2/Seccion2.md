@@ -1,21 +1,63 @@
-# Arquitectura de las herramientas Elastic
-En este capítulo vamos a profundizar en el uso de las herramientas de Elastic para el análisis de datos de Contrataciones Abiertas en México. Para eso es necesario comprender mejor cómo se relacionan las diferentes herramientas antes de explicar cómo importaremos los datos.
+# Plataforma ELK para el Análisis de Contrataciones en formato OCDS
 
-La plataforma ELK tiene una arquitectura lineal entre sus componentes.
+Como establecimos en la introducción de este manual, el análisis de los datos de contrataciones públicas de México es
+una tarea indispensable para la correcta fiscalización democrática de las operaciones gubernamentales.
 
-![ELK Stack](elk_stack.jpg "ELK Stack")
+Para lograr este análisis debemos contar con las herramientas tecnológicas para tomar el Estándar OCDS y ponerlo a
+disposición del público de una forma amigable que permita refinar la información así como crear visualizaciones de estos
+datos.
 
-1. Los datos son recogidos y procesados por LogStash
-1. LogStash envía los datos ya procesados a ElasticSearch para ser indexados
-1. ElasticSearch proporciona los datos a la interfaz de Kibana para poder ser consultados
+La plataforma ELK (ElasticSearch, Logstash, Kibana) proveé de las herramientas necesarias para lograr este objetivo.
 
-Pero veamos un poco más a detalle cada herramienta:
+El presente manual permitirá realizar un sistema con las siguientes características:
 
-- [ElasticSearch](Seccion2/1_ElasticSearch.md)
-- [Logstash](Seccion2/2_Logstash.md)
-- [Kibana](Seccion2/3_Kibana.md)
+- Interfaz gráfica de uso amigable pero robusto para consultar los datos.
+- Un motor de búsqueda e indexado que permita la actualización y corrección de los datos en todo momento.
+- Un motor de ingesta de datos, que permita que según se realicen las publicaciones de los datos por parte del gobierno
+  Mexicano estos puedan ser procesados e ingresados a la base de datos con un mínimo esfuerzo.
 
-Una vez que hemos conocido los conceptos básicos de las herramientas que utilizaremos, en el siguiente capítulo aprenderemos como planeamos utilizar ELK para lograr el análisis de los datos de contrataciones del gobierno Mexicano disponibles en formato OCDS.
+## Arquitectura
 
+Cada una de estas funcionalidades estarán sustentadas en las herramientas Kibana, ElasticSearch y Logstash, y la
+arquitectura para su utilización quedará definida de la siguiente manera:
 
-[Inicio](../README.md) | [Anterior: Las herramientas Elastic](Seccion1.md) | [Siguiente: Plataforma ELK para el Análisis de Contrataciones en formato OCDS](Seccion3.md)
+- Cluster ElasticSearch para indexar y contener los datos.
+    - Inicialmente el clúster tendrá un solo nodo, según la demanda lo indique se podría incrementar el número de nodos.
+    - Un índice especializado con los datos completos liberados.
+- Interfaz de Kibana para visualizar los datos en el índice.
+    - Tanto Kibana como ElasticSearch estarán inicialmente contenidos en un mismo contenedor Docker para su sencilla distribución.
+- Un pipeline para Logstash preparado para tomar los datos OCDS, procesarlos e indexarlos en ElasticSearch
+    - Este pipeline estará contenido en un contenedor Docker para su fácil ejecución.
+
+!["Plataforma ELK"](arquitectura.png "Plataforma ELK")
+
+Llamaremos **Contenedor Servidor** en el que tenemos a ElasticSearch y Kibana, ya que este contenedor se mantendrá en
+ejecución tanto tiempo como se quiera ofrecer este servicio.
+
+Y **Contenedor Procesador** al que solo ejecuta Logstash para procesar los datos y se da por terminado.
+
+### Extra: Contenedores Docker
+
+Un contenedor Docker es una herramienta que utilizaremos para empaquetar nuestra solución, su arquitectura y las
+herramientas.
+
+Este manual no contempla enseñar los detalles de Docker y su tecnología pero podríamos definirlo de forma sencilla como
+"cajas" o "contenedores" (como de Trailers o de barcos de carga) de Software donde va incluido absolutamente todo lo que
+necesitamos para ejecutar nuestro proyecto.
+
+En teoría esto debería facilitar mucho la distribución de cualquier herramienta de Software pues el único prerequisito a
+instalar es Docker en sí mismo. Este paso debería ser muy parecido a instalar cualquier otro software en la plataforma
+de cómputo que se elija.
+
+Una vez instalado Docker, nuestro software estará listo para iniciarse "automáticamente", sin necesitar de ningun tipo
+de software auxiliar ni dependencias.
+
+Otra ventaja de usar Docker es que mantiene estabilidad entre lo que se desarrolla y lo que se distribuye, se evitan
+problemas del tipo "surgieron problemas en tu computadora pero en mi computador si funciona".
+
+Para saber más sobre Contenedores y Docker, se recomiendan las siguientes lecturas:
+- [Amazon Web Services - Qué es Docker?](https://aws.amazon.com/es/docker/)
+- [OpenWebinars - Docker](https://openwebinars.net/blog/docker-que-es-sus-principales-caracteristicas/)
+- [1and1.mx - Instalación de Docker](https://www.1and1.mx/digitalguide/servidores/configuracion/tutorial-docker-instalacion-y-primeros-pasos/)
+
+[Inicio](../README.md) | [Anterior: Las herramientas Elastic](Seccion1.md) | [Siguiente: Instalación y puesta en marcha de la herramienta](Seccion3.md)
