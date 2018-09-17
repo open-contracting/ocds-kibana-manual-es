@@ -11,5 +11,5 @@ shuf -n NUMERO_ENTRADAS_DESEADAS -o OUTPUTFILE INPUTFILE
 
 Ejemplo:
 ```
-shuf -n 1000 -o pef.sample.csv pef.full.csv
+shuf -n 1000 -o sample.csv full.csv
 ```

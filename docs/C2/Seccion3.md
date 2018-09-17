@@ -1,50 +1,122 @@
-# Plataforma ELK para el Análisis de Contrataciones en formato OCDS
+# Puesta en marcha de la Plataforma ELK para el Análisis de Contrataciones en formato OCDS
 
-Como establecimos en la introducción de este manual, el análisis de los datos de contrataciones públicas de México es una tarea indispensable para la correcta fiscalización democrática de las operaciones gubernamentales.
+Al final de esta sección tendremos todo lo necesario hacer consultas y visualizaciones sobre los datos de Contrataciones en formato OCDS.
 
-Para lograr este análisis debemos contar con las herramientas tecnológicas para tomar el Estándar OCDS y ponerlo a disposición del público de una forma amigable que permita refinar la información así como crear visualizaciones de estos datos.
+> Para este procedimiento se recomienda tener familiaridad básica con la terminal de comandos
+    * [Mac](https://www.soydemac.com/abrir-terminal-mac/)
+    * [Windows](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows)
+    * [Linux/Ubuntu](https://elblogdeliher.com/como-moverse-por-los-directorios-en-la-terminal-de-ubuntu/)
 
-La plataforma ELK (ElasticSearch, Logstash, Kibana) proveé de las herramientas necesarias para lograr este objetivo.
+## Objetivos
 
-El presente manual permitirá realizar un sistema con las siguientes características:
+1. Iniciar un servidor ElasticSearch con Kibana
+1. Cargar los datos publicados de Contrataciones en un formato sencillo de consultar.
+1. Realizar una consulta sobre los datos
 
-- Interfaz gráfica de uso amigable pero robusto para consultar los datos.
-- Un motor de búsqueda e indexado que permita la actualización y corrección de los datos en todo momento.
-- Un motor de ingesta de datos, que permita que según se realicen las publicaciones de los datos por parte del gobierno Mexicano estos puedan ser procesados e ingresados a la base de datos con un mínimo esfuerzo.
+El presente proyecto esta desarrollado para poder iniciar los 3 servicios, según sea necesario de forma fácil y rápida.
 
-## Arquitectura
 
-Cada una de estas funcionalidades estarán sustentadas en las herramientas Kibana, ElasticSearch y Logstash, y la arquitectura para su utilización quedará definida de la siguiente manera:
+## Pre-requisitos
 
-- Cluster ElasticSearch para indexar y contener los datos.
-    - Inicialmente el clúster tendrá un solo nodo, según la demanda lo indique se podría incrementar el número de nodos.
-    - Un índice especializado con los datos completos liberados.
-- Interfaz de Kibana para visualizar los datos en el índice.
-    - Tanto Kibana como ElasticSearch estarán inicialmente contenidos en un mismo contenedor Docker para su sencilla distribución.
-- Un pipeline para Logstash preparado para tomar los datos OCDS, procesarlos e indexarlos en ElasticSearch
-    - Este pipeline estará contenido en un contenedor Docker para su fácil ejecución.
+1. Abrir la terminal para comandos del Sistema Operativo
+1. [Instalar Docker CE](https://docs.docker.com/install/)
+1. [Instalar Docker Compose](https://docs.docker.com/compose/install/)
+1. [Descargar el archivo que contiene las
+   herramientas](https://github.com/ProjectPODER/elk-gobmx-csv/archive/master.zip)
+1. Descomprimir el archivo descargado y entrar a la carpeta que se acaba de crear
+    * En la terminal: `cd elk-gobmx-csv-master`
 
-!["Plataforma ELK"](arquitectura.png "Plataforma ELK")
+## Iniciar el *Contenedor Servidor* con ElasticSearch y Kibana
 
-Llamaremos **Contenedor Servidor** en el que tenemos a ElasticSearch y Kibana, ya que este contenedor se mantendrá en ejecución tanto tiempo como se quiera ofrecer este servicio.
+Ahora podremos iniciar el servidor ejecutando el siguiente comando en la terminal:
+```
+docker-compose -f elastic-kibana.yaml up
+```
+> Este comando le indica al programa Docker que debe crear un contenedor segun lo indicado en el archivo
+> `elastic-kibana.yaml`, en el mismo indicamos que ambos programas deben iniciarse.
 
-Y **Contenedor Procesador** al que solo ejecuta Logstash para procesar los datos y se da por terminado.
+Pasados unos *minutos*<sup>1</sup> deberiamos poder abrir en el navegador web la dirección
+[http://localhost:5601/app/kibana](http://localhost:5601/app/kibana) y Kibana se mostrará disponible. > <sup>1</sup>
+Puede variar dependiendo de los recursos disponibles
 
-### Extra: Contenedores Docker
+Apartir de este momento ElasticSearch y Kibana están listos para ser usados. Aunque aún no tenemos datos disponibles.
 
-Un contenedor Docker es una herramienta que utilizaremos para empaquetar nuestra solución, su arquitectura y las herramientas.
+## Cargar los datos OCDS a ElasticSearch
 
-Este manual no contempla enseñar los detalles de Docker y su tecnología pero podríamos definirlo de forma sencilla como "cajas" o "contenedores" (como de Trailers o de barcos de carga) de Software donde va incluido absolutamente todo lo que necesitamos para ejecutar nuestro proyecto.
+Para este proceso debemos posicionarnos en la carpeta `elk-gobmx-csv-master/pipeline`, en la
+terminal:
+```
+cd pipeline
+```
 
-En teoría esto debería facilitar mucho la distribución de cualquier herramienta de Software pues el único prerequisito a instalar es Docker en sí mismo. Este paso debería ser muy parecido a instalar cualquier otro software en la plataforma de cómputo que se elija.
+### Descargando los paquetes de datos
 
-Una vez instalado Docker, nuestro software estará listo para iniciarse "automáticamente", sin necesitar de ningun tipo de software auxiliar ni dependencias.
+Lo primero que debemos hacer es asegurarnos de haber descargado el archivo de **Contrataciones en formato OCDS por
+paquetes json** publicado en el sitio
+[datos.gob.mx](https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf/resource/ed1ec7e5-61ae-4d00-8adc-67c77844e75c)
+> Al 2 de Septiembre de 2018 este archivo lleva por nombre `contratacionesabiertas_bulk_paquetes.json.zip` y tiene un
+tamaño de 310.5 MB aproximadamente.
 
-Otra ventaja de usar Docker es que mantiene estabilidad entre lo que se desarrolla y lo que se distribuye, se evitan problemas del tipo "surgieron problemas en tu computadora pero en mi computador si funciona".
+Ahora debemos descomprimir el archivo `contratacionesabiertas_bulk_paquetes.json.zip` esto generará multiples archivos
+`.json` dentro de una carpeta:
+```
+carpeta/contratacionesabiertas_bulk_paquete1.json carpeta/contratacionesabiertas_bulk_paquete2.json
+carpeta/contratacionesabiertas_bulk_paquete3.json
+...
+```
+> Estos archivos pueden ser bastante grandes en tamaño, es recomendable tener por lo menos 2GB libres de espacio en
+> disco duro antes de continuar.
 
-Para saber más sobre Contenedores y Docker, se recomiendan las siguientes lecturas:
-- [Amazon Web Services - Qué es Docker?](https://aws.amazon.com/es/docker/)
-- [OpenWebinars - Docker](https://openwebinars.net/blog/docker-que-es-sus-principales-caracteristicas/)
-- [1and1.mx - Instalación de Docker](https://www.1and1.mx/digitalguide/servidores/configuracion/tutorial-docker-instalacion-y-primeros-pasos/)
+**IMPORTANTE** Debemos saber la ruta completa de esta carpeta con los archivos .json pues será necesaria para el paso de
+carga. A manera de ejemplo asumamos que los archivos fueron descargados y descomprimidos dentro de la carpeta de
+Descargas del sistema operativo.
 
-[Inicio](../README.md) | [Anterior: Arquitectura de las herramientas Elastic](Seccion2.md) | [Siguiente: Instalación y puesta en marcha de la herramienta](Seccion4.md)
+La ruta completa a esta carpeta **debería ser**
+[<sup>1</sup>](https://en.wikipedia.org/wiki/Home_directory#Default_home_directory_per_operating_system)
+* **Linux/Ubuntu/Mac**: `/home/{nombre de usuario}/Descargas` Se puede abreviar como `$HOME/Descargas`
+* **Windows**: `C:\Users\{nombre de usuario}\Descargas` Se puede abreviar como `%HOMEPATH%\Descargas`
+
+Al confirmar esto podemos continuar.
+
+## Procesando y cargando los datos
+
+**IMPORTANTE** **El proceso actual carga especificamente el dato `compiledRelease` de cada documento OCDS, esto en
+función de poder realizar el análisis sobre la ultima versión disponible de los *releases* OCDS, se recomienda leer los
+capitulos anteriores antes de proceder**
+
+En esta misma carpeta tenemos disponible otra herramienta especificamente diseñada para la carga de los datos, que
+también hace uso de un contenedor Docker. Usaremos dos comandos unicamente: el primero para preparar el contenedor, el
+segundo para ejecutarlo.
+
+```
+docker build . -t logstash-sfp-compranet-ocds:latest
+```
+> Con este comando Docker estará preparando el contenedor con todo lo necesario para procesar y cargar los datos.
+
+Una vez finalizado, podemos ejecutar el proceso de carga según el sistema operativo disponible.
+
+**Linux/Ubuntu o Mac**
+```
+docker run --net="host" -v $HOME/Descargas:/input logstash-sfp-compranet-ocds
+```
+**Windows**
+```
+docker run --net="host" -v %HOMEPATH%\Descargas:/input logstash-sfp-compranet-ocds
+```
+> Este comando utilizará el contenedor preparado con anterioridad ejecutando el proceso y carga de los datos. Para
+> mayores detalles puede consultar la [documentación técnica](../../pipeline/README.md) de este
+> proceso.
+
+La pantalla ahora debe mostrar información del proceso. Esto puede tomar algunos minutos.
+
+Al finalizar exitosamente deberemos ver la leyenda: `Carga finalizada` y `Kibana esta listo`.
+
+Ahora podremos visitar la pagina de [Kibana](http://localhost:5601/app/kibana) y consultar ver los datos cargados.
+
+---
+
+Para conocer más sobre los detalles técnicos de como logramos hacer la carga de los datos, en la siguiente sección
+hablaremos de como utilizamos LogStash para este proceso.
+
+[Inicio](../README.md) | [Anterior: Plataforma ELK para el Análisis de Contrataciones en formato OCDS](Seccion2.md) |
+[Siguiente: Procesamiento de datos con Logstash](Seccion4.md)
