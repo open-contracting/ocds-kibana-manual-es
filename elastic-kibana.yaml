@@ -1,17 +1,15 @@
 version: '3.1'
-# https://www.docker.elastic.co/#
 
 services:
 
   elasticsearch:
-    # https://github.com/elastic/elasticsearch-docker
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.0
     ports:
       - 9200:9200
     environment:
-      - node.name=poder-elasticsearch-test
+      - node.name=elasticsearch
       - discovery.type=single-node
-      - "ELASTIC_PASSWORD=elastic"
+      # - "ELASTIC_PASSWORD=elastic"
       - "ES_JAVA_OPTS=-Xms512m -Xmx1024m"
     ulimits:
       memlock:
@@ -22,8 +20,7 @@ services:
       - esdata:/usr/share/elasticsearch/data
 
   kibana:
-    # https://github.com/elastic/kibana-docker
-    image: docker.elastic.co/kibana/kibana:6.3.1
+    image: docker.elastic.co/kibana/kibana:6.4.0
     depends_on:
       - elasticsearch
     ports:
@@ -33,16 +30,16 @@ services:
       - ./config/kibana-plugins:/usr/share/kibana/plugins:ro
       - kbndata:/usr/share/kibana/data
 
-  configure-security:
-    image: yauritux/busybox-curl
-    command: security.sh
-    environment:
-      - "KIBANA_PASSWORD=kibana"
-      - "LOGSTASH_PASSWORD=logstash"
-    depends_on:
-      - elasticsearch
-    volumes:
-      - ./config/security.sh:/bin/security.sh:ro
+  # configure-security:
+  #   image: yauritux/busybox-curl
+  #   command: security.sh
+  #   environment:
+  #     - "KIBANA_PASSWORD=kibana"
+  #     - "LOGSTASH_PASSWORD=logstash"
+  #   depends_on:
+  #     - elasticsearch
+  #   volumes:
+  #     - ./config/security.sh:/bin/security.sh:ro
 
 volumes:
   esdata:
