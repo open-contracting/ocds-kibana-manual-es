@@ -1,7 +1,7 @@
 Análisis de contrataciones del Gobierno Federal Mexicano en formato Estándar OCDS con herramientas Elastic
 ==========================================================================================================
 
-El manual es una iniciativa del `**Project on Organizing, Development, Education, and Research (PODER)**<https://www.projectpoder.org/>`, **[Iniciativa Latinoamericana por los Datos Abiertos]**(https://idatosabiertos.org/) y **[Open Contracting Parnershipt (OCP)](https://www.open-contracting.org)** escrito por **Ricardo Vega**, **Martín Szyszlican** y **Eduard Martín-Borregón** con la supervisión de Juan Pane y Yohanna Lisnichuk
+El manual es una iniciativa del **[Project on Organizing, Development, Education, and Research (PODER)](https://www.projectpoder.org/), **[Iniciativa Latinoamericana por los Datos Abiertos](https://idatosabiertos.org/)** y **[Open Contracting Parnershipt (OCP)](https://www.open-contracting.org)** escrito por **Ricardo Vega**, **Martín Szyszlican** y **Eduard Martín-Borregón** con la supervisión de Juan Pane y Yohanna Lisnichuk
 
 
 Introducción
