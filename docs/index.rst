@@ -4,7 +4,7 @@ Análisis de contrataciones del Gobierno Federal Mexicano en formato Estándar O
 Introducción
 ------------
 
-    Algo sobre porqué hacemos esto... El gobierno Mexicano comenzó a
+    El gobierno Mexicano comenzó a
     contemplar el Estándar de Datos de Contrataciones Abiertas (OCDS) en
     2014 y en Octubre de 2015 se comprometió a implementar el Estándar
     para todo lo relacionado con la construcción del Nuevo Aeropuerto de
@@ -15,37 +15,33 @@ Introducción
     en OCDS:
     `https://www.gob.mx/contratacionesabiertas/ <https://www.gob.mx/contratacionesabiertas/home#!/>`__
 
-Documentos de apoyo para la escritura del Manual
-------------------------------------------------
 
-1. `Índice propuesto por
-   ILDA <https://docs.google.com/document/d/1oqZfk1BUwyBg7P4jKfzbT53LpRLmIIQUr90IkCMNP4I/edit>`__
-2. `Manual de analisis OCDS en
-   R <https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd>`__
 
-Capítulo 1. Apuntes sobre el herramientas y datos en OCDS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. `Introducción al Estándar OCDS <C1/Seccion1.md>`__
-2. `Introduccion a las herramientas Elastic <C2/Seccion1.md>`__
-3. `Datos de Contrataciones Abiertas en México <C1/Seccion3.md>`__
+.. toctree::
+   :maxdepth: 2
+   :caption: Capítulo 1. Apuntes sobre el herramientas y datos en OCDS
 
-Capítulo 2. Usando las herramientas Elastic para facilitar el análisis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   C1/Seccion1
+   C1/Seccion2
 
-1. `Arquitectura de las herramientas Elastic <C2/Seccion2.md>`__
-2. `Plataforma ELK para el Análisis de Contrataciones en formato
-   OCDS <C2/Seccion3.md>`__
-3. `Puesta en marcha de la Plataforma ELK para el Análisis de
-   Contrataciones en formato OCDS <C2/Seccion4.md>`__
-4. `Procesamiento de datos con Logstash <C2/Seccion5.md>`__
-5. `Resúmen <C2/Seccion5.md>`__
+.. toctree::
+  :maxdepth: 2
+  :caption: Capítulo 2. Usando las herramientas Elastic para facilitar el análisis
 
-Capítulo 3. Análisis de los datos
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  C2/Seccion1
+  C2/Seccion2
+  C2/Seccion3
+  C2/Seccion4
+  C2/Seccion5
 
-1. `Introducción a Kibana <C3/Seccion1.md>`__
-2. `Descubrir <C3/Seccion2.md>`__
-3. `Panel de administración <C3/Seccion3.md>`__
-4. `Visualizar <C3/Seccion4.md>`__
-5. `Dashboards <C3/Seccion5.md>`__
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Capítulo 3. Análisis de los datos
+
+  C3/Seccion1
+  C3/Seccion2
+  C3/Seccion3
+  C3/Seccion4
+  C3/Seccion5
