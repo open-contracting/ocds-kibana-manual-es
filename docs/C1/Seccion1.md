@@ -30,14 +30,7 @@ El estándar define un proceso de contratación como:
 
 > Toda la información de planificación, publicación de la convocatoria, adjudicaciones, contratos e implementación de contratos relacionada con un solo proceso de iniciación.
 
-El estándar cubre todas las etapas de un proceso de contratación, aunque algunos procesos pueden no incluir todos los pasos posibles. Las etapas del proceso de adquisición, con objetos de ejemplo que pueden estar asociados a cada uno, se representan en la figura a continuación.
-
-
-```{r, echo=FALSE, fig.cap="Stages of the procurement process."}
-knitr::include_graphics("procurement-stages.png")
-```
-
-Para fines de identificación, a todos los procesos de contratación se les asigna un Id. de contratación abierta único (ocid), que se puede utilizar para unir datos de diferentes etapas. Para evitar clústers de ocid entre editores, un editor puede anteponer un prefijo a los identificadores generados localmente. Se anima a los editores a registrar su prefijo [aquí](http://standard.open-contracting.org/latest/en/implementation/registration/).
+El estándar cubre todas las etapas de un proceso de contratación, aunque algunos procesos pueden no incluir todos los pasos posibles. Para fines de identificación, a todos los procesos de contratación se les asigna un Id. de contratación abierta único (ocid), que se puede utilizar para unir datos de diferentes etapas. Para evitar clústers de ocid entre editores, un editor puede anteponer un prefijo a los identificadores generados localmente. Se anima a los editores a registrar su prefijo [aquí](http://standard.open-contracting.org/latest/en/implementation/registration/).
 
 
 
