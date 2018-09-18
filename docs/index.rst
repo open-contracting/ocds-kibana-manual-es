@@ -1,21 +1,17 @@
 Análisis de contrataciones del Gobierno Federal Mexicano en formato Estándar OCDS con herramientas Elastic
 ==========================================================================================================
 
+El manual es una iniciativa del **[Project on Organizing, Development, Education, and Research (PODER)](https://www.projectpoder.org/)**, **[Iniciativa Latinoamericana por los Datos Abiertos (ILDA)](https://idatosabiertos.org/)** y **[Open Contracting Parnershipt (OCP)](https://www.open-contracting.org)** escrito por **Ricardo Vega**, **Martín Szyszlican** y **Eduard Martín-Borregón** con la supervisión de Juan Pane y Yohanna Lisnichuk
+
+
 Introducción
 ------------
 
-    El gobierno Mexicano comenzó a
-    contemplar el Estándar de Datos de Contrataciones Abiertas (OCDS) en
-    2014 y en Octubre de 2015 se comprometió a implementar el Estándar
-    para todo lo relacionado con la construcción del Nuevo Aeropuerto de
-    la Ciudad de México. Dicho compromiso incluyó también continuar
-    explorando la liberación de los datos de otras operaciones de
-    gobierno en dicho Estándar. En Noviembre de 2017 el gobierno
-    Mexicano publicó la primera versión de los datos de contrataciones
-    en OCDS:
-    `https://www.gob.mx/contratacionesabiertas/ <https://www.gob.mx/contratacionesabiertas/home#!/>`__
-
-
+    El Open Contracting Parnership indica en septiembre de 2017 que 13 países de América Latina y el Caribe (Argentina, Chile, Colombia, Costa Rica, Guadalupe, Guatemala, Honduras, Martinica, México, Panamá, Paraguay, República Dominicana y Uruguay) están activos. Esto significa que están usando el estándar de datos en contrataciones abiertas, tienen el compromiso de implementarlo y/o tienen alguna innovación en el monitoreo de contrataciones públicas. 
+    
+Para incrementar el uso y el impacto de la publicación de datos se ha realizado esta guía, que muestra como instalar el paquete ELK, importar datos con formato de contrataciones abiertas (OCDS) y analizarlos de forma visual e intuitiva. Si bien todos los ejemplos son en base el caso mexicano, hay instrucciones para importar cualquier conjunto de datos que cumpla el estándar OCDS.
+  
+Esperamos que este sea un granito de arena más para potenciar y promover la transparencia y la rendición de cuentas en la región. 
 
 
 .. toctree::
