@@ -18,6 +18,10 @@ source_parsers = {
 
 source_suffix = ['.rst', '.md']
 
+source_parsers = {
+   '.md': 'recommonmark.parser.CommonMarkParser',
+}
+
 github_doc_root = 'https://github.com/ProjectPODER/ManualKibanaOCDS/tree/master/docs/'
 
 
