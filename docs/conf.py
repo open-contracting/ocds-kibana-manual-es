@@ -18,6 +18,7 @@ source_parsers = {
 
 source_suffix = ['.rst', '.md']
 
+github_doc_root = 'https://github.com/ProjectPODER/ManualKibanaOCDS/tree/master/docs/'
 
 
 def setup(app):
