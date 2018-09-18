@@ -51,7 +51,7 @@ cd pipeline
 
 ### Descargando los paquetes de datos
 
-Lo primero que debemos hacer es asegurarnos de haber descargado el archivo de **Contrataciones en formato OCDS por
+Si queremos trabajar con el total de los contratos publicados en estándard OCDS sin importar los últimos datos publicados, lo primero que debemos hacer es asegurarnos de haber descargado el archivo de **Contrataciones en formato OCDS por
 paquetes json** publicado en el sitio
 [datos.gob.mx](https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf/resource/ed1ec7e5-61ae-4d00-8adc-67c77844e75c)
 > Al 2 de Septiembre de 2018 este archivo lleva por nombre `contratacionesabiertas_bulk_paquetes.json.zip` y tiene un
@@ -77,6 +77,37 @@ La ruta completa a esta carpeta **debería ser**
 * **Windows**: `C:\Users\{nombre de usuario}\Descargas` Se puede abreviar como `%HOMEPATH%\Descargas`
 
 Al confirmar esto podemos continuar.
+
+Si deseamos trabajar con un conjunto reducido de contratos, o con datos más actualizados, en la siguiente sección encontraremos cómo descargar de la API un subconjunto de datos. De lo contrario puede saltear la siguiente sección.
+
+### Descargando datos de la API
+En la sección anterior se explicó cómo descargar el conjunto completo de los datos en OCDS mediante un sólo archivo, en esta sección presentamos una alternativa para descargar sólo los contratos que buscamos o contratos más actualizados que aún no se hayan publicado en el archivo completo.
+
+Para realizar esta descarga utilizaremos el comando curl y para filtrarlo el comando jq. Ambos deben ser instalados previamente:
+```
+sudo apt-get install curl jq
+```
+
+Para ver la documentación completa de la API se puede revisar la [Guía básica de uso del API](http://transparenciapresupuestaria.gob.mx/work/models/PTP/programas/OpenDataDay/Resultados/Guia%20_uso_API_contrataciones%20_abiertas.pdf) donde se detallan las opciones específicas de filtrado. A continuación algunos ejemplos.
+
+Para descargar los últimos 100 procesos de contratación:
+```
+curl https://api.datos.gob.mx/v2/contratacionesabiertas | jq -crM ".results[]"  > contratacionesabiertas_ultimos_100.json
+```
+
+Para descargar los procesos de contratación que involucran a una unidad compradora determinada (limitado a 1000, pero se puede cambiar)
+```
+curl https://api.datos.gob.mx/v2/contratacionesabiertas?records.compiledRelease.parties.name=Servicio%20de%20Administraci%C3%B3n%20Tributaria&pageSize=1000&page=1 | jq -crM ".results[]"  > contratacionesabiertas_SAT_1000.json
+```
+
+Para comprender mejor el comando, vamos a detallarlo parte por parte:
+* Primero se invoca a curl
+* Luego se incluye la dirección URL base de la API  https://api.datos.gob.mx/v2/contratacionesabiertas
+* A continuación los parámetros de filtrado: records.compiledRelease.parties.name es para filtrar por el valor de ese campo, es decir, el nombre de alguna de las partes del contrato. pageSize implica cuántos resultados devolverá en cada pedido y page permite ir pidiendo las páginas siguientes en caso de que haya más que una.
+* Luego usamos un comando de jq que nos permite extraer sólo la parte del resultado que nos interesa, que son los records.
+* Finalmente indicamos que el resultado de la operación debe ser almacenado en un archivo, es importante que este nombre de archivo represente la consulta realizada para simplificar luego el archivado.
+
+Nota: Estos archivos deben almacenarse y tratarse de la misma forma que en la sección anterior, poniéndolos en la carpeta de descargas, para poder continuar con el próximo paso.
 
 ## Procesando y cargando los datos
 
