@@ -31,7 +31,7 @@ Esperamos que este sea un granito de arena más para potenciar y promover
 la transparencia y la rendición de cuentas en la región.
 
 
-
+```eval_rst
 .. toctree::
    :maxdepth: 2
    :caption: Capítulo 1. Apuntes sobre el herramientas y datos en OCDS
@@ -59,3 +59,4 @@ la transparencia y la rendición de cuentas en la región.
   C3/Seccion3
   C3/Seccion4
   C3/Seccion5
+```
