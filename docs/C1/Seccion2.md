@@ -8,12 +8,12 @@ Desde hace muchos años existen datos abiertos sobre contrataciones en México, 
 * http://mexico.procurement-analytics.org/
 
 ## Datos mexicanos en OCDS
-Desde el año 2015 hay diferentes proyectos en la administración pública mexicana para publicar datos en el estándar de contrataciones abiertas OCDS. El primero que estuvo disponible fue el sitio de la Ciudad de México (http://www.contratosabiertos.cdmx.gob.mx/contratos). La Secretaría de la Función Pública comenzó en 2017 a publicar datos en el estándar OCDS, del cual realizaron una traducción al español disponible aquí: https://www.contratacionesabiertas.mx/
+Desde el año 2015 hay diferentes proyectos en la administración pública mexicana para publicar datos en el estándar de contrataciones abiertas OCDS. El primero que estuvo disponible fue el sitio de la [Ciudad de México](http://www.contratosabiertos.cdmx.gob.mx/contratos). La fuente de datos gubernamentales en OCDS la publica [la Secretaría de Hacienda y Credito Público](https://www.gob.mx/contratacionesabiertas/home) y son los datos que se usan en este manual. 
 
-Adicionalmente hay datos en estándar OCDS publicados por el Instituto Nacional de Acceso a la Información (http://contratacionesabiertas.inai.org.mx) y los contratos en relación la construcción del Nuevo Aeropuerto (https://datos.gob.mx/nuevoaeropuerto/)
+Adicionalmente hay que destacar el esfuerzo para traducir el OCDS al español realizado por la [Alianza para las contrataciones Abiertas de México](https://www.contratacionesabiertas.mx/) y otros organismos que públican en OCDS son el [Instituto Nacional de Acceso a la Información](http://contratacionesabiertas.inai.org.mx), el Grupo Aeropuertario de la Ciudad de México publica [los contratos en relación la construcción del Nuevo Aeropuerto](https://datos.gob.mx/nuevoaeropuerto/), la Secretaría de Comunicaciones y Transportes pública los [contratos relacionados con el proyecto Red Compartida](https://datos.gob.mx/redcompartida/) y nivel subnacional está la [Secretaria de Planificación, Administración y Finanzas del Gobierno de Jalisco](https://contratacionesabiertas.jalisco.gob.mx/contratosabiertos/). 
 
 ## Los datos para este manual
-En este manual vamos a estar utilizando los datos publicados por el área de Transparencia Presupuestaria de la Secretaría de la Función Pública disponibles aquí: https://www.gob.mx/contratacionesabiertas
+Como se dijo en el apartado anterior en este manual vamos a estar utilizando los datos publicados por el área de Transparencia Presupuestaria de la Secretaría de la Función Pública disponibles aquí: https://www.gob.mx/contratacionesabiertas
 
 En particular vamos a trabajar con el concentrado de contrataciones abiertas de la Administración Pública Federal en formato JSON, obtenido desde esta URL: https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf/resource/0252e19f-bdd6-43de-af7b-106d4c7a82c8
 
