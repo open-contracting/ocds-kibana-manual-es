@@ -12,6 +12,18 @@ Desde el año 2015 hay diferentes proyectos en la administración pública mexic
 
 Adicionalmente hay que destacar el esfuerzo para traducir el OCDS al español realizado por la [Alianza para las contrataciones Abiertas de México](https://www.contratacionesabiertas.mx/) y otros organismos que publican en OCDS son el [Instituto Nacional de Acceso a la Información](http://contratacionesabiertas.inai.org.mx), el Grupo Aeroportuario de la Ciudad de México publica [los contratos en relación la construcción del Nuevo Aeropuerto](https://datos.gob.mx/nuevoaeropuerto/), la Secretaría de Comunicaciones y Transportes pública los [contratos relacionados con el proyecto Red Compartida](https://datos.gob.mx/redcompartida/) y nivel subnacional está la [Secretaria de Planificación, Administración y Finanzas del Gobierno de Jalisco](https://contratacionesabiertas.jalisco.gob.mx/contratosabiertos/). 
 
+## Datos en OCDS en América Latina
+
+Además de México en América Latina hay datos en formato OCDS en cinco países:
+* [ChileCompra](http://www.chilecompra.cl/)
+* [Colombia Compra Eficiente](https://www.colombiacompra.gov.co/transparencia/gestion-documental/datos-abiertos)
+* [Superintendencia de Alianza Público-Privada de Honduras](http://app.sisocs.org/index.php?r=Ciudadano/index)
+* paraguay_dncp
+* paraguay_hacienda
+* [Compras Estatales de la Agencia de Compras y Contrataciones del Estado de Uruguay](https://www.comprasestatales.gub.uy/inicio/datos-abiertos/)
+
+En el manual [OCDS Kingfisher tool](https://ocdskingfisher.readthedocs.io/en/master/index.html) se explica como descargarlas e importarlas. 
+
 ## Los datos para este manual
 Como se dijo en el apartado anterior en este manual vamos a estar utilizando los datos publicados por el área de Transparencia Presupuestaria de la Secretaría de la Función Pública disponibles aquí: [https://www.gob.mx/contratacionesabiertas](https://www.gob.mx/contratacionesabiertas)
 
