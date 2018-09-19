@@ -1,11 +1,11 @@
 # Procesamiento de datos con Logstash
 
-Ahora que hemos logrado poner en marcha la plataforma podemos ahondar en los detalles técnicos de la colección, procesamiento e indexación de los datos, que como habíamos revisado con anterioridad es la tarea realizada por la herramienta Logstash.
+Ahora que hemos logrado poner en marcha la plataforma podemos ahondar en los detalles técnicos de la colección,
+procesamiento e indexación de los datos, que como habíamos revisado con anterioridad es la tarea realizada por la
+herramienta Logstash.
 
-**IMPORTANTE**
-Todo lo mencionado a continuación está abstraído en el código incluido en los contenedores Docker
-
-Recordemos que Logstash utiliza procesos llamados Pipelines, para contextualizar lo logrado con los datos OCDS utilizaremos el pipeline de ese dataset a manera de ejemplo.
+**IMPORTANTE** Todo lo mencionado a continuación se encuentra implementado en el código incluido en los contenedores
+Docker. NO es necesario repetir estos pasos, unicamente se menciona aqui para entender mejor el proceso.
 
 ### Preparación de los datos OCDS por paquetes
 
@@ -14,7 +14,8 @@ Recordemos que Logstash utiliza procesos llamados Pipelines, para contextualizar
 El archivo obtenido desde gob.mx se presenta en formato de colección de [Paquete de
 Registros](http://standard.open-contracting.org/latest/es/schema/record_package/)
 
-> El esquema de paquete de registros (record package) describe la estructura del contenedor para publicar registros. Los contenidos de un registro se basan en el esquema de entregas (releases). El paquete contiene metadatos importantes.
+> El esquema de paquete de registros (record package) describe la estructura del contenedor para publicar registros. Los
+> contenidos de un registro se basan en el esquema de entregas (releases). El paquete contiene metadatos importantes.
 
 ```
 [
