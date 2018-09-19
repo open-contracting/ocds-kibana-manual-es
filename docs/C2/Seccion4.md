@@ -243,9 +243,7 @@ Para lo primero utilizamos el Plugin [Output File](https://www.elastic.co/guide/
 y en las opciones especificamos el nombre del archivo log, que debe ser creado si no existe y que debe sobrescribir lo existente.
 
 Para enviar los documentos a ElasticSearch usamos otro plugin que dispone de múltiples opciones, en nuestro caso especificamos tres
-pero recomendamos consultar el manual.
-
-[Output ElasticSearch](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html)
+pero recomendamos consultar el manual [Output ElasticSearch](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html).
 
 Las opciones utilizadas son las siguientes:
 - `index`: Indica el nombre del indice al que vamos a enviar el documento.
