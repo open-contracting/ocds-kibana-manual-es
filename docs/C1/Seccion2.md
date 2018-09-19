@@ -3,7 +3,7 @@ Si bien la mayoría de la información en este manual puede ser utilizada para e
 ## Datos de Contrataciones Abiertas
 Desde hace muchos años existen datos abiertos sobre contrataciones en México, un historial de los mismos se puede encontrar en el sitio de [CompraNet](http://compranet.funcionpublica.gob.mx/), que dispone de información en formato Excel desde el año 2002. Estos datos han sido objeto de múltiples análisis a lo largo del tiempo y están disponibles en una variedad de plataformas de tecnología cívica que simplifican su análisis. Para enumerar algunas de las que están actualmente disponibles:
 * [QuiénEsQuién.Wiki](https://www.quienesquien.wiki)
-* [ContratoBook](https://contratobook.com.mx)
+* [ContratoBook](http://contratobook.org/#/contratos)
 * [CompranNetFacil](http://compranetfacil.com/)
 * [Data Analytics for Procurement](http://mexico.procurement-analytics.org/#/analysis/summary)
 
