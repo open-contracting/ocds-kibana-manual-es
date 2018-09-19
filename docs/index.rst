@@ -15,14 +15,14 @@ Esperamos que este sea un granito de arena más para potenciar y promover la tra
 
 .. toctree::
    :maxdepth: 2
-   :caption: Capítulo 1. Apuntes sobre el herramientas y datos en OCDS
+   :caption: 1. Herramientas y datos en OCDS
 
    C1/Seccion1
    C1/Seccion2
 
 .. toctree::
   :maxdepth: 2
-  :caption: Capítulo 2. Usando las herramientas Elastic para facilitar el análisis
+  :caption: 2. Instalación y configuración de ELK
 
   C2/Seccion1
   C2/Seccion2
@@ -33,7 +33,7 @@ Esperamos que este sea un granito de arena más para potenciar y promover la tra
 
 .. toctree::
   :maxdepth: 2
-  :caption: Capítulo 3. Análisis de los datos
+  :caption: 3. Análisis de los datos
 
   C3/Seccion1
   C3/Seccion2
