@@ -18,8 +18,8 @@ Además de México en América Latina hay datos en formato OCDS en cinco países
 * [ChileCompra](http://www.chilecompra.cl/)
 * [Colombia Compra Eficiente](https://www.colombiacompra.gov.co/transparencia/gestion-documental/datos-abiertos)
 * [Superintendencia de Alianza Público-Privada de Honduras](http://app.sisocs.org/index.php?r=Ciudadano/index)
-* paraguay_dncp
-* paraguay_hacienda
+* [Portal de Contrataciones Públicas de la República de Paraguay](https://www.contrataciones.gov.py/datos/api/v2/#!/ocds) 
+* [Portal de Datos Abiertos del Ministerio de Hacienda de Paraguay](https://datos.hacienda.gov.py/)
 * [Compras Estatales de la Agencia de Compras y Contrataciones del Estado de Uruguay](https://www.comprasestatales.gub.uy/inicio/datos-abiertos/)
 
 En el manual [OCDS Kingfisher tool](https://ocdskingfisher.readthedocs.io/en/master/index.html) se explica como descargarlas e importarlas. 
