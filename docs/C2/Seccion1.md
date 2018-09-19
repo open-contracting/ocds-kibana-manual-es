@@ -9,7 +9,7 @@ Las herramientas que componen este sistema son: ElasticSearch, Logstash y Kibana
 Estas herramientas son creadas, mantenidas y distribuidas por la compañía [Elastic](elastic.co) desde 2012 y han evolucionado según las necesidades del mercado. La primera de las herramientas en ser creada fue ElasticSearch en 2004 bajo el nombre de Compass, pero la primera versión oficial surge en 2010.
 
 Elastic ofrece sus productos en dos modalidades:
-- Como software de código abierto, bajo la licencia Apache 2, salvo algunas funcionalidades adicionales son distribuidos con licensia propietaria. Ofrece la oportunidad de ver, utilizar y hasta modificar las herramientas sin costo alguno, pero toda administración de las herramientas debe ser llevado a cabo personalmente.
+- Como software de código abierto, bajo la licencia Apache 2, salvo algunas funcionalidades adicionales son distribuidos con licencia propietaria. Ofrece la oportunidad de ver, utilizar y hasta modificar las herramientas sin costo alguno, pero toda administración de las herramientas debe ser llevado a cabo personalmente.
 - Como servicio de pago, Elastic Cloud pone a disposición todas las herramientas y las funcionalidades adiciones en servidores administrados por ellos.
 
 ## Las ventajas de la plataforma ELK
@@ -44,10 +44,6 @@ La plataforma ELK tiene una arquitectura lineal entre sus componentes.
 
 Pero veamos un poco más a detalle cada herramienta:
 
-- [ElasticSearch](Seccion1/1_ElasticSearch.md)
-- [Logstash](Seccion1/2_Logstash.md)
-- [Kibana](Seccion1/3_Kibana.md)
-
-Una vez que hemos conocido los conceptos básicos de las herramientas que utilizaremos, en el siguiente capítulo aprenderemos como planeamos utilizar ELK para lograr el análisis de los datos de contrataciones del gobierno Mexicano disponibles en formato OCDS.
-
-[Inicio](../README.md) | [Siguiente: Plataforma ELK para el Análisis de Contrataciones en formato OCDS](Seccion3.md)
+- [ElasticSearch](https://manualkibanaocds.readthedocs.io/es/latest/C2/Seccion1/1_ElasticSearch.html)
+- [Logstash](https://manualkibanaocds.readthedocs.io/es/latest/C2/Seccion1/2_Logstash.html)
+- [Kibana](https://manualkibanaocds.readthedocs.io/es/latest/C2/Seccion1/3_Kibana.html)
