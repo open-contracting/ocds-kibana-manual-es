@@ -14,7 +14,7 @@ Esto permite que un sistema basado en ElasticSearch y configurado apropiadamente
 
 ## Conceptos de ElasticSearch
 
-### Cúmulo (Cluster)
+### Cúmulo (Clúster)
 
 Al conjunto de nodos en ElasticSearch se le conoce como "clúster", un clúster puede tener uno o más nodos. Un clúster tendrá un nombre único, y los nodos reconocerán el clúster al que pertenecen por este nombre. Es completamente válido tener un clúster con un solo nodo, y esto resulta mucho más sencillo de configurar, por lo que será el ejemplo elegido en este manual.
 
