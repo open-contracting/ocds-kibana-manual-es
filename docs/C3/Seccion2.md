@@ -11,11 +11,16 @@ Las principales acciones tanto para buscar como para configurar la visualizació
 1. **Selector de indices**: En el desplegable se encuentran los distintos indices importados en la instancia de Kibana, este desplegable nos permite mover a través de ellos. Incluso algunos filtros se mantienen entre indices si hay campos coincidentes. 
 2. **Buscador**: Nos permite hacer toda una serie de preguntas sobre nuestra base de datos, una forma de ver si nuestra query está funcionado es comprobar el recuento de "hits" que aparece justo encima del buscador. Algunas de las querys más habituales que se pueden usar:   
 
-<table>
+<table border=1>
     <tr>
-        <td>Acción</td>
-        <td>Comando</td>
-        <td>Ejemplo</td>
+        <th>Acción</td>
+        <th>Comando</td>
+        <th>Ejemplo</td>
+    </tr>
+    <tr>
+        <td>Buscar en cualquier campo</td>
+        <td>*string*</td>
+        <td>México</td>
     </tr>
     <tr>
         <td>AcciónAcciónAcciónAcciónAcciónAcción</td>
@@ -25,9 +30,7 @@ Las principales acciones tanto para buscar como para configurar la visualizació
 </table>
 
 
-| Acción | Comando | Ejemplo |
-|:--|:--|:--|
-| Buscar en cualquier campo | *string* | México |
+|  |  |  |
 | Buscar en campo espeficio | *campo:string* | buyer.name:México |
 | Buscar texto especifico en campo especifico | *campo:"string"* | buyer.name:"Telecomunicaciones de México" |
 | Buscar dos textos en un campo | *campo:("string" OR "string")* | buyer.name:("Telecomunicaciones de México" OR " Tecnológico Nacional de México") |
