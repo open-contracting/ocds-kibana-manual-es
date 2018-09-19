@@ -13,7 +13,9 @@ Las principales acciones tanto para buscar como para configurar la visualizació
 
 <table>
     <tr>
-        <td>Foo</td>
+        <td>Acción</td>
+        <td>Comando</td>
+        <td>Ejemplo</td>
     </tr>
 </table>
 
