@@ -16,7 +16,7 @@ Al final de esta sección tendremos todo lo necesario hacer consultas y visualiz
 El presente proyecto esta desarrollado para poder iniciar los 3 servicios, según sea necesario de forma fácil y rápida.
 
 
-## Pre-requisitos
+## Prerequisitos
 
 1. Abrir la terminal para comandos del Sistema Operativo
 1. [Instalar Docker CE](https://docs.docker.com/install/)
@@ -32,14 +32,14 @@ Ahora podremos iniciar el servidor ejecutando el siguiente comando en la termina
 ```
 docker-compose -f elastic-kibana.yaml up
 ```
-> Este comando le indica al programa Docker que debe crear un contenedor segun lo indicado en el archivo
+> Este comando le indica al programa Docker que debe crear un contenedor según lo indicado en el archivo
 > `elastic-kibana.yaml`, en el mismo indicamos que ambos programas deben iniciarse.
 
-Pasados unos *minutos*<sup>1</sup> deberiamos poder abrir en el navegador web la dirección
+Pasados unos *minutos*<sup>1</sup> deberíamos poder abrir en el navegador web la dirección
 [http://localhost:5601/app/kibana](http://localhost:5601/app/kibana) y Kibana se mostrará disponible. > <sup>1</sup>
 Puede variar dependiendo de los recursos disponibles
 
-Apartir de este momento ElasticSearch y Kibana están listos para ser usados. Aunque aún no tenemos datos disponibles.
+A partir de este momento ElasticSearch y Kibana están listos para ser usados. Aunque aún no tenemos datos disponibles.
 
 ## Cargar los datos OCDS a ElasticSearch
 
@@ -111,11 +111,11 @@ Nota: Estos archivos deben almacenarse y tratarse de la misma forma que en la se
 
 ## Procesando y cargando los datos
 
-**IMPORTANTE** **El proceso actual carga especificamente el dato `compiledRelease` de cada documento OCDS, esto en
+**IMPORTANTE** **El proceso actual carga específicamente el dato `compiledRelease` de cada documento OCDS, esto en
 función de poder realizar el análisis sobre la ultima versión disponible de los *releases* OCDS, se recomienda leer los
-capitulos anteriores antes de proceder**
+capítulos anteriores antes de proceder**
 
-En esta misma carpeta tenemos disponible otra herramienta especificamente diseñada para la carga de los datos, que
+En esta misma carpeta tenemos disponible otra herramienta Usaremos diseñada para la carga de los datos, que
 también hace uso de un contenedor Docker. Usaremos dos comandos unicamente: el primero para preparar el contenedor, el
 segundo para ejecutarlo.
 
@@ -148,6 +148,3 @@ Ahora podremos visitar la pagina de [Kibana](http://localhost:5601/app/kibana) y
 
 Para conocer más sobre los detalles técnicos de como logramos hacer la carga de los datos, en la siguiente sección
 hablaremos de como utilizamos LogStash para este proceso.
-
-[Inicio](../README.md) | [Anterior: Plataforma ELK para el Análisis de Contrataciones en formato OCDS](Seccion2.md) |
-[Siguiente: Procesamiento de datos con Logstash](Seccion4.md)
