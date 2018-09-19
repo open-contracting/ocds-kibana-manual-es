@@ -33,7 +33,7 @@ Esperamos que este sea un granito de arena más para potenciar y promover la tra
 
 .. toctree::
   :maxdepth: 2
-  :caption: 3. Análisis de los datos
+  :caption: 3. Análisis de datos
 
   C3/Seccion1
   C3/Seccion2
