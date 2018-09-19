@@ -35,9 +35,8 @@ docker-compose -f elastic-kibana.yaml up
 > Este comando le indica al programa Docker que debe crear un contenedor según lo indicado en el archivo
 > `elastic-kibana.yaml`, en el mismo indicamos que ambos programas deben iniciarse.
 
-Pasados unos *minutos*<sup>1</sup> deberíamos poder abrir en el navegador web la dirección
-[http://localhost:5601/app/kibana](http://localhost:5601/app/kibana) y Kibana se mostrará disponible. > <sup>1</sup>
-Puede variar dependiendo de los recursos disponibles
+Pasados unos minutos, depende de los recursos disponibles, deberíamos poder abrir en el navegador web la dirección
+[http://localhost:5601/app/kibana](http://localhost:5601/app/kibana) y Kibana se mostrará disponible. 
 
 A partir de este momento ElasticSearch y Kibana están listos para ser usados. Aunque aún no tenemos datos disponibles.
 
@@ -102,7 +101,7 @@ curl https://api.datos.gob.mx/v2/contratacionesabiertas?records.compiledRelease.
 
 Para comprender mejor el comando, vamos a detallarlo parte por parte:
 * Primero se invoca a curl
-* Luego se incluye la dirección URL base de la API  https://api.datos.gob.mx/v2/contratacionesabiertas
+* Luego se incluye la dirección URL base de la API: [https://api.datos.gob.mx/v2/contratacionesabiertas](https://api.datos.gob.mx/v2/contratacionesabiertas)
 * A continuación los parámetros de filtrado: records.compiledRelease.parties.name es para filtrar por el valor de ese campo, es decir, el nombre de alguna de las partes del contrato. pageSize implica cuántos resultados devolverá en cada pedido y page permite ir pidiendo las páginas siguientes en caso de que haya más que una.
 * Luego usamos un comando de jq que nos permite extraer sólo la parte del resultado que nos interesa, que son los records.
 * Finalmente indicamos que el resultado de la operación debe ser almacenado en un archivo, es importante que este nombre de archivo represente la consulta realizada para simplificar luego el archivado.
@@ -135,7 +134,7 @@ docker run --net="host" -v $HOME/Descargas:/input logstash-sfp-compranet-ocds
 docker run --net="host" -v %HOMEPATH%\Descargas:/input logstash-sfp-compranet-ocds
 ```
 > Este comando utilizará el contenedor preparado con anterioridad ejecutando el proceso y carga de los datos. Para
-> mayores detalles puede consultar la [documentación técnica](../../pipeline/README.md) de este
+> mayores detalles puede consultar la [documentación técnica](https://github.com/ProjectPODER/ManualKibanaOCDS/tree/master/pipeline) de este
 > proceso.
 
 La pantalla ahora debe mostrar información del proceso. Esto puede tomar algunos minutos.
