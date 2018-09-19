@@ -22,12 +22,12 @@ las mecánicas de Logstash.
 En el archivo [pipeline.conf](/pipeline/pipeline.conf) podemos encontrar
 el pipeline ya diseñado para este dataset, revisemos cada uno de los bloques que lo componen.
 
-- [Entrada](Seccion4/2_Entrada.md)
-- [Transformación](Seccion4/3_Transformacion.md)
-- [Salida](Seccion4/4_Salida.md)
+- [Entrada](https://manualkibanaocds.readthedocs.io/es/latest/C2/Seccion4/2_Entrada.html)
+- [Transformación](https://manualkibanaocds.readthedocs.io/es/latest/C2/Seccion4/3_Transformacion.html)
+- [Salida](https://manualkibanaocds.readthedocs.io/es/latest/C2/Seccion4/4_Salida.html)
 
 Como pudimos constatar la creación de un pipeline para procesamiento con Logstash es la codificación de un proceso
 lógico determinado. Cada dataset puede requerir distintos procesos, pero ahí radica el poder de Logstash que nos permite
 plasmar estos pasos de forma concisa y ordenada.
 
-[Inicio](../README.md) | [Anterior: Instalación y puesta en marcha de la herramienta](Seccion3.md) | [Siguiente: Resúmen](Seccion5.md)
+
