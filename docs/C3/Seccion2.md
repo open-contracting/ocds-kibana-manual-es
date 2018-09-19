@@ -19,26 +19,42 @@ Las principales acciones tanto para buscar como para configurar la visualizació
     </tr>
     <tr>
         <td>Buscar en cualquier campo</td>
-        <td>*string*</td>
+        <td>string</td>
         <td>México</td>
     </tr>
     <tr>
-        <td>AcciónAcciónAcciónAcciónAcciónAcción</td>
-        <td>ComandAcciónAccióno</td>
-        <td>EjeAcciónmplo</td>
+        <td>Buscar en campo espeficio</td>
+        <td>campo:string</td>
+        <td>buyer.name:México</td>
+    </tr>
+    <tr>
+        <td>Buscar texto especifico en campo especifico</td>
+        <td>campo:"string"</td>
+        <td>buyer.name:"Telecomunicaciones de México"</td>
+    </tr>
+    <tr>
+        <td>Buscar dos textos en un campo</td>
+        <td>campo:("string" OR "string")</td>
+        <td>buyer.name:("Telecomunicaciones de México" OR " Tecnológico Nacional de México")</td>
+    </tr>
+    <tr>
+        <td>Buscar en dos campos a la vez</td>
+        <td>campo:"string" AND campo:"string"</td>
+        <td>buyer.name:"Telecomunicaciones de México" AND tender.title:servicios</td>
+    </tr>
+    <tr>
+        <td>Más grande o más pequeño</td>
+        <td>campo:>valor</td>
+        <td>contracts.value.amount:(>100000 AND <1000000)</td>
+    </tr>
+    <tr>
+        <td>Wildcards, valores desconcidos</td>
+        <td>c?mp*</td>
+        <td>M?xic*</td>
     </tr>
 </table>
 
-
-|  |  |  |
-| Buscar en campo espeficio | *campo:string* | buyer.name:México |
-| Buscar texto especifico en campo especifico | *campo:"string"* | buyer.name:"Telecomunicaciones de México" |
-| Buscar dos textos en un campo | *campo:("string" OR "string")* | buyer.name:("Telecomunicaciones de México" OR " Tecnológico Nacional de México") |
-| Buscar en dos campos a la vez | *campo:"string" AND campo:"string"* | buyer.name:"Telecomunicaciones de México" AND tender.title:servicios |
-| Más grande o más pequeño | *campo:>valor* | contracts.value.amount:(>100000 AND <1000000) |
-| wildcards, valores desconcidos | *c?mpo* | M?exic* |
-  
-    Para conocer más opciones leer la documentación de [Query String Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-query-string-query.html#query-string-syntax) y de [Lucene Query Syntax](https://www.elastic.co/guide/en/kibana/6.x/lucene-query.html).
+Para conocer más opciones leer la documentación de [Query String Query](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-dsl-query-string-query.html#query-string-syntax) y de [Lucene Query Syntax](https://www.elastic.co/guide/en/kibana/6.x/lucene-query.html).
 
 3. **Filtros**: Los filtros gráficos pueden hacer más o menos las mismas operaciones de filtro en el buscador, con la ventaja que se pueden sumar varios filtros con facilidad y que hay una opción para editar el filtro y hacerlo mucho más complejo siguiendo [este tutorial](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/query-filter-context.html). Si se están haciendo filtros sobre campos que contienen strings verán que aparecen duplicadas, una con el nombre definida y otra que termina en *.keyword*, se recomienda usar la segunda. 
 
