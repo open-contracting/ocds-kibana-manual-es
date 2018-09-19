@@ -1,6 +1,6 @@
 # Kibana
 
-Si bien ElasticSearch y Logstash pueden ser consultados o invocados utilizando software programado a medida y comandos en el servidor para realizar consultas a los índices, es importante poner a disponsición estas bases de datos a todo tipo de usuarios. Esa es la importancia de Kibana.
+Si bien ElasticSearch y Logstash pueden ser consultados o invocados utilizando software programado a medida y comandos en el servidor para realizar consultas a los índices, es importante poner a disposición estas bases de datos a todo tipo de usuarios. Esa es la importancia de Kibana.
 
 Kibana es la interfaz gráfica de usuario de la plataforma ELK. Y permite realizar análisis, consultas y visualizaciones de distintos tipos de los datos en nuestros índices.
 
