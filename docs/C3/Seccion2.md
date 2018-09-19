@@ -17,6 +17,11 @@ Las principales acciones tanto para buscar como para configurar la visualizació
         <td>Comando</td>
         <td>Ejemplo</td>
     </tr>
+    <tr>
+        <td>AcciónAcciónAcciónAcciónAcciónAcción</td>
+        <td>ComandAcciónAccióno</td>
+        <td>EjeAcciónmplo</td>
+    </tr>
 </table>
 
 
