@@ -6,7 +6,7 @@ Es un conjunto de herramientas que al combinarse crean una plataforma robusta de
 
 Las herramientas que componen este sistema son: ElasticSearch, Logstash y Kibana. Y por las iniciales de estos, el conjunto también es conocido como "stack ELK" o simplemente "ELK".
 
-Estas herramientas son creadas, mantenidas y distribuidas por la compañía [Elastic](elastic.co) desde 2012 y han evolucionado según las necesidades del mercado. La primera de las herramientas en ser creada fue ElasticSearch en 2004 bajo el nombre de Compass, pero la primera versión oficial surge en 2010.
+Estas herramientas son creadas, mantenidas y distribuidas por la compañía [Elastic](https://www.elastic.co/) desde 2012 y han evolucionado según las necesidades del mercado. La primera de las herramientas en ser creada fue ElasticSearch en 2004 bajo el nombre de Compass, pero la primera versión oficial surge en 2010.
 
 Elastic ofrece sus productos en dos modalidades:
 - Como software de código abierto, bajo la licencia Apache 2, salvo algunas funcionalidades adicionales son distribuidos con licencia propietaria. Ofrece la oportunidad de ver, utilizar y hasta modificar las herramientas sin costo alguno, pero toda administración de las herramientas debe ser llevado a cabo personalmente.
