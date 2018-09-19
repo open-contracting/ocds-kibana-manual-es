@@ -1,14 +1,11 @@
 # Procesamiento de datos con Logstash
 
-Ahora que hemos logrado poner en marcha la plataforma podemos ahondar en los detalles técnicos de la colección,
-procesamiento e indexación de los datos, que como habiamos revisado con anterioridad es la tarea realizada por la
-herramienta Logstash.
+Ahora que hemos logrado poner en marcha la plataforma podemos ahondar en los detalles técnicos de la colección, procesamiento e indexación de los datos, que como habíamos revisado con anterioridad es la tarea realizada por la herramienta Logstash.
 
 **IMPORTANTE**
-Todo lo mencionado a continuación está abstraido en el código incluido en los contenedores Docker
+Todo lo mencionado a continuación está abstraído en el código incluido en los contenedores Docker
 
-Recordemos que Logstash utiliza procesos llamados Pipelines, para contextualizar lo logrado con los datos OCDS
-utilizaremos el pipeline de ese dataset a manera de ejemplo.
+Recordemos que Logstash utiliza procesos llamados Pipelines, para contextualizar lo logrado con los datos OCDS utilizaremos el pipeline de ese dataset a manera de ejemplo.
 
 ### Preparación de los datos OCDS por paquetes
 
@@ -17,8 +14,7 @@ utilizaremos el pipeline de ese dataset a manera de ejemplo.
 El archivo obtenido desde gob.mx se presenta en formato de colección de [Paquete de
 Registros](http://standard.open-contracting.org/latest/es/schema/record_package/)
 
-> El esquema de paquete de registros (record package) describe la estructura del contenedor para publicar registros. Los
-> contenidos de un registro se basan en el esquema de entregas (releases). El paquete contiene metadatos importantes.
+> El esquema de paquete de registros (record package) describe la estructura del contenedor para publicar registros. Los contenidos de un registro se basan en el esquema de entregas (releases). El paquete contiene metadatos importantes.
 
 ```
 [
@@ -54,22 +50,19 @@ Esto se traduce en una estructura como la siguiente:
 ]
 ```
 
-Para poder trabajar con este documento necesitaremos convertirlo a un format donde cada linea del archivo sea un
-documento OCDS.
+Para poder trabajar con este documento necesitaremos convertirlo a un formato donde cada linea del archivo sea un documento OCDS.
 ```
 { documento ocds }
 { documento ocds }
 ```
 
-De esta forma podremos procesarlo con Logstash para despues enviar los documentos uno a uno a ElasticSearch.
+De esta forma podremos procesarlo con Logstash para después enviar los documentos uno a uno a ElasticSearch.
 
-#### Convertiendo el formato con la herramienta `jq`
+#### Convirtiendo el formato con la herramienta `jq`
 
-Para poder trabajar con archivos JSON existe una herramienta disponible llamada [jq](https://stedolan.github.io/jq/) de
-código libre y licencia MIT.
+Para poder trabajar con archivos JSON existe una herramienta disponible llamada [jq](https://stedolan.github.io/jq/) de código libre y licencia MIT.
 
-Esta herramienta nos permitirá manipular el documento JSON y llevarlo al formato requerido. Una vez que tenemos
-instalada esta herramienta y disponible el comando `jq` podemos usar un comando como:
+Esta herramienta nos permitirá manipular el documento JSON y llevarlo al formato requerido. Una vez que tenemos instalada esta herramienta y disponible el comando `jq` podemos usar un comando como:
 ```
 jq -crM ".[].records[]" "archivo.json" > "archivo.ocds_por_linea"
 ```
@@ -86,8 +79,7 @@ jq
 ```
 ##### El filtro jq y la estructura de datos
 
-El filtro es la parte más importante de este comando para entenderlo debemos revisar con cuidado la estructura de datos
-presentada en el archivo original.
+El filtro es la parte más importante de este comando para entenderlo debemos revisar con cuidado la estructura de datos presentada en el archivo original.
 ```
 [
     {
@@ -103,19 +95,18 @@ presentada en el archivo original.
     ...
 ]
 ```
-Para efectos de este proyecto nos interesa obtener cada documento ocds por separado, de acuerdo a la notacion de
-documentos JSON una ruta para acceder a ellos sería:
+Para efectos de este proyecto nos interesa obtener cada documento ocds por separado, de acuerdo a la notación de documentos JSON una ruta para acceder a ellos sería:
 1. Entremos a cada elemento del arreglo raíz: `.[]`
 1. De cada elemento, entremos a la propiedad records: `.records`
 1. Obtengamos cada elemento de este arreglo: `.records[]`
 
-Uniendo todas las instrucciones y en notacion de filtro de jq obtenemos: `.[].records[]`
+Uniendo todas las instrucciones y en notación de filtro de jq obtenemos: `.[].records[]`
 
 Los archivos producidos por este comando son adecuados para procesarlos con Logstash, así que continuemos con la
 creación del pipeline, pero primero revisemos algunos conceptos importantes.
 
 
-### Conceptos Basicos para Pipelines de Logstash
+### Conceptos básicos para Pipelines de Logstash
 
 Ahora que estamos listos para enviar los datos a Logstash, revisemos algunos conceptos requeridos para entender mejor
 las mecánicas de Logstash.
@@ -132,7 +123,7 @@ bloque {
 }
 ```
 
-Algunas veces estos bloques pueden estar vacios
+Algunas veces estos bloques pueden estar vacíos
 ```
 bloque { }
 ```
@@ -152,11 +143,7 @@ Los valores de las opciones pueden ser de distintos tipos:
 
 ## Pipeline
 
-En el archivo [pipeline.conf](/pipeline/pipeline.conf) podemos encontrar
-el pipeline ya diseñado para este dataset, revisemos cada uno de los bloques que lo componen.
-
-
-
+En el archivo [pipeline.conf](https://github.com/ProjectPODER/ManualKibanaOCDS/blob/master/pipeline/pipeline.conf) podemos encontrar el pipeline ya diseñado para este dataset, revisemos cada uno de los bloques que lo componen.
 
 
 ### Entrada (input)
@@ -170,12 +157,12 @@ input {
   }
 }
 ```
-Para este pipeline hemos decidido leer el archivo desde la entrada estandar del programa, por cada linea de texto que
+Para este pipeline hemos decidido leer el archivo desde la entrada estándar del programa, por cada linea de texto que
 reciba el programa esta será tratada como un documento JSON y almacenada en memoria para el siguiente paso.
 
 ### Transformación (filter)
 
-Este bloque le indica a Logstash qué debe hacer con cada uno de los registros que ha leido desde el modulo de Entrada.
+Este bloque le indica a Logstash qué debe hacer con cada uno de los registros que ha leído desde el modulo de Entrada.
 
 ```
 filter {
@@ -192,7 +179,7 @@ filter {
 
 Este puede ser el proceso más complicado del Pipeline, y también el más interesante y poderoso para nuestras tareas.
 
-Este bloque se compone por una serie de filtros que actuan de forma secuencial, en este caso solo ocupamos un filtro: ruby
+Este bloque se compone por una serie de filtros que actúan de forma secuencial, en este caso solo ocupamos un filtro: ruby
 
 ### [Filtro Ruby](https://www.elastic.co/guide/en/logstash/current/plugins-filters-ruby.html)
 
@@ -248,14 +235,14 @@ output {
 
 ```
 
-Aqui realizamos dos cosas:
+Aquí realizamos dos cosas:
 1. Guardar en un archivo log todos los documentos procesados, uno por cada línea.
 1. Enviar los documentos a ElasticSearch.
 
 Para lo primero utilizamos el Plugin [Output File](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-file.html)
-y en las opciones especificamos el nombre del archivo log, que debe ser creado si no existe y que debe sobreescribir lo existente.
+y en las opciones especificamos el nombre del archivo log, que debe ser creado si no existe y que debe sobrescribir lo existente.
 
-Para enviar los documentos a ElasticSearch usamos otro plugin que dispone de multiples opciones, en nuestro caso especificamos tres
+Para enviar los documentos a ElasticSearch usamos otro plugin que dispone de múltiples opciones, en nuestro caso especificamos tres
 pero recomendamos consultar el manual.
 
 [Output ElasticSearch](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html)
@@ -264,8 +251,8 @@ Las opciones utilizadas son las siguientes:
 - `index`: Indica el nombre del indice al que vamos a enviar el documento.
 - `hosts`: Indica el `hostname` del servidor ElasticSearch.
 - `document_id`: Esta opción es **MUY** importante ya que permite que Logstash identifique el documento con un
-  identificador único, que a su vez permitará a ElasticSearch saber cuando un documento ya existía previamente. En este
-  caso el documento OCDS tiene un id unico llamado `ocid`
+  identificador único, que a su vez permitirá a ElasticSearch saber cuando un documento ya existía previamente. En este
+  caso el documento OCDS tiene un id único llamado `ocid`.
 
 Como pudimos constatar la creación de un pipeline para procesamiento con Logstash es la codificación de un proceso
 lógico determinado. Cada dataset puede requerir distintos procesos, pero ahí radica el poder de Logstash que nos permite
