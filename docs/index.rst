@@ -8,7 +8,7 @@ Introducción
 
 El Open Contracting Parnership indica en septiembre de 2017 que 13 países de América Latina y el Caribe (Argentina, Chile, Colombia, Costa Rica, Guadalupe, Guatemala, Honduras, Martinica, México, Panamá, Paraguay, República Dominicana y Uruguay) están activos. Esto significa que están usando el estándar de datos en contrataciones abiertas, tienen el compromiso de implementarlo y/o tienen alguna innovación en el monitoreo de contrataciones públicas.
 
-Para incrementar el uso y el impacto de la publicación de datos se ha realizado esta guía, que muestra como instalar el paquete ELK, importar datos con formato de contrataciones abiertas (OCDS) y analizarlos de forma visual e intuitiva. Si bien todos los ejemplos son en base el caso mexicano, hay instrucciones para importar cualquier conjunto de datos que cumpla el estándar OCDS.
+Para incrementar el uso y el impacto de la publicación de datos se ha realizado esta guía, que muestran cómo instalar el paquete ELK, importar datos con formato de contrataciones abiertas (OCDS) y analizarlos de forma visual e intuitiva. Si bien todos los ejemplos están basados el caso mexicano, hay instrucciones para importar cualquier conjunto de datos que cumpla el estándar OCDS.
 
 Esperamos que este sea un granito de arena más para potenciar y promover la transparencia y la rendición de cuentas en la región.
 
