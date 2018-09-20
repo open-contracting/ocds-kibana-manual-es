@@ -53,7 +53,20 @@ Una vez instalado Docker, nuestro software estará listo para iniciarse automát
 de software auxiliar ni dependencias.
 
 Otra ventaja de usar Docker es que mantiene estabilidad entre lo que se desarrolla y lo que se distribuye, se evitan
-problemas del tipo "surgieron problemas en tu computadora pero en mi computador si funciona".
+problemas del tipo "funciona correctamente en mi computadora".
+
+> En las siguientes secciones utilizaremos diversos comandos de docker, entre los detalles más importantes se encuentra
+> el concepto de "volúmenes" que podriamos entender como "carpetas compartidas" entre el contenedor docker y nuestra computadora.
+    ```
+    docker run -v CARPETA_LOCAL:CARPETA_DEL_CONTENEDOR imagen
+    ```
+    La opción `-v A:B` le indica a docker que queremos compartir la carpeta `A` de nuestra computadora con el contenedor,
+    pero para el contenedor se llamará `B`
+    Un ejemplo:
+    ```
+    docker run -v $HOME/Descargas:/input imagen
+    ```
+    "Comparte" la carpeta Descargas de mi computadora con el contenedor, dentro del contenedor la carpeta se llamará `/input`
 
 Para saber más sobre Contenedores y Docker, se recomiendan las siguientes lecturas:
 - [Amazon Web Services - Qué es Docker?](https://aws.amazon.com/es/docker/)
