@@ -2,10 +2,11 @@
 
 Al final de esta sección tendremos todo lo necesario hacer consultas y visualizaciones sobre los datos de Contrataciones en formato OCDS.
 
-> Para este procedimiento se recomienda tener familiaridad básica con la terminal de comandos
-    * [Mac](https://www.soydemac.com/abrir-terminal-mac/)
-    * [Windows](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows)
-    * [Linux/Ubuntu](https://elblogdeliher.com/como-moverse-por-los-directorios-en-la-terminal-de-ubuntu/)
+Para una mejor comprensión de esta sección se recomienda tener familiaridad básica con la terminal de comandos:
+
+* [Mac](https://www.soydemac.com/abrir-terminal-mac/)
+* [Windows](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows)
+* [Linux/Ubuntu](https://elblogdeliher.com/como-moverse-por-los-directorios-en-la-terminal-de-ubuntu/)
 
 ## Objetivos
 
@@ -22,9 +23,9 @@ El presente proyecto esta desarrollado para poder iniciar los 3 servicios, segú
 1. [Instalar Docker CE](https://docs.docker.com/install/)
 1. [Instalar Docker Compose](https://docs.docker.com/compose/install/)
 1. [Descargar el archivo que contiene las
-   herramientas](https://github.com/ProjectPODER/elk-gobmx-csv/archive/master.zip)
+   herramientas](https://github.com/ProjectPODER/ManualKibanaOCDS/archive/master.zip)
 1. Descomprimir el archivo descargado y entrar a la carpeta que se acaba de crear
-    * En la terminal: `cd elk-gobmx-csv-master`
+    * En la terminal: `cd ManualKibanaOCDS-master`
 
 ## Iniciar el *Contenedor Servidor* con ElasticSearch y Kibana
 
@@ -36,7 +37,7 @@ docker-compose -f elastic-kibana.yaml up
 > `elastic-kibana.yaml`, en el mismo indicamos que ambos programas deben iniciarse.
 
 Pasados unos minutos, depende de los recursos disponibles, deberíamos poder abrir en el navegador web la dirección
-[http://localhost:5601/app/kibana](http://localhost:5601/app/kibana) y Kibana se mostrará disponible. 
+[http://localhost:5601/app/kibana](http://localhost:5601/app/kibana) y Kibana se mostrará disponible.
 
 A partir de este momento ElasticSearch y Kibana están listos para ser usados. Aunque aún no tenemos datos disponibles.
 
@@ -50,63 +51,78 @@ cd pipeline
 
 ### Descargando los paquetes de datos
 
-Si queremos trabajar con el total de los contratos publicados en estándard OCDS sin importar los últimos datos publicados, lo primero que debemos hacer es asegurarnos de haber descargado el archivo de **Contrataciones en formato OCDS por
-paquetes json** publicado en el sitio
+Si queremos trabajar con el total de los contratos publicados en estándard OCDS sin importar los últimos datos
+publicados, lo primero que debemos hacer es asegurarnos de haber descargado el archivo de **Contrataciones en formato
+OCDS por paquetes json** publicado en el sitio
 [datos.gob.mx](https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf/resource/ed1ec7e5-61ae-4d00-8adc-67c77844e75c)
 > Al 2 de Septiembre de 2018 este archivo lleva por nombre `contratacionesabiertas_bulk_paquetes.json.zip` y tiene un
 tamaño de 310.5 MB aproximadamente.
 
-Ahora debemos descomprimir el archivo `contratacionesabiertas_bulk_paquetes.json.zip` esto generará multiples archivos
-`.json` dentro de una carpeta:
-```
-carpeta/contratacionesabiertas_bulk_paquete1.json carpeta/contratacionesabiertas_bulk_paquete2.json
-carpeta/contratacionesabiertas_bulk_paquete3.json
-...
-```
 > Estos archivos pueden ser bastante grandes en tamaño, es recomendable tener por lo menos 2GB libres de espacio en
 > disco duro antes de continuar.
 
+Ahora debemos descomprimir el archivo `contratacionesabiertas_bulk_paquetes.json.zip`, esto generará multiples archivos
+`.json` dentro de una carpeta:
+```
+carpeta/contratacionesabiertas_bulk_paquete1.json
+carpeta/contratacionesabiertas_bulk_paquete2.json
+carpeta/contratacionesabiertas_bulk_paquete3.json
+...
+```
+
 **IMPORTANTE** Debemos saber la ruta completa de esta carpeta con los archivos .json pues será necesaria para el paso de
-carga. A manera de ejemplo asumamos que los archivos fueron descargados y descomprimidos dentro de la carpeta de
-Descargas del sistema operativo.
+carga.
 
-La ruta completa a esta carpeta **debería ser**
+A manera de ejemplo asumamos que los archivos fueron descargados y descomprimidos dentro de la carpeta de Descargas del
+sistema operativo. La ruta completa a esta carpeta **debería ser**
 [<sup>1</sup>](https://en.wikipedia.org/wiki/Home_directory#Default_home_directory_per_operating_system)
-* **Linux/Ubuntu/Mac**: `/home/{nombre de usuario}/Descargas` Se puede abreviar como `$HOME/Descargas`
-* **Windows**: `C:\Users\{nombre de usuario}\Descargas` Se puede abreviar como `%HOMEPATH%\Descargas`
 
-Al confirmar esto podemos continuar.
+* **Linux/Ubuntu/Mac**: `/home/{nombre de usuario}/Descargas`
+    Se puede abreviar como `$HOME/Descargas`
+* **Windows**: `C:\Users\{nombre de usuario}\Descargas`
+    Se puede abreviar como `%HOMEPATH%\Descargas`
 
-Si deseamos trabajar con un conjunto reducido de contratos, o con datos más actualizados, en la siguiente sección encontraremos cómo descargar de la API un subconjunto de datos. De lo contrario puede saltear la siguiente sección.
+Al confirmar esto u obtener la ruta completa de la carpeta con los archivos `.json` podemos continuar.
 
 ### Descargando datos de la API
-En la sección anterior se explicó cómo descargar el conjunto completo de los datos en OCDS mediante un sólo archivo, en esta sección presentamos una alternativa para descargar sólo los contratos que buscamos o contratos más actualizados que aún no se hayan publicado en el archivo completo.
+
+Si deseamos trabajar con un conjunto reducido de contratos, o con datos más actualizados, en la siguiente sección
+encontraremos cómo descargar de la API un subconjunto de datos. De lo contrario puede saltear la siguiente sección.
+
+En la sección anterior se explicó cómo descargar el conjunto completo de los datos en OCDS mediante un sólo archivo, en
+esta sección presentamos una alternativa para descargar sólo los contratos que buscamos o contratos más actualizados que
+aún no se hayan publicado en el archivo completo.
 
 Para realizar esta descarga utilizaremos el comando curl y para filtrarlo el comando jq. Ambos deben ser instalados previamente:
 ```
 sudo apt-get install curl jq
 ```
 
-Para ver la documentación completa de la API se puede revisar la [Guía básica de uso del API](http://transparenciapresupuestaria.gob.mx/work/models/PTP/programas/OpenDataDay/Resultados/Guia%20_uso_API_contrataciones%20_abiertas.pdf) donde se detallan las opciones específicas de filtrado. A continuación algunos ejemplos.
+Para ver la documentación completa de la API se puede revisar la [Guía básica de uso del API](http://transparenciapresupuestaria.gob.mx/work/models/PTP/programas/OpenDataDay/Resultados/Guia%20_uso_API_contrataciones%20_abiertas.pdf)
+donde se detallan las opciones específicas de filtrado. A continuación algunos ejemplos.
 
 Para descargar los últimos 100 procesos de contratación:
 ```
-curl https://api.datos.gob.mx/v2/contratacionesabiertas | jq -crM ".results[]"  > contratacionesabiertas_ultimos_100.json
+curl https://api.datos.gob.mx/v2/contratacionesabiertas | jq -crM ".results" > contratacionesabiertas_ultimos_100.json
 ```
 
 Para descargar los procesos de contratación que involucran a una unidad compradora determinada (limitado a 1000, pero se puede cambiar)
 ```
-curl https://api.datos.gob.mx/v2/contratacionesabiertas?records.compiledRelease.parties.name=Servicio%20de%20Administraci%C3%B3n%20Tributaria&pageSize=1000&page=1 | jq -crM ".results[]"  > contratacionesabiertas_SAT_1000.json
+curl https://api.datos.gob.mx/v2/contratacionesabiertas?records.compiledRelease.parties.name=Servicio%20de%20Administraci%C3%B3n%20Tributaria&pageSize=1000&page=1 | jq -crM ".results"  > contratacionesabiertas_SAT_1000.json
 ```
 
 Para comprender mejor el comando, vamos a detallarlo parte por parte:
 * Primero se invoca a curl
 * Luego se incluye la dirección URL base de la API: [https://api.datos.gob.mx/v2/contratacionesabiertas](https://api.datos.gob.mx/v2/contratacionesabiertas)
-* A continuación los parámetros de filtrado: records.compiledRelease.parties.name es para filtrar por el valor de ese campo, es decir, el nombre de alguna de las partes del contrato. pageSize implica cuántos resultados devolverá en cada pedido y page permite ir pidiendo las páginas siguientes en caso de que haya más que una.
-* Luego usamos un comando de jq que nos permite extraer sólo la parte del resultado que nos interesa, que son los records.
-* Finalmente indicamos que el resultado de la operación debe ser almacenado en un archivo, es importante que este nombre de archivo represente la consulta realizada para simplificar luego el archivado.
+* A continuación los parámetros de filtrado: `records.compiledRelease.parties.name` es para filtrar por el valor de ese
+  campo, es decir, el nombre de alguna de las partes del contrato. pageSize implica cuántos resultados devolverá en cada
+  pedido y page permite ir pidiendo las páginas siguientes en caso de que haya más que una.
+* Luego usamos un comando de jq que nos permite extraer sólo la parte de los resultados.
+* Finalmente indicamos que el resultado de la operación debe ser almacenado en un archivo, es importante que este nombre
+  de archivo represente la consulta realizada para simplificar luego el archivado.
 
-Nota: Estos archivos deben almacenarse y tratarse de la misma forma que en la sección anterior, poniéndolos en la carpeta de descargas, para poder continuar con el próximo paso.
+> Estos archivos deben almacenarse y tratarse de la misma forma que en la sección anterior, poniéndolos en la carpeta de
+> descargas, para poder continuar con el próximo paso.
 
 ## Procesando y cargando los datos
 
@@ -114,7 +130,7 @@ Nota: Estos archivos deben almacenarse y tratarse de la misma forma que en la se
 función de poder realizar el análisis sobre la ultima versión disponible de los *releases* OCDS, se recomienda leer los
 capítulos anteriores antes de proceder**
 
-En esta misma carpeta tenemos disponible otra herramienta Usaremos diseñada para la carga de los datos, que
+En esta misma carpeta tenemos disponible otra herramienta diseñada para la carga de los datos, que
 también hace uso de un contenedor Docker. Usaremos dos comandos unicamente: el primero para preparar el contenedor, el
 segundo para ejecutarlo.
 
