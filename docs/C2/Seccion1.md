@@ -2,19 +2,19 @@
 
 ## Introducción
 
-Es un conjunto de herramientas que al combinarse crean una plataforma robusta de administración de datos permitiendo la monitorización, consolidación y análisis de los mismos.
+Es un conjunto de herramientas que al combinarse crean una plataforma robusta de administración de datos permitiendo el monitoreo, consolidación y análisis de los mismos.
 
 Las herramientas que componen este sistema son: ElasticSearch, Logstash y Kibana. Y por las iniciales de estos, el conjunto también es conocido como "stack ELK" o simplemente "ELK".
 
 Estas herramientas son creadas, mantenidas y distribuidas por la compañía [Elastic](https://www.elastic.co/) desde 2012 y han evolucionado según las necesidades del mercado. La primera de las herramientas en ser creada fue ElasticSearch en 2004 bajo el nombre de Compass, pero la primera versión oficial surge en 2010.
 
 Elastic ofrece sus productos en dos modalidades:
-- Como software de código abierto, bajo la licencia Apache 2, salvo algunas funcionalidades adicionales son distribuidos con licencia propietaria. Ofrece la oportunidad de ver, utilizar y hasta modificar las herramientas sin costo alguno, pero toda administración de las herramientas debe ser llevado a cabo personalmente.
-- Como servicio de pago, Elastic Cloud pone a disposición todas las herramientas y las funcionalidades adiciones en servidores administrados por ellos.
+- Como software de código abierto, bajo la licencia Apache 2, salvo algunas funcionalidades adicionales que son distribuidas con licencia propietaria. Ofrece la oportunidad de ver, utilizar y hasta modificar las herramientas sin costo alguno, pero toda administración de las herramientas debe ser llevado a cabo personalmente.
+- Como servicio de pago, Elastic Cloud pone a disposición todas las herramientas y las funcionalidades adicionales en servidores administrados por ellos.
 
 ## Las ventajas de la plataforma ELK
 
-Hay muchas soluciones distintas para cubrir la necesidad de procesamiento, monitoreo y visualización de datos, tanto de pago como libres, pero lo que distingue a ELK sobre otras es principalmente:
+Hay muchas soluciones distintas para cubrir la necesidad de procesamiento, monitoreo y visualización de datos, tanto de paga como libres, pero lo que distingue a ELK sobre otras es principalmente:
 
 - **Potencia**: Ofrece mucha funcionalidad con un bajo costo técnico, las configuraciones son mínimas para empezar. Y las optimizaciones disponibles son amplias.
 - **Escalabilidad**: Elasticsearch es una herramienta diseñada para manejar terabytes de datos sin ningún problema. Su arquitectura le permite expandirse de forma rápida y fácil.
@@ -28,7 +28,7 @@ ELK está compuesta por tres pilares fundamentales: Elasticsearch, Logstash y Ki
 
 ![Plataforma ELK](elk.png "Plataforma ELK")
 
-Cada componente tiene una funcionalidad y arquitectura específica, veamos cómo se relacionan y como podemos usarlos como una plataforma.
+Cada componente tiene una funcionalidad y arquitectura específica, veamos cómo se relacionan y cómo podemos usarlos como una plataforma.
 
 ## Arquitectura de la plataforma
 
