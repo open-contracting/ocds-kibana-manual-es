@@ -2,11 +2,11 @@
 
 > *Esta introducción es una traducción del capítulo [An introduction to the Open Contracting Data Standard](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd#an-introduction-to-the-open-contracting-data-standard) del Manual [Analyzing Open Contracting data using the R programming language](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd) de [Rodrigo Parra](https://github.com/rparrapy)*
 
-Se considera un dato abierto aquel que está en un formato estructurado, reutilizable y legible por máquina; más allá de los requerimientos técnicos los datos abiertos abren nuevas oportunidades para la participación y la rendición de cuentas ciudadana. El [Estándar de Datos de Contrataciones Abiertas (OCDS por sus siglas en inglés)](https://www.open-contracting.org/data-standard/?lang=es) fue creado para aplicar estos principios a los datos relacionados con el ciclo de vida completo de contratación, que incluye planificación, convocatoria, adjudicación, contratación e implementación.
+Se considera un dato abierto aquel que está en un formato estructurado, reutilizable y legible por máquina; más allá de los requerimientos técnicos, los datos abiertos abren nuevas oportunidades para la participación y la rendición de cuentas ciudadana. El [Estándar de Datos de Contrataciones Abiertas (OCDS por sus siglas en inglés)](https://www.open-contracting.org/data-standard/?lang=es) fue creado para aplicar estos principios a los datos relacionados con el ciclo de vida completo de contratación, que incluye planificación, convocatoria, adjudicación, contratación e implementación.
 
-El estándar de datos, diseñado y desarrollado mediante un proceso abierto por la [Open Contrancting Parnertship (OCP)](https://www.open-contracting.org/?lang=es), facilita a los gobiernos y ciudades de todo el mundo compartir sus datos de contratación, permitiendo una mayor transparencia en la contratación pública y respaldando el análisis accesible y en profundidad de la eficiencia, efectividad, equidad e integridad de los sistemas de contratación pública. 
+El estándar de datos, diseñado y desarrollado mediante un proceso abierto por la [Open Contracting Partnership (OCP)](https://www.open-contracting.org/?lang=es), facilita a los gobiernos y ciudades de todo el mundo a compartir sus datos de contratación, permitiendo una mayor transparencia en la contratación pública y respaldando el análisis accesible y en profundidad de la eficiencia, efectividad, equidad e integridad de los sistemas de contratación pública. 
 
-La intención de esta sección es presentar al lector el estándar, los casos de uso para los que fue diseñado y los conceptos básicos necesarios para aplicarlo. La mayoría del contenido fue tomado de la documentación oficial del estándar; para obtener una introducción más completa, consulte la [guia de inicio rapida de la OCP](http://standard.open-contracting.org/latest/en/getting_started/).
+La intención de esta sección es presentar al lector el estándar, los casos de uso para los que fue diseñado y los conceptos básicos necesarios para aplicarlo. La mayoría del contenido fue tomado de la documentación oficial del estándar; para obtener una introducción más completa, consulte la [guía de inicio rápida de la OCP](http://standard.open-contracting.org/latest/en/getting_started/).
 
 ### Usuarios y casos de uso
 
@@ -17,7 +17,7 @@ El estándar fue diseñado para satisfacer las cuatro necesidades principales qu
 * Permitir que el sector privado compita de forma justa por los contratos públicos
 * Monitoreo de la efectividad de la prestación del servicio contratado
 
-Para saber quién está publicando datos que cumplen con OCDS y cómo lo están haciendo, consulte el la web de [OCP](https://www.open-contracting.org/?lang=es). Cuatro posibles casos de uso para los datos de contratación abierta son:
+Para saber quién está publicando datos que cumplen con OCDS y cómo lo están haciendo, consulte la web de [OCP](https://www.open-contracting.org/?lang=es). Cuatro posibles casos de uso para los datos de contratación abierta son:
 
 * Valor para el dinero en la adquisición: ayudar a los funcionarios a obtener una buena relación calidad-precio durante el proceso de adquisición, y analizar si estos objetivos se lograron después.
 * Detección de fraude y corrupción: identificación de banderas rojas que podrían indicar corrupción mediante el estudio de adquisiciones individuales o redes basadas en fondos, propiedad e intereses.
@@ -41,7 +41,7 @@ Los procesos de contratación se representan como **documentos** en el OCDS. Cad
 * **Metadatos de lanzamiento**: información contextual sobre cada lanzamiento de datos;
 * **Participantes**: información sobre las organizaciones y otros actores involucrados en el proceso de contratación;
 * **Planificación**: información sobre los objetivos, presupuestos y proyectos relacionados con un proceso de contratación;
-* **Convocatoria**: información sobre cómo se realizará o se llevará a cabo una licitación;
+* **Convocatoria**: información sobre cómo se llevará a cabo una licitación;
 * **Adjudicación**: información sobre las adjudicaciones realizadas como parte de un proceso de contratación;
 * **Contrato**: información sobre contratos firmados como parte de un proceso de contratación;
 * **Implementación**: información sobre el progreso de cada contrato hacia la finalización.
@@ -71,7 +71,7 @@ Hay dos tipos de documentos definidos en el estándar:
 
 * **Releases** son inmutables y representan actualizaciones sobre el proceso de contratación. Por ejemplo, se pueden usar para notificar a los usuarios de nuevas convocatorias, premios, contratos y otras actualizaciones. Como tal, un único proceso de contratación puede tener muchos lanzamientos.
 
-* **Registros** son instantáneas del estado actual de un proceso de contratación. Un registro debe actualizarse cada vez que se publique una nueva versión asociada a su proceso de contratación; por lo tanto, solo debe haber un solo registro por proceso de contratación.
+* **Registros** son instantáneas del estado actual de un proceso de contratación. Un registro debe actualizarse cada vez que se publique una nueva versión asociada a su proceso de contratación; por lo tanto, solo debe haber un registro por proceso de contratación.
 
 ### Campos
 
@@ -185,12 +185,12 @@ Cada sección puede contener varios **campos** especificados en el estándar, qu
 
 ### Extensiones y listas de códigos
 
-Además de los campos regulares, el esquema OCDS define algunos campos que solo se pueden usar en ciertas secciones, p. *títulos* y *descripciones* de licitaciones, premios y contratos. En algunos casos, los editores pueden requerir campos que no son proporcionados por el esquema central; una **extensión** permite definir nuevos campos que se pueden usar en estos casos. Una lista de extensiones disponibles está disponible [aquí](http://standard.open-contracting.org/latest/en/extensions); si ninguna extensión existente satisface las necesidades de un editor, se alienta al editor a colaborar en la creación de una nueva extensión de comunidad.
+Además de los campos regulares, el esquema OCDS define algunos campos que solo se pueden usar en ciertas secciones, p. *títulos* y *descripciones* de licitaciones, premios y contratos. En algunos casos, los editores pueden requerir campos que no son proporcionados por el esquema central; una **extensión** permite definir nuevos campos que se pueden usar en estos casos. Una lista de las extensiones disponibles se puede encontrar [aquí](http://standard.open-contracting.org/latest/en/extensions); si ninguna extensión existente satisface las necesidades de un editor, se alienta al editor a colaborar en la creación de una nueva extensión de comunidad.
 
-Otro concepto que vale la pena mencionar es el de las listas de códigos. Las listas de códigos son conjuntos de cadenas sensibles a mayúsculas y minúsculas con etiquetas asociadas, disponibles en cada idioma en el que se ha traducido OCDS. Los editores deben usar valores de lista de códigos siempre que sea posible para mapear sus sistemas de clasificación existentes; si es necesario, los campos de detalles pueden usarse para proporcionar información de clasificación más detallada. Hay dos tipos de listas de códigos:
+Otro concepto que vale la pena mencionar es el de las listas de códigos. Las listas de códigos son conjuntos de cadenas sensibles a mayúsculas y minúsculas con etiquetas asociadas, disponibles en cada idioma en el que se ha traducido el OCDS. Los editores deben usar valores de lista de códigos siempre que sea posible para mapear sus sistemas de clasificación existentes; si es necesario, los campos de detalles pueden usarse para proporcionar información de clasificación más detallada. Hay dos tipos de listas de códigos:
 
 * **Las listas de códigos cerradas** son conjuntos de valores fijos. Si un campo está asociado con una lista de códigos cerrada, solo debe aceptar una opción de la lista publicada.
 * **Las listas de códigos abiertas** son conjuntos de valores recomendados. Si un campo está asociado con una lista de códigos abierta, acepta opciones de la lista, pero también otros valores.
 
 
-El OCDS se mantiene utilizando [esquema JSON](http://json-schema.org). En esta sección, hemos introducido y descrito las secciones principales y los objetos comunes utilizados en el esquema, proporcionando fragmentos JSON como ejemplos de estos bloques básicos. Si está interesado en la referencia completa del esquema JSON, consulte la [documentación oficial](http://standard.open-contracting.org/latest/en/schema/).
+El OCDS se mantiene utilizando un [esquema JSON](http://json-schema.org). En esta sección, hemos introducido y descrito las secciones principales y los objetos comunes utilizados en el esquema, proporcionando fragmentos JSON como ejemplos de estos bloques básicos. Si le intereasa en la referencia completa del esquema JSON, consulte la [documentación oficial](http://standard.open-contracting.org/latest/en/schema/).
