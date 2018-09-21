@@ -63,7 +63,7 @@ Es importante mencionar que el formato de esta información se conoce en el est�
 > Estos archivos pueden ser bastante grandes en tamaño, es recomendable tener por lo menos 2GB libres de espacio en
 > disco duro antes de continuar.
 
-Ahora debemos descomprimir el archivo `contratacionesabiertas_bulk_paquetes.json.zip`, esto generará multiples archivos
+Ahora debemos descomprimir el archivo `contratacionesabiertas_bulk_paquetes.json.zip`, esto generará múltiples archivos
 `.json` dentro de una carpeta:
 ```
 carpeta/contratacionesabiertas_bulk_paquete1.json
@@ -72,8 +72,7 @@ carpeta/contratacionesabiertas_bulk_paquete3.json
 ...
 ```
 
-**IMPORTANTE:** Debemos saber la ruta completa de esta carpeta con los archivos .json pues será necesaria para el paso de
-carga.
+**IMPORTANTE:** Debemos saber la ruta completa de esta carpeta con los archivos .json, pues será necesaria para el paso de carga.
 
 A manera de ejemplo asumamos que los archivos fueron descargados y descomprimidos dentro de la carpeta de Descargas del
 sistema operativo. La ruta completa a esta carpeta **debería ser**
@@ -131,15 +130,15 @@ hablaremos de como utilizamos LogStash para este proceso.
 
 Anteriormente se explicó cómo descargar el conjunto completo de los datos en OCDS mediante un sólo archivo, en esta
 sección presentamos una alternativa para descargar sólo los contratos que buscamos o contratos más actualizados que aún
-no se hayan publicado en el archivo completo, para esto usaremos la API datos.gob.mx proporcionada por el gobierno Mexicano.
+no se hayan publicado en el archivo completo, para esto usaremos la API datos.gob.mx proporcionada por el Gobierno Mexicano.
 
 > Para ver la documentación completa de la API se puede revisar la [Guía básica de uso de la API](http://transparenciapresupuestaria.gob.mx/work/models/PTP/programas/OpenDataDay/Resultados/Guia%20_uso_API_contrataciones%20_abiertas.pdf)
 > donde se detallan las opciones específicas de filtrado.
 
-Para realizar la accion de descarga y para manipular un poco los datos utilizaremos las herramientas: [cURL](https://es.wikipedia.org/wiki/CURL)
+Para realizar la acción de descarga y para manipular un poco los datos utilizaremos las herramientas: [cURL](https://es.wikipedia.org/wiki/CURL)
 y [jq](https://es.wikipedia.org/wiki/Jq).
 
-> El comando `curl` nos permitirá descargar la informacion de forma automatica mientras el comando `jq` nos ayudará a
+> El comando `curl` nos permitirá descargar la información de forma automática mientras el comando `jq` nos ayudará a
 > darle un formato manejable a los datos JSON.
 > Más adelante en este manual se incluye una breve introducción a `jq`.
 
@@ -148,7 +147,7 @@ Se pueden instalar ambos programas de forma local, por ejemplo para Linux Ubuntu
 ```
 sudo apt-get install -y curl jq
 ```
-Para Windows o Mac, tendriamos que descargar los archivos ejecutables por separado, pero tambien tenemos la opción de usar el
+Para Windows o Mac, tendríamos que descargar los archivos ejecutables por separado, pero también tenemos la opción de usar el
 *contenedor docker* incluido en el presente código, para ello solo tenemos que ejecutar el siguiente comando de docker:
 ```
 docker run --rm -it -v $HOME/Descargas:/input --entrypoint=bash logstash-sfp-compranet-ocds
