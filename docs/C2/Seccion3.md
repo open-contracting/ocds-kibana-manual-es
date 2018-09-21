@@ -1,6 +1,6 @@
 # Puesta en marcha de la Plataforma ELK para el Análisis de Contrataciones en formato OCDS
 
-Al final de esta sección tendremos todo lo necesario hacer consultas y visualizaciones sobre los datos de Contrataciones en formato OCDS.
+Al final de esta sección tendremos todo lo necesario para hacer consultas y visualizaciones sobre los datos de Contrataciones en formato OCDS.
 
 Para una mejor comprensión de esta sección se recomienda tener familiaridad básica con la terminal de comandos:
 
@@ -10,11 +10,11 @@ Para una mejor comprensión de esta sección se recomienda tener familiaridad b�
 
 ## Objetivos
 
-1. Iniciar un servidor ElasticSearch con Kibana
+1. Iniciar un servidor ElasticSearch con Kibana.
 1. Cargar los datos publicados de Contrataciones en un formato sencillo de consultar.
-1. Realizar una consulta sobre los datos
+1. Realizar una consulta sobre los datos.
 
-El presente proyecto esta desarrollado para poder iniciar los 3 servicios, según sea necesario de forma fácil y rápida.
+El presente proyecto está desarrollado para poder iniciar los 3 servicios, según sea necesario de forma fácil y rápida.
 
 
 ## Prerequisitos
@@ -51,7 +51,7 @@ cd pipeline
 
 ### Descargando los paquetes de datos
 
-Si queremos trabajar con el total de los contratos publicados en estándard OCDS sin importar los últimos datos
+Si queremos trabajar con el total de los contratos publicados en estándar OCDS sin importar los últimos datos
 publicados, lo primero que debemos hacer es asegurarnos de haber descargado el archivo de **Contrataciones en formato
 OCDS por paquetes json** publicado en el sitio
 [datos.gob.mx](https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf/resource/ed1ec7e5-61ae-4d00-8adc-67c77844e75c)
@@ -72,7 +72,7 @@ carpeta/contratacionesabiertas_bulk_paquete3.json
 ...
 ```
 
-**IMPORTANTE** Debemos saber la ruta completa de esta carpeta con los archivos .json pues será necesaria para el paso de
+**IMPORTANTE:** Debemos saber la ruta completa de esta carpeta con los archivos .json pues será necesaria para el paso de
 carga.
 
 A manera de ejemplo asumamos que los archivos fueron descargados y descomprimidos dentro de la carpeta de Descargas del
@@ -133,7 +133,7 @@ Anteriormente se explicó cómo descargar el conjunto completo de los datos en O
 sección presentamos una alternativa para descargar sólo los contratos que buscamos o contratos más actualizados que aún
 no se hayan publicado en el archivo completo, para esto usaremos la API datos.gob.mx proporcionada por el gobierno Mexicano.
 
-> Para ver la documentación completa de la API se puede revisar la [Guía básica de uso del API](http://transparenciapresupuestaria.gob.mx/work/models/PTP/programas/OpenDataDay/Resultados/Guia%20_uso_API_contrataciones%20_abiertas.pdf)
+> Para ver la documentación completa de la API se puede revisar la [Guía básica de uso de la API](http://transparenciapresupuestaria.gob.mx/work/models/PTP/programas/OpenDataDay/Resultados/Guia%20_uso_API_contrataciones%20_abiertas.pdf)
 > donde se detallan las opciones específicas de filtrado.
 
 Para realizar la accion de descarga y para manipular un poco los datos utilizaremos las herramientas: [cURL](https://es.wikipedia.org/wiki/CURL)
