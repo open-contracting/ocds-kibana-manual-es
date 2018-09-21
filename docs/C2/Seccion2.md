@@ -14,7 +14,7 @@ El presente manual permitirá realizar un sistema con las siguientes caracterís
 - Interfaz gráfica de uso amigable pero robusto para consultar los datos.
 - Un motor de búsqueda e indexado que permita la actualización y corrección de los datos en todo momento.
 - Un motor de ingesta de datos, que permita que según se realicen las publicaciones de los datos por parte del gobierno
-  Mexicano estos puedan ser procesados e ingresados a la base de datos con un mínimo esfuerzo.
+  mexicano éstos puedan ser procesados e ingresados a la base de datos con un mínimo esfuerzo.
 
 ## Arquitectura
 
@@ -31,7 +31,7 @@ arquitectura para su utilización quedará definida de la siguiente manera:
 
 !["Plataforma ELK"](arquitectura.png "Plataforma ELK")
 
-Llamaremos **Contenedor Servidor** en el que tenemos a ElasticSearch y Kibana, ya que este contenedor se mantendrá en
+Llamaremos **Contenedor Servidor** al que aloja a ElasticSearch y Kibana, ya que este contenedor se mantendrá en
 ejecución tanto tiempo como se quiera ofrecer este servicio.
 
 Y **Contenedor Procesador** al que solo ejecuta Logstash para procesar los datos y se da por terminado.
@@ -41,7 +41,7 @@ Y **Contenedor Procesador** al que solo ejecuta Logstash para procesar los datos
 Un contenedor Docker es una herramienta que utilizaremos para empaquetar nuestra solución, su arquitectura y las
 herramientas.
 
-Este manual no contempla enseñar los detalles de Docker y su tecnología pero podríamos definirlo de forma sencilla como
+Este manual no contempla enseñar los detalles de Docker y su tecnología, pero podríamos definirlo de forma sencilla como
 "cajas" o "contenedores" (como de trailers o de barcos de carga) de Software donde va incluido absolutamente todo lo que
 necesitamos para ejecutar nuestro proyecto.
 
