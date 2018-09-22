@@ -20,8 +20,8 @@ A manera de resumen, recordemos los siguientes puntos.
 1. Una vez iniciado un servidor de ElasticSearch con Kibana podemos comenzar a enviar documentos al mismo para ser indexados.
 1. Logstash es una herramienta muy flexible para tomar una colección de datos, leerla, transformarla para finalmente enviarla
 a ElasticSearch.
-1. Logstash utiliza "Pipelines" para procesar los datos, estos están compuestos de 3 partes: Entrada, Filtro, Salida.
+1. Logstash utiliza "Pipelines" para procesar los datos, éstos están compuestos de 3 partes: Entrada, Filtro, Salida.
 1. El Pipeline está escrito en un "lenguaje" propio que describe cada proceso de forma lógica y clara, con la flexibilidad
 disponible para realizar acciones complejas con instrucciones de código de programación.
-1. Una vez escrito el Pipeline este puede ser usado múltiples veces, incluso para crear índices distintos dentro de un mismo
+1. Una vez escrito el Pipeline éste puede ser usado múltiples veces, incluso para crear índices distintos dentro de un mismo
 servidor ElasticSearch.
