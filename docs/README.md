@@ -4,15 +4,14 @@ Análisis de contrataciones del Gobierno Federal Mexicano en formato Estándar O
 El manual es una iniciativa del **[Project on Organizing, Development,
 Education, and Research (PODER)](https://www.projectpoder.org/)**, la
 **[Iniciativa Latinoamericana por los Datos
-Abiertos](https://idatosabiertos.org/)** y **[Open Contracting
-Parnershipt (OCP)](https://www.open-contracting.org)** escrito por
+Abiertos](https://idatosabiertos.org/)** y **[Open Contracting Partnership (OCP)](https://www.open-contracting.org)** escrito por
 **Ricardo Vega**, **Martín Szyszlican** y **Eduard Martín-Borregón** con
 la supervisión de Juan Pane y Yohanna Lisnichuk.
 
 Introducción
 ------------
 
-El Open Contracting Parnership indica en septiembre de 2017 que 13
+El Open Contracting Partnership indica en septiembre de 2017 que 13
 países de América Latina y el Caribe (Argentina, Chile, Colombia, Costa
 Rica, Guadalupe, Guatemala, Honduras, Martinica, México, Panamá,
 Paraguay, República Dominicana y Uruguay) están activos. Esto significa
