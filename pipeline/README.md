@@ -1,5 +1,5 @@
 # Pipeline Logstash for procurement data in OCDS format (Open Contracting)
-[(spanish bellow)](#user-content-pipeline-logstash-para-datos-de-contratos-en-formato-ocds-open-contracting)
+[Versión en Español](#user-content-pipeline-logstash-para-datos-de-contratos-en-formato-ocds-open-contracting)
 
 Data can be downloaded in: [Datos Gob MX](https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf)
 
