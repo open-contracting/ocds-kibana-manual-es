@@ -3,7 +3,7 @@
 ## Formato disponible y formato requerido
 
 El archivo obtenido desde gob.mx se presenta en formato de colección de [Paquete de
-Registros](http://standard.open-contracting.org/latest/es/schema/record_package/)
+Registros](https://standard.open-contracting.org/latest/es/schema/record_package/)
 
 > El esquema de paquete de registros (record package) describe la estructura del contenedor para publicar registros. Los
 > contenidos de un registro se basan en el esquema de entregas (releases). El paquete contiene metadatos importantes.

@@ -58,7 +58,7 @@ OCDS por paquetes json** publicado en el sitio
 > Al 2 de Septiembre de 2018 este archivo lleva por nombre `contratacionesabiertas_bulk_paquetes.json.zip` y tiene un
 tamaño de 310.5 MB aproximadamente.
 
-Es importante mencionar que el formato de esta información se conoce en el estándar OCDS como [recordPackages](http://standard.open-contracting.org/latest/en/schema/record_package/) o [paquete de Registros](http://standard.open-contracting.org/latest/es/schema/record_package/); las herramientas y código incluidas en éste manual utilizan este formato, para utilizar alguno otro como *releases* o *releasePackages* o alguna otra estructura no definida por el estándar OCDS serían necesarias modificaciones al código.
+Es importante mencionar que el formato de esta información se conoce en el estándar OCDS como [recordPackages](https://standard.open-contracting.org/latest/en/schema/record_package/) o [paquete de Registros](https://standard.open-contracting.org/latest/es/schema/record_package/); las herramientas y código incluidas en éste manual utilizan este formato, para utilizar alguno otro como *releases* o *releasePackages* o alguna otra estructura no definida por el estándar OCDS serían necesarias modificaciones al código.
 
 > Estos archivos pueden ser bastante grandes en tamaño, es recomendable tener por lo menos 2GB libres de espacio en
 > disco duro antes de continuar.

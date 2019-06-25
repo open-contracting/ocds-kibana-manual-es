@@ -5,7 +5,7 @@ Data can be downloaded in: [Datos Gob MX](https://datos.gob.mx/busca/dataset/con
 
 It is necessary to download [data packages](https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf/resource/ed1ec7e5-61ae-4d00-8adc-67c77844e75c)
 
-The documentation of OCDS scheme can be found here: [Open Contracting](http://standard.open-contracting.org/latest/en/getting_started/)
+The documentation of OCDS scheme can be found here: [Open Contracting](https://standard.open-contracting.org/latest/en/getting_started/)
 
 ## Dependency
 
@@ -47,7 +47,7 @@ Datos descargables en: [Datos Gob MX](https://datos.gob.mx/busca/dataset/concent
 
 Se requiere descargar los [datos por paquetes](https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf/resource/ed1ec7e5-61ae-4d00-8adc-67c77844e75c)
 
-La documentacion del esquema OCDS se puede encontrar en: [Open Contracting](http://standard.open-contracting.org/latest/en/getting_started/)
+La documentacion del esquema OCDS se puede encontrar en: [Open Contracting](https://standard.open-contracting.org/latest/en/getting_started/)
 
 ## Dependencias
 

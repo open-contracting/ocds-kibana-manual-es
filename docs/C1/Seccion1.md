@@ -6,7 +6,7 @@ Se considera un dato abierto aquel que está en un formato estructurado, reutili
 
 El estándar de datos, diseñado y desarrollado mediante un proceso abierto por la [Open Contracting Partnership (OCP)](https://www.open-contracting.org/?lang=es), facilita a los gobiernos y ciudades de todo el mundo a compartir sus datos de contratación, permitiendo una mayor transparencia en la contratación pública y respaldando el análisis accesible y en profundidad de la eficiencia, efectividad, equidad e integridad de los sistemas de contratación pública. 
 
-La intención de esta sección es presentar al lector el estándar, los casos de uso para los que fue diseñado y los conceptos básicos necesarios para aplicarlo. La mayoría del contenido fue tomado de la documentación oficial del estándar; para obtener una introducción más completa, consulte la [guía de inicio rápida de la OCP](http://standard.open-contracting.org/latest/en/getting_started/).
+La intención de esta sección es presentar al lector el estándar, los casos de uso para los que fue diseñado y los conceptos básicos necesarios para aplicarlo. La mayoría del contenido fue tomado de la documentación oficial del estándar; para obtener una introducción más completa, consulte la [guía de inicio rápida de la OCP](https://standard.open-contracting.org/latest/en/getting_started/).
 
 ### Usuarios y casos de uso
 
@@ -30,7 +30,7 @@ El estándar define un proceso de contratación como:
 
 > Toda la información de planificación, publicación de la convocatoria, adjudicaciones, contratos e implementación de contratos relacionada con un solo proceso de iniciación.
 
-El estándar cubre todas las etapas de un proceso de contratación, aunque algunos procesos pueden no incluir todos los pasos posibles. Para fines de identificación, a todos los procesos de contratación se les asigna un Id. de contratación abierta único (ocid), que se puede utilizar para unir datos de diferentes etapas. Para evitar clústers de ocid entre editores, un editor puede anteponer un prefijo a los identificadores generados localmente. Se anima a los editores a registrar su prefijo [aquí](http://standard.open-contracting.org/latest/en/implementation/registration/).
+El estándar cubre todas las etapas de un proceso de contratación, aunque algunos procesos pueden no incluir todos los pasos posibles. Para fines de identificación, a todos los procesos de contratación se les asigna un Id. de contratación abierta único (ocid), que se puede utilizar para unir datos de diferentes etapas. Para evitar clústers de ocid entre editores, un editor puede anteponer un prefijo a los identificadores generados localmente. Se anima a los editores a registrar su prefijo [aquí](https://standard.open-contracting.org/latest/en/implementation/registration/).
 
 
 
@@ -185,7 +185,7 @@ Cada sección puede contener varios **campos** especificados en el estándar, qu
 
 ### Extensiones y listas de códigos
 
-Además de los campos regulares, el esquema OCDS define algunos campos que solo se pueden usar en ciertas secciones, p. *títulos* y *descripciones* de licitaciones, premios y contratos. En algunos casos, los editores pueden requerir campos que no son proporcionados por el esquema central; una **extensión** permite definir nuevos campos que se pueden usar en estos casos. Una lista de las extensiones disponibles se puede encontrar [aquí](http://standard.open-contracting.org/latest/en/extensions); si ninguna extensión existente satisface las necesidades de un editor, se alienta al editor a colaborar en la creación de una nueva extensión de comunidad.
+Además de los campos regulares, el esquema OCDS define algunos campos que solo se pueden usar en ciertas secciones, p. *títulos* y *descripciones* de licitaciones, premios y contratos. En algunos casos, los editores pueden requerir campos que no son proporcionados por el esquema central; una **extensión** permite definir nuevos campos que se pueden usar en estos casos. Una lista de las extensiones disponibles se puede encontrar [aquí](https://standard.open-contracting.org/latest/en/extensions); si ninguna extensión existente satisface las necesidades de un editor, se alienta al editor a colaborar en la creación de una nueva extensión de comunidad.
 
 Otro concepto que vale la pena mencionar es el de las listas de códigos. Las listas de códigos son conjuntos de cadenas sensibles a mayúsculas y minúsculas con etiquetas asociadas, disponibles en cada idioma en el que se ha traducido el OCDS. Los editores deben usar valores de lista de códigos siempre que sea posible para mapear sus sistemas de clasificación existentes; si es necesario, los campos de detalles pueden usarse para proporcionar información de clasificación más detallada. Hay dos tipos de listas de códigos:
 
@@ -193,4 +193,4 @@ Otro concepto que vale la pena mencionar es el de las listas de códigos. Las li
 * **Las listas de códigos abiertas** son conjuntos de valores recomendados. Si un campo está asociado con una lista de códigos abierta, acepta opciones de la lista, pero también otros valores.
 
 
-El OCDS se mantiene utilizando un [esquema JSON](http://json-schema.org). En esta sección, hemos introducido y descrito las secciones principales y los objetos comunes utilizados en el esquema, proporcionando fragmentos JSON como ejemplos de estos bloques básicos. Si le intereasa en la referencia completa del esquema JSON, consulte la [documentación oficial](http://standard.open-contracting.org/latest/en/schema/).
+El OCDS se mantiene utilizando un [esquema JSON](http://json-schema.org). En esta sección, hemos introducido y descrito las secciones principales y los objetos comunes utilizados en el esquema, proporcionando fragmentos JSON como ejemplos de estos bloques básicos. Si le intereasa en la referencia completa del esquema JSON, consulte la [documentación oficial](https://standard.open-contracting.org/latest/en/schema/).
