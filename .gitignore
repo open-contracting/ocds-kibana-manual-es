@@ -1,3 +1,4 @@
 *.full.csv
 *.json.full
 .~lock.*
+/docs/_build

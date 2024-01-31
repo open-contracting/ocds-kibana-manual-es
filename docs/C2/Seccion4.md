@@ -7,9 +7,9 @@ herramienta Logstash.
 **IMPORTANTE:** Todo lo mencionado a continuación se encuentra implementado en el código incluido en los contenedores
 Docker. NO es necesario repetir estos pasos, unicamente se menciona aqui para entender mejor el proceso.
 
-### Preparación de los datos OCDS por paquetes
+## Preparación de los datos OCDS por paquetes
 
-#### Formato disponible y formato requerido
+### Formato disponible y formato requerido
 
 El archivo obtenido desde gob.mx se presenta en formato de colección de [Paquete de
 Registros](https://standard.open-contracting.org/latest/es/schema/record_package/)
@@ -59,7 +59,7 @@ Para poder trabajar con este documento necesitaremos convertirlo a un formato do
 
 De esta forma podremos procesarlo con Logstash para después enviar los documentos uno a uno a ElasticSearch.
 
-#### Convirtiendo el formato con la herramienta `jq`
+### Convirtiendo el formato con la herramienta `jq`
 
 Para poder trabajar con archivos JSON existe una herramienta disponible llamada [jq](https://stedolan.github.io/jq/) de código libre y licencia MIT.
 
@@ -78,7 +78,7 @@ jq
     "archivo.json" = El archivo por leer
     "archivo.ocds_por_linea" = El archivo generado con el resultado
 ```
-##### El filtro jq y la estructura de datos
+#### El filtro jq y la estructura de datos
 
 El filtro es la parte más importante de este comando; para entenderlo debemos revisar con cuidado la estructura de datos presentada en el archivo original.
 ```
@@ -107,12 +107,12 @@ Los archivos producidos por este comando son adecuados para procesarlos con Logs
 creación del pipeline, pero primero revisemos algunos conceptos importantes.
 
 
-### Conceptos básicos para Pipelines de Logstash
+## Conceptos básicos para Pipelines de Logstash
 
 Ahora que estamos listos para enviar los datos a Logstash, revisemos algunos conceptos requeridos para entender mejor
 las mecánicas de Logstash.
 
-#### Sintaxis
+### Sintaxis
 
 Las definiciones de Pipelines para Logstash utilizan un lenguaje similar a bloques de código de programación
 simplificado.
@@ -182,7 +182,7 @@ Este puede ser el proceso más complicado del Pipeline, y también el más inter
 
 Este bloque se compone por una serie de filtros que actúan de forma secuencial, en este caso solo ocupamos un filtro: ruby.
 
-### [Filtro Ruby](https://www.elastic.co/guide/en/logstash/current/plugins-filters-ruby.html)
+#### [Filtro Ruby](https://www.elastic.co/guide/en/logstash/current/plugins-filters-ruby.html)
 
 > Este filtro es más avanzado y requiere de conocimientos de programación en lenguaje Ruby.
 

@@ -84,7 +84,7 @@ Los gráficos de líneas nos sirven para mostrar la evolución durante el tiempo
   
 Si le diéramos play ahora, el gráfico quedaría solo con la línea verde, y la azul quedaría rozando al 0, ya que los valores entre ambas son muy distintos. Para que esto aparezca bien, hemos de crear un segundo eje de valores en la gráfica. Para esto hemos de hacer clic en *Metrics & Axes* (el menú a la izquierda del botón play) y en el desplegable "Value Axis" elegir la opción "New Axis", que nos generará un nuevo eje que podemos editar en la siguiente caja **Y-Axis**.
 
-Observando el gráfico podemos ver que termina en el 2020, cuando aún estamos en 2018. Para rectificar esto, podemos añadir un filtro a los datos, de la misma forma que lo hacemos en el apartado [Discover](https://manualkibanaocds.readthedocs.io/es/latest/C3/Seccion2.html) 
+Observando el gráfico podemos ver que termina en el 2020, cuando aún estamos en 2018. Para rectificar esto, podemos añadir un filtro a los datos, de la misma forma que lo hacemos en el apartado [Discover](Seccion2) 
 
 
 ## Otros gráficos disponibles

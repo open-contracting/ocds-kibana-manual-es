@@ -1,4 +1,4 @@
-## Introducción al Estándar de Datos de Contrataciones Abiertas
+# Introducción al Estándar de Datos de Contrataciones Abiertas
 
 > *Esta introducción es una traducción del capítulo [An introduction to the Open Contracting Data Standard](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd#an-introduction-to-the-open-contracting-data-standard) del Manual [Analyzing Open Contracting data using the R programming language](https://github.com/rparrapy/ocds-r-manual/blob/master/manual.Rmd) de [Rodrigo Parra](https://github.com/rparrapy)*
 
@@ -8,7 +8,7 @@ El estándar de datos, diseñado y desarrollado mediante un proceso abierto por 
 
 La intención de esta sección es presentar al lector el estándar, los casos de uso para los que fue diseñado y los conceptos básicos necesarios para aplicarlo. La mayoría del contenido fue tomado de la documentación oficial del estándar; para obtener una introducción más completa, consulte la [guía de inicio rápida de la OCP](https://standard.open-contracting.org/latest/en/getting_started/).
 
-### Usuarios y casos de uso
+## Usuarios y casos de uso
 
 El estándar fue diseñado para satisfacer las cuatro necesidades principales que se detectaron en los usurarios:
 
@@ -24,7 +24,7 @@ Para saber quién está publicando datos que cumplen con OCDS y cómo lo están 
 * Competir por contratos públicos: permitir que las empresas privadas comprendan el potencial de las oportunidades de adquisición al observar información relacionada con adquisiciones pasadas y actuales.
 * Supervisión de la prestación de servicios: ayuda a los actores interesados a aprovechar la trazabilidad en el proceso de adquisición para fines de supervisión, vinculando los presupuestos y los datos de los donantes con los contratos y los resultados.
 
-### El proceso de contratación
+## El proceso de contratación
 
 El estándar define un proceso de contratación como:
 
@@ -34,7 +34,7 @@ El estándar cubre todas las etapas de un proceso de contratación, aunque algun
 
 
 
-### Documentos
+## Documentos
 
 Los procesos de contratación se representan como **documentos** en el OCDS. Cada documento se compone de varias **secciones**, que se mencionan a continuación:
 
@@ -48,7 +48,7 @@ Los procesos de contratación se representan como **documentos** en el OCDS. Cad
 
 Un ejemplo de fragmento de JSON compatible con esta estructura se ve de la siguiente manera:
 
-```{json}
+```json
 {
    "language": "en",
    "ocid": "contracting-process-identifier",
@@ -73,13 +73,13 @@ Hay dos tipos de documentos definidos en el estándar:
 
 * **Registros** son instantáneas del estado actual de un proceso de contratación. Un registro debe actualizarse cada vez que se publique una nueva versión asociada a su proceso de contratación; por lo tanto, solo debe haber un registro por proceso de contratación.
 
-### Campos
+## Campos
 
 Cada sección puede contener varios **campos** especificados en el estándar, que se utilizan para representar datos. Estos objetos pueden aparecer varias veces en diferentes secciones del mismo documento; por ejemplo, los artículos pueden presentarse en convocatoria (para indicar los artículos que un comprador desea comprar), en un objeto de adjudicación (para indicar los artículos para los que se ha realizado una adjudicación) y en un objeto contractual (para indicar los artículos enumerados en el contrato). Algunos campos de ejemplo, acompañados por los fragmentos de JSON correspondientes, se presentan a continuación.
 
-#### Participantes (Organizaciones)
+### Participantes (Organizaciones)
 
-```{json, eval=FALSE}
+```json
 {
     "address": {
         "countryName": "United Kingdom",
@@ -103,22 +103,22 @@ Cada sección puede contener varios **campos** especificados en el estándar, qu
         "uri": "http://www.barnet.gov.uk/"
     },
     "name": "London Borough of Barnet",
-    "roles": [ ... ]
+    "roles": [ ]
 }
 ```
 
-#### Valores
+### Valores
 
-```{json, eval=FALSE}
+```json
 {
     "amount": 11000000,
     "currency": "GBP"
 }
 ```
 
-#### Items
+### Items
 
-```{json, eval=FALSE}
+```json
 {
     "additionalClassifications": [
        {
@@ -147,18 +147,18 @@ Cada sección puede contener varios **campos** especificados en el estándar, qu
 }
 ```
 
-#### Periodos de tiempo
+### Periodos de tiempo
 
-```{json, eval=FALSE}
+```json
 {
     "endDate": "2011-08-01T23:59:00Z",
     "startDate": "2010-07-01T00:00:00Z"
 }
 ```
 
-#### Documentos
+### Documentos
 
-```{json, eval=FALSE}
+```json
 {
     "datePublished": "2010-05-10T10:30:00Z",
     "description": "Award of contract to build new cycle lanes to AnyCorp Ltd.",
@@ -171,9 +171,9 @@ Cada sección puede contener varios **campos** especificados en el estándar, qu
 }
 ```
 
-#### Hitos
+### Hitos
 
-```{json, eval=FALSE}
+```json
 {
     "description": "A consultation period is open for citizen input.",
     "dueDate": "2015-04-15T17:00:00Z",
@@ -183,7 +183,7 @@ Cada sección puede contener varios **campos** especificados en el estándar, qu
 ```
 
 
-### Extensiones y listas de códigos
+## Extensiones y listas de códigos
 
 Además de los campos regulares, el esquema OCDS define algunos campos que solo se pueden usar en ciertas secciones, p. *títulos* y *descripciones* de licitaciones, premios y contratos. En algunos casos, los editores pueden requerir campos que no son proporcionados por el esquema central; una **extensión** permite definir nuevos campos que se pueden usar en estos casos. Una lista de las extensiones disponibles se puede encontrar [aquí](https://standard.open-contracting.org/latest/en/extensions); si ninguna extensión existente satisface las necesidades de un editor, se alienta al editor a colaborar en la creación de una nueva extensión de comunidad.
 

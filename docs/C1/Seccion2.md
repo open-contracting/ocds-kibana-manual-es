@@ -1,6 +1,9 @@
-Si bien la mayoría de la información en este manual puede ser utilizada para el análisis de cualquier conjunto de datos, nuestros esfuerzos  están orientados a analizar datos de Contrataciones Abiertas publicadas por la Secretaría de Hacienda y Crédito Público.
+# Datos de Contrataciones Abiertas
 
-## Datos de Contrataciones Abiertas
+```{note}
+Si bien la mayoría de la información en este manual puede ser utilizada para el análisis de cualquier conjunto de datos, nuestros esfuerzos  están orientados a analizar datos de Contrataciones Abiertas publicadas por la Secretaría de Hacienda y Crédito Público.
+```
+
 Desde hace muchos años existen datos abiertos sobre contrataciones en México, un historial de los mismos se puede encontrar en el sitio de [CompraNet](http://compranet.funcionpublica.gob.mx/), que dispone de información en formato Excel desde el año 2002. Estos datos han sido objeto de múltiples análisis a lo largo del tiempo y están disponibles en una variedad de plataformas de tecnología cívica que simplifican su análisis. Para enumerar algunas de las que están actualmente disponibles:
 * [QuiénEsQuién.Wiki](https://www.quienesquien.wiki)
 * [ContratoBook](http://contratobook.org/#/contratos)

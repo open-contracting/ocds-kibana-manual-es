@@ -44,6 +44,15 @@ La plataforma ELK tiene una arquitectura lineal entre sus componentes.
 
 Pero veamos un poco más a detalle cada herramienta:
 
-- [ElasticSearch](https://manualkibanaocds.readthedocs.io/es/latest/C2/Seccion1/1_ElasticSearch.html)
-- [Logstash](https://manualkibanaocds.readthedocs.io/es/latest/C2/Seccion1/2_Logstash.html)
-- [Kibana](https://manualkibanaocds.readthedocs.io/es/latest/C2/Seccion1/3_Kibana.html)
+- [ElasticSearch](Seccion1/1_ElasticSearch)
+- [Logstash](Seccion1/2_Logstash)
+- [Kibana](Seccion1/3_Kibana)
+
+```{toctree}
+:hidden: true
+
+Seccion1/1_ElasticSearch
+Seccion1/2_Logstash
+Seccion1/3_Kibana
+Extra
+```
