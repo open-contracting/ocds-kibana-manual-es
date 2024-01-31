@@ -14,9 +14,9 @@ Adicionalmente hay que destacar el esfuerzo para traducir el OCDS al español re
 
 ## Datos en OCDS en América Latina y el resto del mundo
 
-Además de México en América Latina y el resto del mundo hay varios países que publican conjuntos de datos en formato OCDS. La Alianza para el gobierno antiene un listado completo actualizado trimestralmente de [Publicadores de OCDS](https://www.open-contracting.org/why-open-contracting/worldwide/#/table)
+Además de México en América Latina y el resto del mundo hay varios países que publican conjuntos de datos en formato OCDS. La Alianza para el gobierno antiene un listado completo de [Publicadores de OCDS](https://data.open-contracting.org/es/).
 
-Además la herramienta [OCDS Kingfisher](https://ocdskingfisher.readthedocs.io/en/master/index.html) permite descargarlos e importarlos a una base de datos.
+Además, [OCDS Kingfisher Collect](https://kingfisher-collect.readthedocs.io) permite descargarlos e importarlos a una base de datos.
 
 ## Los datos para este manual
 Como se dijo en el apartado anterior en este manual vamos a estar utilizando los datos publicados por el área de Transparencia Presupuestaria de la Secretaría de Hacienda y Crédito Público disponibles aquí: [https://www.gob.mx/contratacionesabiertas](https://www.gob.mx/contratacionesabiertas)
